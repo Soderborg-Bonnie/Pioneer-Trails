@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.model;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,10 +18,20 @@ public class Game implements Serializable{
     private Integer numPeeps;
     private Player player;
     private Wagon wagon;
+    private ArrayList<Actor> actors = new ArrayList<Actor>();
 
     public Game() {
     }
 
+    public ArrayList<Actor>getActors(){
+        return actors;
+    }
+    
+    public void setActor(ArrayList<Actor> actors){
+this.actors = actors;
+
+    }
+    
     public Wagon getWagon() {
         return wagon;
     }

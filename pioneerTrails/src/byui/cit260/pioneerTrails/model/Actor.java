@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.model;
 
 import java.awt.Point;
+import java.util.ArrayList;
 
 /**
  *
@@ -21,7 +22,26 @@ public enum Actor {
     private String name;
     private Boolean aliveState;
     private Point coordinates;
+    private ArrayList<Player>players = new ArrayList<Player>();
+    private Game game;
 
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
+    
+    
+    public ArrayList<Player>getPlayers(){
+        return players;
+    }
+    
+    public void setPlayers(ArrayList<Player>players){
+        this.players = players;
+    }
     public String getName() {
         return name;
     }
