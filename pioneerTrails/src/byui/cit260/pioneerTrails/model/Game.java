@@ -3,21 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package byui.cit260.pioneerTrails.model;
+
+import java.util.Objects;
 
 /**
  *
- * @author tyler
+ * @author Bonnie
  */
-public class Game implements Serializable {
-    
+public class Game implements Serializable{
     //class instance variables
-    private int totalTime;
-    private int numPeeps;
+    private Integer time;
+    private Integer numPeeps;
     private Player player;
+    private Wagon wagon;
 
     public Game() {
     }
 
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+    
+    
     public Player getPlayer() {
         return player;
     }
@@ -27,38 +39,37 @@ public class Game implements Serializable {
     }
     
     
-    
 
-    public int getTotalTime() {
-        return totalTime;
+    public int getTime() {
+        return time;
     }
 
-    public void setTotalTime(int totalTime) {
-        this.totalTime = totalTime;
+    public void setTime(Integer time) {
+        this.time = time;
     }
 
-    public int getNumPeeps() {
+    public Integer getNumPeeps() {
         return numPeeps;
     }
 
-    public void setNumPeeps(int numPeeps) {
+    public void setNumPeeps(Integer numPeeps) {
         this.numPeeps = numPeeps;
     }
 
     @Override
-    public String toString() {
-        return "Game{" + "totalTime=" + totalTime + ", numPeeps=" + numPeeps + '}';
-    }
-    
-    
-
-    @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + this.totalTime;
-        hash = 79 * hash + this.numPeeps;
+        hash = 43 * hash + Objects.hashCode(this.time);
+        hash = 43 * hash + Objects.hashCode(this.numPeeps);
         return hash;
     }
+
+    @Override
+    public String toString() {
+        return "Game{" + "time=" + time + ", numPeeps=" + numPeeps + '}';
+    }
+    
+    
 
     @Override
     public boolean equals(Object obj) {
@@ -72,14 +83,16 @@ public class Game implements Serializable {
             return false;
         }
         final Game other = (Game) obj;
-        if (this.totalTime != other.totalTime) {
+        if (!Objects.equals(this.time, other.time)) {
             return false;
         }
-        if (this.numPeeps != other.numPeeps) {
+        if (!Objects.equals(this.numPeeps, other.numPeeps)) {
             return false;
         }
         return true;
     }
+    
+    
     
     
     
