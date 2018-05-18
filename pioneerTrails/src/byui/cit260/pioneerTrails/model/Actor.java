@@ -22,9 +22,9 @@ public enum Actor {
     private String name;
     private Boolean aliveState;
     private Point coordinates;
-    private ArrayList<Player>players = new ArrayList<Player>();
+    private Player player;
     private Game game;
-
+ 
     public Game getGame() {
         return game;
     }
@@ -32,16 +32,18 @@ public enum Actor {
     public void setGame(Game game) {
         this.game = game;
     }
-    
-    
-    
-    public ArrayList<Player>getPlayers(){
-        return players;
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
     
-    public void setPlayers(ArrayList<Player>players){
-        this.players = players;
-    }
+    
+    
+    
     public String getName() {
         return name;
     }
