@@ -6,7 +6,7 @@
 package byui.cit260.pioneerTrails.model;
 
 import java.awt.Point;
-import java.util.ArrayList;
+
 
 /**
  *

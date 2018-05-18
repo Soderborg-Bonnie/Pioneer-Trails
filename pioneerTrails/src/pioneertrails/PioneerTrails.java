@@ -9,19 +9,12 @@ import byui.cit260.pioneerTrails.model.Actor;
 import byui.cit260.pioneerTrails.model.Player;
 import java.awt.Point;
 
-/**
- *
- * @author tharman
- */
-public class PioneerTrails {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+
+public class PioneerTrails {
+    
+public static void TeamTest(){
         Player playerOne = new Player();
-       
-        
         playerOne.setName("friend of UFE");
         playerOne.setAliveState(true);
         
@@ -32,8 +25,17 @@ public class PioneerTrails {
         Boolean actorOneAliveState = Actor.Dad.getAliveState();
         Point actorOneCoordinates = Actor.Dad.getCoordinates();
         
-        System.out.println(playerOne.toString());
+        System.out.println("Player: " + playerOneName);
+        System.out.println("Actor name: " + actorOneName);
         
+
+}
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        TeamTest();
     }
     
 }
