@@ -6,24 +6,30 @@
 package byui.cit260.pioneerTrails.model;
 
 import java.awt.Point;
+import java.util.Objects;
 
 
 /**
  *
  * @author Bonnie
  */
-public enum Actor implements Serializable{
-    Dad("Dad", true, new Point(1,1)),
-    Mom("Mom", true, new Point(0,1)),
-    Child1("Child1", true, new Point(1,2)),
-    Child2("Child2", true, new Point(2,3)),
-    Child3("Child3", true, new Point(3,4));
-        
+public class Actor implements Serializable{
+    //Dad("Dad", true, new Point(1,1)),
+    //Mom("Mom", true, new Point(0,1)),
+    //Child1("Child1", true, new Point(1,2)),
+    //Child2("Child2", true, new Point(2,3)),
+    //Child3("Child3", true, new Point(3,4));
+    
+    //class instance variables
     private String name;
     private Boolean aliveState;
-    private Point coordinates;
     private Player player;
     private Game game;
+
+    public Actor() {
+    }
+    
+    
  
     public Game getGame() {
         return game;
@@ -40,34 +46,70 @@ public enum Actor implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
-    
-    
-    
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Boolean getAliveState() {
         return aliveState;
     }
 
-    public Point getCoordinates() {
-        return coordinates;
+    public void setAliveState(Boolean aliveState) {
+        this.aliveState = aliveState;
     }
 
     @Override
     public String toString() {
-        return "Actor{" + "name=" + name + ", aliveState=" + aliveState + ", coordinates=" + coordinates + '}';
+        return "Actor{" + "name=" + name + ", aliveState=" + aliveState + '}';
+    }
+    
+    
+
+    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 23 * hash + Objects.hashCode(this.name);
+        hash = 23 * hash + Objects.hashCode(this.aliveState);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Actor other = (Actor) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.aliveState, other.aliveState)) {
+            return false;
+        }
+        
+        return true;
     }
     
     
    
-    Actor(String name, Boolean aliveState, Point coordinates){
+    Actor(String name, Boolean aliveState){
         this.name = name;
         this.aliveState = aliveState;
-        this.coordinates = coordinates;
+       
         
 }
+
+   
     
 }

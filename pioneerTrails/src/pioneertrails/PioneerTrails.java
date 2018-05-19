@@ -15,6 +15,8 @@ import java.awt.Point;
 
 
 public class PioneerTrails {
+
+    private static Object actorOne;
     
 public static void TeamTest(){
         Player playerOne = new Player();
@@ -28,19 +30,27 @@ public static void TeamTest(){
         String playerOneName = playerOne.getName();
         Boolean playerOneAliveState = playerOne.getAliveState();
         
-        String actorOneName = Actor.Dad.getName();
-        Boolean actorOneAliveState = Actor.Dad.getAliveState();
-        Point actorOneCoordinates = Actor.Dad.getCoordinates();
+        Actor actorOne = new Actor();
+        actorOne.setName("Child3");
+        actorOne.setAliveState(true);
         
+        
+        String actorOneName = actorOne.getName();
+        Boolean actorOneAliveState = actorOne.getAliveState();
+       
         Integer gameOneTime = gameOne.getTime();
         Integer gameOneNumPeeps = gameOne.getNumPeeps();
         
-        System.out.println("Player: " + playerOneName);
-        System.out.println(playerOneName + " is alive." + playerOneAliveState);
-        System.out.println("Actor name: " + actorOneName);
-        System.out.println(actorOneName + " is alive." + actorOneAliveState);
-        System.out.println("Game time: " + gameOneTime + " minutes");
-        System.out.println("How many people are along for the ride? " + gameOneNumPeeps);
+        //System.out.println("Player: " + playerOneName);
+        //System.out.println(playerOneName + " is alive." + playerOneAliveState);
+        //System.out.println("Actor name: " + actorOneName);
+        //System.out.println(actorOneName + " is alive." + actorOneAliveState);
+        //System.out.println("Game time: " + gameOneTime + " minutes");
+        //System.out.println("How many people are along for the ride? " + gameOneNumPeeps);
+        System.out.println(gameOne.toString());
+        System.out.println(playerOne.toString());
+        System.out.println(actorOne.toString());
+        //System.out.println("Actor name: " + actorOneName + " & " + actorOneName " is alive: " + actorOneAliveState);
         
 
 }
@@ -65,13 +75,14 @@ public static void IndividualTestBonnie(){
     Integer resourceOneQuantity = resourceOne.getQuantity();
     Boolean resourceOneBroken = resourceOne.getBroken();
     
-    System.out.println("Wagon is driveable. " + wagonOneDriveable);
-    System.out.println("Wagon can carry " + wagonOneCapacity + " pounds.");
-    System.out.println("Our resource is: " + resourceOneName);
-    System.out.println("We have " + resourceOneQuantity + " " + resourceOneName);
-    System.out.println("Our " + resourceOneName + " weighs " + resourceOneWeight + " pounds.");
-    System.out.println("Our " + resourceOneName + " is broken: " + resourceOneBroken);
-    
+    //System.out.println("Wagon is driveable. " + wagonOneDriveable);
+    //System.out.println("Wagon can carry " + wagonOneCapacity + " pounds.");
+    //System.out.println("Our resource is: " + resourceOneName);
+    //System.out.println("We have " + resourceOneQuantity + " " + resourceOneName);
+    //System.out.println("Our " + resourceOneName + " weighs " + resourceOneWeight + " pounds.");
+    //System.out.println("Our " + resourceOneName + " is broken: " + resourceOneBroken);
+    System.out.println(wagonOne.toString());
+    System.out.println(resourceOne.toString());
     
     
             
@@ -81,7 +92,7 @@ public static void IndividualTestBonnie(){
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //TeamTest();
+        TeamTest();
         IndividualTestBonnie();
     }
     
