@@ -7,8 +7,11 @@ package pioneertrails;
 
 import byui.cit260.pioneerTrails.model.Actor;
 import byui.cit260.pioneerTrails.model.Game;
+import byui.cit260.pioneerTrails.model.Location;
+import byui.cit260.pioneerTrails.model.Map;
 import byui.cit260.pioneerTrails.model.Player;
 import byui.cit260.pioneerTrails.model.Resource;
+import byui.cit260.pioneerTrails.model.Scene;
 import byui.cit260.pioneerTrails.model.Wagon;
 import java.awt.Point;
 
@@ -87,6 +90,64 @@ public static void IndividualTestBonnie(){
     
             
         }
+
+public static void IndividualTestTyler(){
+    Map mapOne = new Map();
+    mapOne.setDescription("Game Map");
+    mapOne.setCurrentRow(1);
+    mapOne.setCurrentCol(4);
+    mapOne.setTotalRows(6);
+    mapOne.setTotalColumns(6);
+    
+    Location locationOne = new Location();
+    locationOne.setRow(3);
+    locationOne.setColumn(6);
+    locationOne.setVisited(true);
+    locationOne.setStopsRemaining(12);
+    
+    Scene sceneOne = new Scene();
+    sceneOne.setName("Green River");
+    sceneOne.setDescription("a quaint little town.");
+    sceneOne.setSymbol("<<");
+    sceneOne.setDifficulty(3);
+    sceneOne.setHindrance(true);
+    
+    
+    String mapOneDescription = mapOne.getDescription();
+    Integer mapOneCurrentRow = mapOne.getCurrentRow();
+    Integer mapOneCurrentCol = mapOne.getCurrentCol();
+    Integer mapOneTotalRows = mapOne.getTotalRows();
+    Integer mapOneTotalColumns = mapOne.getTotalColumns();
+    
+    Integer locationOneRow = locationOne.getRow();
+    Integer locationOneColumn = locationOne.getColumn();
+    Boolean locationOneVisited = locationOne.getVisited();
+    Integer locationOneStopsRemaining = locationOne.getStopsRemaining();
+    
+    String sceneOneName = sceneOne.getName();
+    String sceneOneDescription = sceneOne.getDescription();
+    String sceneOneSymbol = sceneOne.getSymbol();
+    Integer sceneOneDifficulty = sceneOne.getDifficulty();
+    Boolean sceneOneHindrance = sceneOne.getHindrance();
+    
+    System.out.println("Welcome to the" + mapOneDescription + ".");
+    System.out.println("You are located at row" + mapOneCurrentRow + " and column" + mapOneCurrentCol + ".");
+    System.out.println("There are " + mapOneTotalRows + " rows and " + mapOneTotalColumns + " columns.");
+    System.out.println("This location is on row" + locationOneRow + ".");
+    System.out.println("This location is on column" + locationOneColumn + ".");
+    System.out.println("You have been here before: " + locationOneVisited + ".");
+    System.out.println("You have" + locationOneStopsRemaining + " stops remaining.");
+    System.out.println("Welcome to " + sceneOneName + "," + sceneOneDescription + ".");
+    System.out.println("The symbol for this location is " + sceneOneSymbol + ".");
+    System.out.println("This location has a difficulty rating of " + sceneOneDifficulty + ".");
+    System.out.println("You will be hindered in your journey: " + sceneOneHindrance + ".");
+    System.out.println(mapOne.toString());
+    System.out.println(locationOne.toString());
+    System.out.println(sceneOne.toString());
+    
+    
+    
+}
     
     /**
      * @param args the command line arguments
