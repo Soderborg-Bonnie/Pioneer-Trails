@@ -130,17 +130,17 @@ public static void IndividualTestTyler(){
     Integer sceneOneDifficulty = sceneOne.getDifficulty();
     Boolean sceneOneHindrance = sceneOne.getHindrance();
     
-    System.out.println("Welcome to the" + mapOneDescription + ".");
-    System.out.println("You are located at row " + mapOneCurrentRow + " and column " + mapOneCurrentCol + ".");
-    System.out.println("There are " + mapOneTotalRows + " rows and " + mapOneTotalColumns + " columns.");
-    System.out.println("This location is on row " + locationOneRow + ".");
-    System.out.println("This location is on column " + locationOneColumn + ".");
-    System.out.println("You have been here before: " + locationOneVisited + ".");
-    System.out.println("You have " + locationOneStopsRemaining + " stops remaining.");
-    System.out.println("Welcome to " + sceneOneName + "," + sceneOneDescription + ".");
-    System.out.println("The symbol for this location is " + sceneOneSymbol + ".");
-    System.out.println("This location has a difficulty rating of " + sceneOneDifficulty + ".");
-    System.out.println("You will be hindered in your journey: " + sceneOneHindrance + ".");
+    //System.out.println("Welcome to the" + mapOneDescription + ".");
+    //System.out.println("You are located at row " + mapOneCurrentRow + " and column " + mapOneCurrentCol + ".");
+    //System.out.println("There are " + mapOneTotalRows + " rows and " + mapOneTotalColumns + " columns.");
+    //System.out.println("This location is on row " + locationOneRow + ".");
+    //System.out.println("This location is on column " + locationOneColumn + ".");
+    //System.out.println("You have been here before: " + locationOneVisited + ".");
+    //System.out.println("You have " + locationOneStopsRemaining + " stops remaining.");
+    //System.out.println("Welcome to " + sceneOneName + "," + sceneOneDescription + ".");
+    //System.out.println("The symbol for this location is " + sceneOneSymbol + ".");
+    //System.out.println("This location has a difficulty rating of " + sceneOneDifficulty + ".");
+    //System.out.println("You will be hindered in your journey: " + sceneOneHindrance + ".");
     System.out.println(mapOne.toString());
     System.out.println(locationOne.toString());
     System.out.println(sceneOne.toString());
