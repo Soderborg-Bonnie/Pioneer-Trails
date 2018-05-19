@@ -20,6 +20,17 @@ public class Scene implements Serializable {
     private Integer difficulty;
     private Boolean hindrance;
     private ArrayList<Location> locations = new ArrayList<Location>();
+    private Resource resource;
+
+    public Resource getResource() {
+        return resource;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
+    }
+    
+    
 
     public Scene() {
     }

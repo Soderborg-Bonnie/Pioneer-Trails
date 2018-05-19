@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.model;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,6 +17,19 @@ public class Wagon implements Serializable{
     private Boolean driveable;
     private Integer capacity;
     private Game game;
+    private ArrayList<Resource> resources = new ArrayList<Resource>();
+
+    public ArrayList<Resource> getResources() {
+        return resources;
+    }
+
+    public void setResources(ArrayList<Resource> resources) {
+        this.resources = resources;
+    }
+    
+    
+    
+    
 
     public Wagon() {
     }

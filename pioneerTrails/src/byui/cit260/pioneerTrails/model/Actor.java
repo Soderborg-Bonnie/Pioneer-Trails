@@ -12,7 +12,7 @@ import java.awt.Point;
  *
  * @author Bonnie
  */
-public enum Actor {
+public enum Actor implements Serializable{
     Dad("Dad", true, new Point(1,1)),
     Mom("Mom", true, new Point(0,1)),
     Child1("Child1", true, new Point(1,2)),

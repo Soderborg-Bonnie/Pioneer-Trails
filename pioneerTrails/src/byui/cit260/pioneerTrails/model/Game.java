@@ -20,6 +20,22 @@ public class Game implements Serializable{
     private Wagon wagon;
     private ArrayList<Actor> actors = new ArrayList<Actor>();
     private Map map;
+    private ArrayList<Resource> resources = new ArrayList<Resource>();
+
+    public ArrayList<Resource> getResources() {
+        return resources;
+    }
+
+    public void setResources(ArrayList<Resource> resources) {
+        this.resources = resources;
+    }
+    
+    
+
+
+    
+      
+    
 
     public Game() {
     }
@@ -39,7 +55,7 @@ public class Game implements Serializable{
     }
     
     public void setActor(ArrayList<Actor> actors){
-this.actors = actors;
+        this.actors = actors;
 
     }
     
