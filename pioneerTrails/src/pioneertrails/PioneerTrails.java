@@ -152,6 +152,24 @@ public static void IndividualTestTyler(){
 }
 
 public static void IndividualTestTamlyn(){
+    
+  QuestionScene questionSceneOne = new QuestionScene();
+  questionSceneOne.setQuestionText("Name of this tree?");
+  questionSceneOne.setAnswer1("Pine");
+  questionSceneOne.setAnswer2("Fir");
+  questionSceneOne.setAnswer3("Aspen");
+  questionSceneOne.setAnswer4("Magnolia");
+  questionSceneOne.setCorrectAnswer(2);
+    
+ String questionSceneOneQuestionText = questionSceneOne.getQuestionText();
+ String questionSceneOneAnswer1 = questionSceneOne.getAnswer1();
+ String questionSceneOneAnswer2 = questionSceneOne.getAnswer2();
+ String questionSceneOneAnswer3 = questionSceneOne.getAnswer3();
+ String questionSceneOneAnswer4 = questionSceneOne.getAnswer4();
+ int questionSceneOneCorrectAnswer = questionSceneOne.getCorrectAnswer();
+   
+ System.out.println(questionSceneOne.toString());
+   
  System.out.println(Illness.Fever.getType());
  System.out.println(Illness.Fever.getTreatment());
  System.out.println(Illness.Fever.getMortalityRate());
