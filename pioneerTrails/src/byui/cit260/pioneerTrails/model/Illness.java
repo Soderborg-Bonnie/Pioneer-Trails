@@ -6,10 +6,10 @@ package byui.cit260.pioneerTrails.model;
  * @author Tamlyn Laurence
  */
 public enum Illness {
-    Fever("Fever", "Your fever of 106 degrees is caused by a bacterial infection. Rest. Drink plenty of water. Eat mild bland foods.", 2);
-    Hypothermia("Hypothermia", "Hypothermia is causing shivering and mental confusion. Remove wet clothing. Wrap in blankets. Try to shiver.  Drink warm drinks.", 2);
-    Snake Bite("Snake Bite", "You have been bitten by a Rattlesnake. Remove tight clothing. Be still and rest.  Ask for a blessing.", 8);
-    Broken Bone("Broken Bone", "You have suffered a broken bone. Remove tight clothing. Splint the fracture.  Keep elevated. Eat Horsetail for silica which in calcium absorbtion.", 1);    
+    Fever("Fever", "Your fever of 106 degrees is caused by a bacterial infection. Rest. Drink plenty of water. Eat mild bland foods.", 2),
+    Hypothermia("Hypothermia", "Hypothermia is causing shivering and mental confusion. Remove wet clothing. Wrap in blankets. Try to shiver.  Drink warm drinks.", 2),
+    Snake_Bite("Snake Bite", "You have been bitten by a Rattlesnake. Remove tight clothing. Be still and rest.  Ask for a blessing.", 8),
+    Broken_Bone("Broken Bone", "You have suffered a broken bone. Remove tight clothing. Splint the fracture.  Keep elevated. Eat Horsetail for silica which in calcium absorbtion.", 1);   
     
     private String type;
     private String treatment;

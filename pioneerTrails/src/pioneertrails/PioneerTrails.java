@@ -13,6 +13,8 @@ import byui.cit260.pioneerTrails.model.Player;
 import byui.cit260.pioneerTrails.model.Resource;
 import byui.cit260.pioneerTrails.model.Scene;
 import byui.cit260.pioneerTrails.model.Wagon;
+import byui.cit260.pioneerTrails.model.Illness;
+import byui.cit260.pioneerTrails.model.QuestionScene;
 import java.awt.Point;
 
 
@@ -148,6 +150,24 @@ public static void IndividualTestTyler(){
     
     
 }
+
+public static void IndividualTestTamlyn(){
+ System.out.println(Illness.Fever.getType());
+ System.out.println(Illness.Fever.getTreatment());
+ System.out.println(Illness.Fever.getMortalityRate());
+ 
+ System.out.println(Illness.Hypothermia.getType());
+ System.out.println(Illness.Hypothermia.getTreatment());
+ System.out.println(Illness.Hypothermia.getMortalityRate());
+ 
+ System.out.println(Illness.Snake_Bite.getType());
+ System.out.println(Illness.Snake_Bite.getTreatment());
+ System.out.println(Illness.Snake_Bite.getMortalityRate());
+ 
+ System.out.println(Illness.Broken_Bone.getType());
+ System.out.println(Illness.Broken_Bone.getTreatment());
+ System.out.println(Illness.Broken_Bone.getMortalityRate());
+}
     
     /**
      * @param args the command line arguments
@@ -156,6 +176,7 @@ public static void IndividualTestTyler(){
         TeamTest();
         IndividualTestBonnie();
         IndividualTestTyler();
+        IndividualTestTamlyn();
     }
     
 }
