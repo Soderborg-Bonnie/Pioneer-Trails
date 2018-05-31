@@ -25,29 +25,26 @@ IF numPeople <0 or >5
 
 calcWaterConsumption(availableWater, numPeople, time, waterRation): double 
 waterResource = availableWater - (numPeople*time*waterRation) 
-IF waterResource <0
-	RETURN -999
-Update waterResource & continue game
-RETURN  waterResource
-END */
+IF waterResource */
   
  public static double calcWaterConsumption(double availableWater, double numPeople, double time, double waterRation){ 
-if (availableWater < 0 || > 101) {
+if (availableWater < 0 || availableWater > 101) {
     return -1;
 } 
-if (waterRation < 1 || > 1) {
+if (waterRation < 1 || waterRation > 1) {
         return  -2;
 }
-if (time < 1 || > 20) {
+if (time < 1 || time > 20) {
         return -3;
 }
-if (numPeople < 0 || > 5) {
+if (numPeople < 0 || numPeople > 5) {
        return -4;
 }
        
 double waterResource = availableWater - (numPeople*time*waterRation); {
-if (waterResource <= 0) {
+if (waterResource <= 0){
 	return -999;
+}
  else
         return  waterResource;
 }

@@ -23,15 +23,31 @@ public class ResourceControlTest {
     @Test
     public void testCalcWaterConsumption() {
         System.out.println("calcWaterConsumption");
-        double availableWater = 0.0;
-        double numPeople = 0.0;
-        double time = 0.0;
-        double waterRation = 0.0;
-        double expResult = 0.0;
-        double result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        
+        //Test case 1
+        
+        System.out.println("\tTest 1");
+        double availableWater = 30.0;
+        double numPeople = 5.0;
+        double time = 3.0;
+        double waterRation = 1.0;
+        double waterResource = availableWater - (numPeople*time*waterRation);
+        
+        //Create instance of ResourceControl class
+        ResourceControl instance = new ResourceControl();
+        
+        //expected output return value
+        double expResult = 15.0;
+        
+        System.out.println("calcWaterConsumption(" + "availableWater" + ", " + "numPeople" + ", " + "time" + ", " + "waterRation" + ")" );
+         
+         //call function to run test
+        double result = instance.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        
+        System.out.println(result);
+        //compare expected and actual return values
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
