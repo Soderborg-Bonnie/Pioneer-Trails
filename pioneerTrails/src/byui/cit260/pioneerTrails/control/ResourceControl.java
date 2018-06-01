@@ -28,7 +28,7 @@ waterResource = availableWater - (numPeople*time*waterRation)
 IF waterResource */
   
  public static double calcWaterConsumption(double availableWater, double numPeople, double time, double waterRation){ 
-if (availableWater < 0 || availableWater > 101) {
+if (availableWater < 0 || availableWater > 100) {
     return -1;
 } 
 if (waterRation < 1 || waterRation > 1) {

@@ -160,7 +160,7 @@ public class ResourceControlTest {
         
         
         //expected output return value
-         expResult = -20.0;
+         expResult = -999.0;
         
         System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")" );
          
@@ -181,7 +181,7 @@ public class ResourceControlTest {
         
         
         //expected output return value
-         expResult = 0.0;
+         expResult = -999.0;
         
         System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")" );
          
