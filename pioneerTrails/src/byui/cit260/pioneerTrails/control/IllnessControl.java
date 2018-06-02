@@ -13,7 +13,7 @@ public class IllnessControl {
    public static int calcIllnessOutcome(int choice, int mortalityRate, int chance){
        if (choice < 1 || choice > 2){
            return -1;
-           }
+       }
        if (mortalityRate < 1 || mortalityRate > 9){
            return -2;
        }
