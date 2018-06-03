@@ -86,9 +86,9 @@ END**/
     public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled){
             if (resourceItemWeight <0 || resourceItemWeight > 400){
                 return -1;}
-            if (quantityResourceItem <=0 || quantityResourceItem >=5){
+            if (quantityResourceItem <=0 || quantityResourceItem >5){
                 return -2;}
-            if (percentSpoiled <= 0 || percentSpoiled >= 100){
+            if (percentSpoiled < 0 || percentSpoiled > 1){
                 return -3;}
             double totalWeight = (resourceItemWeight * quantityResourceItem)-(resourceItemWeight*quantityResourceItem*percentSpoiled);{
             if (totalWeight > 1500){
