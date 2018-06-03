@@ -66,5 +66,37 @@ END **/
         return calcWagonWheelDegradation;
     }
 }
+    /**calcFoodWeight(resourceItem, resourceItemWeight, quantityResourceItem, percentSpoiled): double
+BEGIN
+settotalWeight = 0;
+	IF (resourceItemWeight < 0 or resourceWeight > 400)
+		RETURN -1
+	IF (quantityResourceItem <= 0 or quantityResourceItem >= 5)
+		RETURN -2
+	IF (percentSpoiled <= 0 or percentSpoiled >= 100)
+		RETURN -3
+	
+totalWeight = (resourceItemWeight * quantityResourceItem) – (resourceItemWeight * quantityResourceItem * percentSpoiled)
+IF (totalWeight > 1500)
+	RETURN -4
+//update totalWeight & continue game
+	RETURN double totalWeight
+END**/
+
+    public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled){
+            if (resourceItemWeight <0 || resourceItemWeight > 400){
+                return -1;}
+            if (quantityResourceItem <=0 || quantityResourceItem >=5){
+                return -2;}
+            if (percentSpoiled <= 0 || percentSpoiled >= 100){
+                return -3;}
+            double totalWeight = (resourceItemWeight * quantityResourceItem)-(resourceItemWeight*quantityResourceItem*percentSpoiled);{
+            if (totalWeight > 1500){
+                return -4;}
+            //update totalWeight & continue game
+                return totalWeight;
+            }
+    }
 }
+
 

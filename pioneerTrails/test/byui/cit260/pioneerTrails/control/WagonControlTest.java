@@ -178,5 +178,31 @@ public class WagonControlTest {
         assertEquals(expResult, result, 0.0);
        
     }
+
+    /**
+     * Test of calcFoodWeight method, of class WagonControl.
+     */
+    @Test
+    public void testCalcFoodWeight() {
+        System.out.println("calcFoodWeight");
+        
+        //Test Case 1
+        System.out.println("\tTest 1");
+        double resourceItemWeight = 100.0;
+        double quantityResourceItem = 5.0;
+        double percentSpoiled = 10.0;
+        
+        //Expected output return value
+        double expResult = -2.0;
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " + quantityResourceItem + ", " + percentSpoiled + ")" );
+        
+        //Call function to test result
+        double result = WagonControl.calcFoodWeight(resourceItemWeight, quantityResourceItem, percentSpoiled);
+        System.out.println(result);
+        
+        //Compare expected and actual values
+        assertEquals(expResult, result, 0.0);
+        
+    }
     
 }
