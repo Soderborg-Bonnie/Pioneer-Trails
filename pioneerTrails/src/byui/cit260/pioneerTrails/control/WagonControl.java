@@ -25,7 +25,7 @@ IF terrainDifficulty = “Medium”
 	RETURN 10
 IF terrainDifficulty = “Difficult” 
 	RETURN 20
-IF terrainDifficulty != (“Normal” || “Medium” || “Difficult”)
+IF terrainDifficulty != (“Normal” || “Medium” || “Difficult”)    
 	RETURN -999
  calcWagonWheelDegradation = wagonWheelDurability – (normalDegradation + terrainDifficulty) 
 IF calcWagonWheelDegradation <1 || >100
@@ -35,37 +35,36 @@ calcWagonWheelDegradation = wagonWheelDurability
 RETURN wagonWheelDurability
 END **/
     
-    public static double calcWagonWheelDegradation(double wagonWheelDurability, double normalDegradation, string terrainDifficulty) {
-     if (wagonWheelDurability < 1 || wagonWheelDurability >100) {
-	return -1;
-}
-    if (normalDegradation != 10) {
-	return -2;
-}
-    if (terrainDifficulty = "Normal") { 
-	return 0;
-}
-    if (terrainDifficulty = "Medium") {
-	return 10;
-    }        
-    if (terrainDifficulty = "Difficult") { 
-	return 20;
-    }        
-    if (terrainDifficulty != "Normal" || terrainDifficulty != "Medium" || terrainDifficulty != "Difficult") {
-	return -999;
-    }
+    public static double calcWagonWheelDegradation(double wagonWheelDurability, double normalDegradation, String terrainDifficulty) {
+        double terrainValue = 0;
+
+        if (wagonWheelDurability < 1 || wagonWheelDurability >100) {
+           return -1;
+       }
+        if (normalDegradation != 10) {
+           return -2;
+       }
+       switch (terrainDifficulty) {
+           case "Normal": terrainValue = 0;
+               break;
+           case "Medium": terrainValue = 10;
+               break;
+           case "Difficult": terrainValue = 20;
+               break;
+       }
+
+       if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium" && terrainDifficulty != "Difficult") {
+           return -999;
+       }
    
 
- double calcWagonWheelDegradation = wagonWheelDurability - (normalDegradation + terrainDifficulty); {
-    if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
-	return -4;
-}        
-    if (calcWagonWheelDegradation >1 && calcWagonWheelDegradation <100) {
-        calcWagonWheelDegradation = wagonWheelDurability;
+        double calcWagonWheelDegradation = wagonWheelDurability - (normalDegradation + terrainValue); {
+        if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
+            return -4;
+        }        
     
-}
-    return wagonWheelDurability;
-}
+        return calcWagonWheelDegradation;
+    }
 }
 }
 
