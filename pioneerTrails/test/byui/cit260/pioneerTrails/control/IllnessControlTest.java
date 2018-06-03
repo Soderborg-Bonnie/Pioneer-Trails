@@ -54,8 +54,7 @@ public class IllnessControlTest {
         System.out.println(result);
         assertEquals(expResult, result);
         
-        
-        
+                
                      //Test Case 3
         System.out.println("\tTest 3");
         choice = -1;
@@ -66,8 +65,7 @@ public class IllnessControlTest {
         System.out.println(result);
         assertEquals(expResult, result); 
         
-        
-        
+                
                 //Test Case 4
         System.out.println("\tTest 4");
         choice = 1;
@@ -110,6 +108,7 @@ public class IllnessControlTest {
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
         assertEquals(expResult, result); 
+        
         
                 //Test Case 8
         System.out.println("\tTest 8");
