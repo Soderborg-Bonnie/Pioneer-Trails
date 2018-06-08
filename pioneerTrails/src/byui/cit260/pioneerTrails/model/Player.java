@@ -13,12 +13,13 @@ import java.util.Objects;
  * @author Bonnie
  */
 public class Player implements Serializable {
+
     //class instance variables
     private String name;
     private Boolean aliveState;
-    private ArrayList<Game>games = new ArrayList<Game>();
+    private ArrayList<Game> games = new ArrayList<Game>();
     private Actor actor;
-            
+
     public Player() {
     }
 
@@ -29,17 +30,15 @@ public class Player implements Serializable {
     public void setActor(Actor actor) {
         this.actor = actor;
     }
-    
-    
-    
-    public ArrayList<Game> getGames(){
+
+    public ArrayList<Game> getGames() {
         return games;
     }
-    
-    public void setGames(ArrayList<Game>games){
+
+    public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -68,8 +67,6 @@ public class Player implements Serializable {
     public String toString() {
         return "Player{" + "name=" + name + ", aliveState=" + aliveState + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -91,9 +88,5 @@ public class Player implements Serializable {
         }
         return true;
     }
-    
-    
-    
-    
-    
+
 }

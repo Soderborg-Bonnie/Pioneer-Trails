@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author Bonnie
  */
-public class Wagon implements Serializable{
+public class Wagon implements Serializable {
+
     //class instance variables
     private Boolean driveable;
     private Integer capacity;
@@ -26,10 +27,6 @@ public class Wagon implements Serializable{
     public void setResources(ArrayList<Resource> resources) {
         this.resources = resources;
     }
-    
-    
-    
-    
 
     public Wagon() {
     }
@@ -41,8 +38,6 @@ public class Wagon implements Serializable{
     public void setGame(Game game) {
         this.game = game;
     }
-    
-    
 
     public Boolean getDriveable() {
         return driveable;
@@ -72,8 +67,6 @@ public class Wagon implements Serializable{
     public String toString() {
         return "Wagon{" + "driveable=" + driveable + ", capacity=" + capacity + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -95,9 +88,5 @@ public class Wagon implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }
-
-

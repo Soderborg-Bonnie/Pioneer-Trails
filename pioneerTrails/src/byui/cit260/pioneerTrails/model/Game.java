@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author Bonnie
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
+
     //class instance variables
     private Integer time;
     private Integer numPeeps;
@@ -29,13 +30,6 @@ public class Game implements Serializable{
     public void setResources(ArrayList<Resource> resources) {
         this.resources = resources;
     }
-    
-    
-
-
-    
-      
-    
 
     public Game() {
     }
@@ -47,18 +41,16 @@ public class Game implements Serializable{
     public void setMap(Map map) {
         this.map = map;
     }
-    
-    
 
-    public ArrayList<Actor>getActors(){
+    public ArrayList<Actor> getActors() {
         return actors;
     }
-    
-    public void setActor(ArrayList<Actor> actors){
+
+    public void setActor(ArrayList<Actor> actors) {
         this.actors = actors;
 
     }
-    
+
     public Wagon getWagon() {
         return wagon;
     }
@@ -66,8 +58,7 @@ public class Game implements Serializable{
     public void setWagon(Wagon wagon) {
         this.wagon = wagon;
     }
-    
-    
+
     public Player getPlayer() {
         return player;
     }
@@ -75,8 +66,6 @@ public class Game implements Serializable{
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
-    
 
     public int getTime() {
         return time;
@@ -106,8 +95,6 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "time=" + time + ", numPeeps=" + numPeeps + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -129,10 +116,5 @@ public class Game implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
-    
+
 }

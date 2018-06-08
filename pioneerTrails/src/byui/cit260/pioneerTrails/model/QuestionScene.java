@@ -1,4 +1,3 @@
-
 package byui.cit260.pioneerTrails.model;
 
 import java.util.Objects;
@@ -7,7 +6,8 @@ import java.util.Objects;
  *
  * @author Tamlyn Laurence
  */
-public class QuestionScene implements Serializable{
+public class QuestionScene implements Serializable {
+
     private String questionText;
     private String answer1;
     private String answer2;
@@ -17,8 +17,7 @@ public class QuestionScene implements Serializable{
 
     public QuestionScene() {
     }
-    
-    
+
     public String getQuestionText() {
         return questionText;
     }
@@ -71,8 +70,8 @@ public class QuestionScene implements Serializable{
     public String toString() {
         return "QuestionScene{" + "questionText=" + questionText + ", answer1=" + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 + ", answer4=" + answer4 + ", correctAnswer=" + correctAnswer + '}';
     }
-    
-        @Override
+
+    @Override
     public int hashCode() {
         int hash = 3;
         hash = 53 * hash + Objects.hashCode(this.questionText);
@@ -83,7 +82,7 @@ public class QuestionScene implements Serializable{
         hash = 53 * hash + this.correctAnswer;
         return hash;
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -116,7 +115,5 @@ public class QuestionScene implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

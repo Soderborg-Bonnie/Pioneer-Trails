@@ -8,18 +8,17 @@ package byui.cit260.pioneerTrails.model;
 import java.awt.Point;
 import java.util.Objects;
 
-
 /**
  *
  * @author Bonnie
  */
-public class Actor implements Serializable{
+public class Actor implements Serializable {
     //Dad("Dad", true, new Point(1,1)),
     //Mom("Mom", true, new Point(0,1)),
     //Child1("Child1", true, new Point(1,2)),
     //Child2("Child2", true, new Point(2,3)),
     //Child3("Child3", true, new Point(3,4));
-    
+
     //class instance variables
     private String name;
     private Boolean aliveState;
@@ -28,9 +27,7 @@ public class Actor implements Serializable{
 
     public Actor() {
     }
-    
-    
- 
+
     public Game getGame() {
         return game;
     }
@@ -67,10 +64,7 @@ public class Actor implements Serializable{
     public String toString() {
         return "Actor{" + "name=" + name + ", aliveState=" + aliveState + '}';
     }
-    
-    
 
-    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -97,19 +91,14 @@ public class Actor implements Serializable{
         if (!Objects.equals(this.aliveState, other.aliveState)) {
             return false;
         }
-        
+
         return true;
     }
-    
-    
-   
-    Actor(String name, Boolean aliveState){
+
+    Actor(String name, Boolean aliveState) {
         this.name = name;
         this.aliveState = aliveState;
-       
-        
-}
 
-   
-    
+    }
+
 }

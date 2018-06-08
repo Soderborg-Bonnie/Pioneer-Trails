@@ -1,75 +1,71 @@
-
 package byui.cit260.pioneerTrails.view;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
  *
  * @author Tamlyn Laurence
  */
-
-
 public class StartProgramView {
+
     public StartProgramView() {
-        
-    
-}
-        public void displayStartProgramView() {
-            //   endOfView = false
-            //   DO
-            //      inputs = getInputs()
-            //      IF no inputs were entered OR the first input is Q
-            //              RETURN
-            //      ENDIF
-            //              endOFVIEW = doAction(inputs)
-            //   WHILE endOfView != true
-            
-            boolean endOfView = false;
-            
-            do{
-                String[] inputs = this.getInputs();
-                //inputs[0].ToUpperCase();
-                if (inputs.length < 1 || inputs[0] == "Q"){
+
+    }
+
+    public void display() {
+        //   endOfView = false
+        //   DO
+        //      inputs = getInputs()
+        //      IF no inputs were entered OR the first input is Q
+        //              RETURN
+        //      ENDIF
+        //              endOFVIEW = doAction(inputs)
+        //   WHILE endOfView != true
+        System.out.println("display banner");
+
+        boolean endOfView = false;
+
+        do {
+            String[] inputs = this.getInputs();
+           
+            if (inputs[0].equalsIgnoreCase("Q")) {
                 return;
-                
-            }else
+            } else {
                 endOfView = doAction(inputs);
-            }while(endOfView != true);
-                   
+            }
+        } while (endOfView != true);
+
     }
 
     private String[] getInputs() {
-        
-        System.out.println("Would you like to start a new game? Y/N");
-        Scanner inputFromUser = new Scanner(System.in);
-        while (inputFromUser == null){
-           System.out.println("Please input something valid");
+
+        Scanner scanner = new Scanner(System.in);
+        String[] inputs = new String[1];
+        Boolean valid = false;
+        while (!valid) {
+            System.out.println("Input name, please: ");
+            inputs[0] = scanner.nextLine();
+            inputs[0] = inputs[0].trim();
+            if (inputs[0].length() < 1) {
+                System.out.println("try again");
+                continue;
+            }
+            valid = true;
+
         }
-        if (inputFromUser =="y") || (inputFromUser =="Y"){
-            System.out.println("description/banner");
-    
+        return inputs;
     }
-        elseif (inputFromUser == "n") || (inputFromUser == "N") || (inputFromUser == "q") || (inputFromUser == "Q")
-                return (quit?)
-                        
-                        else 
-                               System.out.println("Please input something valid"); 
-                                             
-        
-        //char[] arrayVar = new char[0];
-        
-        
-        
-        
-        
-        
-        
-    }
-   //{
-   //    System.out.println("*** getInputs() has been called ***");
-        
-   //   String[] inputs = new String[1];
-   //     inputs[0] = "testInput";
+
+    //48 use toUpperCase
+    //49 create banner
+    //53 quit?
+    //char[] arrayVar = new char[0];
+    //{
+    //    System.out.println("*** getInputs() has been called ***");
+    //   String[] inputs = new String[1];
+    //     inputs[0] = "testInput";
 //         String[] inputs = new String[1];
 //      
 //        return inputs;
@@ -98,24 +94,17 @@ public class StartProgramView {
 //ENDWHILE
 //
 //RETURN inputs 
-   
-   
-
-
     private boolean doAction(String[] inputs) {
         System.out.println("***doAction() called***");
         System.out.println("\tinputs = " + inputs[0]);
-        
+
         return true;
-        
+
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public void display(){
-        String[] testCode = getInputs();
-        doAction(testCode);
-    }
-    
-    }
-    
 
+//    public void display(){
+//        String[] testCode = getInputs();
+//        doAction(testCode);
+//    }
+}

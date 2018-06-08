@@ -10,5 +10,5 @@ package byui.cit260.pioneerTrails.model;
  * @author Bonnie
  */
 interface Serializable {
-    
+
 }

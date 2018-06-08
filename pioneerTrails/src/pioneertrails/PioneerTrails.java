@@ -18,8 +18,6 @@ import byui.cit260.pioneerTrails.model.QuestionScene;
 import java.awt.Point;
 import byui.cit260.pioneerTrails.view.StartProgramView;
 
-
-
 public class PioneerTrails {
 
     /*private static Object actorOne;
@@ -192,16 +190,14 @@ public static void IndividualTestTamlyn(){
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-           
+
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
-            // the above 2 lines are from page 9 of Lesson 7 Team
+        // the above 2 lines are from page 9 of Lesson 7 Team
     }
-        /*TeamTest();
+    /*TeamTest();
         IndividualTestBonnie();
         IndividualTestTyler();
         IndividualTestTamlyn();
-        */
-    }
-    
-
+     */
+}

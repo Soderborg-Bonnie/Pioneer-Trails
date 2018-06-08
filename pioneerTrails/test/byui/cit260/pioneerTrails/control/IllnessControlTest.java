@@ -15,14 +15,14 @@ import static org.junit.Assert.*;
  * @author Tamlyn Laurence
  */
 public class IllnessControlTest {
-    
+
     public IllnessControlTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -42,9 +42,8 @@ public class IllnessControlTest {
         int result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
         assertEquals(expResult, result);
-        
-        
-                //Test Case 2
+
+        //Test Case 2
         System.out.println("\tTest 2");
         choice = 2;
         mortalityRate = 6;
@@ -53,9 +52,8 @@ public class IllnessControlTest {
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
         assertEquals(expResult, result);
-        
-                
-                     //Test Case 3
+
+        //Test Case 3
         System.out.println("\tTest 3");
         choice = -1;
         mortalityRate = 2;
@@ -63,10 +61,9 @@ public class IllnessControlTest {
         expResult = -1;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result); 
-        
-                
-                //Test Case 4
+        assertEquals(expResult, result);
+
+        //Test Case 4
         System.out.println("\tTest 4");
         choice = 1;
         mortalityRate = 11;
@@ -74,10 +71,9 @@ public class IllnessControlTest {
         expResult = -2;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result); 
-        
-        
-                //Test Case 5
+        assertEquals(expResult, result);
+
+        //Test Case 5
         System.out.println("\tTest 5");
         choice = 1;
         mortalityRate = 9;
@@ -85,10 +81,9 @@ public class IllnessControlTest {
         expResult = -3;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result); 
-        
-        
-                //Test Case 6
+        assertEquals(expResult, result);
+
+        //Test Case 6
         System.out.println("\tTest 6");
         choice = 1;
         mortalityRate = 1;
@@ -96,10 +91,9 @@ public class IllnessControlTest {
         expResult = 2;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result);  
-        
-        
-                //Test Case 7
+        assertEquals(expResult, result);
+
+        //Test Case 7
         System.out.println("\tTest 6");
         choice = 1;
         mortalityRate = 1;
@@ -107,10 +101,9 @@ public class IllnessControlTest {
         expResult = 10;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result); 
-        
-        
-                //Test Case 8
+        assertEquals(expResult, result);
+
+        //Test Case 8
         System.out.println("\tTest 8");
         choice = 1;
         mortalityRate = 9;
@@ -118,10 +111,9 @@ public class IllnessControlTest {
         expResult = 10;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result); 
-        
+        assertEquals(expResult, result);
 
-                //Test Case 9
+        //Test Case 9
         System.out.println("\tTest 9");
         choice = 1;
         mortalityRate = 9;
@@ -129,10 +121,9 @@ public class IllnessControlTest {
         expResult = -3;
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
-        assertEquals(expResult, result); 
-        
-        
-                //Test Case 10
+        assertEquals(expResult, result);
+
+        //Test Case 10
         System.out.println("\tTest 10");
         choice = 2;
         mortalityRate = 1;
@@ -141,9 +132,8 @@ public class IllnessControlTest {
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
         assertEquals(expResult, result);
-        
-        
-                //Test Case 11
+
+        //Test Case 11
         System.out.println("\tTest 11");
         choice = 2;
         mortalityRate = 1;
@@ -152,9 +142,8 @@ public class IllnessControlTest {
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
         assertEquals(expResult, result);
-        
-        
-                //Test Case 12
+
+        //Test Case 12
         System.out.println("\tTest 12");
         choice = 2;
         mortalityRate = 9;
@@ -163,9 +152,8 @@ public class IllnessControlTest {
         result = IllnessControl.calcIllnessOutcome(choice, mortalityRate, chance);
         System.out.println(result);
         assertEquals(expResult, result);
-        
-        
-                //Test Case 13
+
+        //Test Case 13
         System.out.println("\tTest 13");
         choice = 2;
         mortalityRate = 9;
@@ -175,5 +163,5 @@ public class IllnessControlTest {
         System.out.println(result);
         assertEquals(expResult, result);
     }
-    
+
 }

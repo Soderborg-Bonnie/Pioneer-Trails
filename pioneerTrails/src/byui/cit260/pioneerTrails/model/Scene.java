@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author tharman
  */
 public class Scene implements Serializable {
-    
+
     private String name;
     private String description;
     private String symbol;
@@ -29,13 +29,9 @@ public class Scene implements Serializable {
     public void setResource(Resource resource) {
         this.resource = resource;
     }
-    
-    
 
     public Scene() {
     }
-    
-    
 
     public String getName() {
         return name;
@@ -101,8 +97,6 @@ public class Scene implements Serializable {
     public String toString() {
         return "Scene{" + "name=" + name + ", description=" + description + ", symbol=" + symbol + ", difficulty=" + difficulty + ", hindrance=" + hindrance + ", locations=" + locations + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -136,10 +130,5 @@ public class Scene implements Serializable {
         }
         return true;
     }
-    
-    
-    
-    
-    
-    
+
 }

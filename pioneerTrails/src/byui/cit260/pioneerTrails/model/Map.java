@@ -13,16 +13,15 @@ import java.util.Objects;
  * @author tharman
  */
 public class Map implements Serializable {
-    
+
     //class instance variables
     private String description;
     private Integer currentRow;
     private Integer currentCol;
     private Integer totalRows;
     private Integer totalColumns;
-    private ArrayList<Game>games = new ArrayList<Game>();
+    private ArrayList<Game> games = new ArrayList<Game>();
     private ArrayList<Location> locations = new ArrayList<Location>();
-    
 
     public Map() {
     }
@@ -34,8 +33,6 @@ public class Map implements Serializable {
     public void setLocations(ArrayList<Location> locations) {
         this.locations = locations;
     }
-    
-    
 
     public ArrayList<Game> getGames() {
         return games;
@@ -44,8 +41,6 @@ public class Map implements Serializable {
     public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
-    
-    
 
     public String getDescription() {
         return description;
@@ -102,8 +97,6 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "description=" + description + ", currentRow=" + currentRow + ", currentCol=" + currentCol + ", totalRows=" + totalRows + ", totalColumns=" + totalColumns + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -134,9 +127,5 @@ public class Map implements Serializable {
         }
         return true;
     }
-    
-    
-    
-    
-    
+
 }

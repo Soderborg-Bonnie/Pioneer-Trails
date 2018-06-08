@@ -11,9 +11,10 @@ import java.util.Objects;
  *
  * @author Bonnie
  */
-public class Resource implements Serializable{
+public class Resource implements Serializable {
+
     //class instance variables
-    private String  name;
+    private String name;
     private Integer quantity;
     private Integer weight;
     private Boolean need;
@@ -29,8 +30,6 @@ public class Resource implements Serializable{
     public void setWagon(Wagon wagon) {
         this.wagon = wagon;
     }
-    
-    
 
     public Game getGame() {
         return game;
@@ -39,8 +38,6 @@ public class Resource implements Serializable{
     public void setGame(Game game) {
         this.game = game;
     }
-    
-    
 
     public Scene getScene() {
         return scene;
@@ -49,13 +46,9 @@ public class Resource implements Serializable{
     public void setScene(Scene scene) {
         this.scene = scene;
     }
-    
-    
 
     public Resource() {
     }
-    
-    
 
     public String getName() {
         return name;
@@ -102,7 +95,6 @@ public class Resource implements Serializable{
         return "Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + ", need=" + need + ", broken=" + broken + '}';
     }
 
-        
     @Override
     public int hashCode() {
         int hash = 7;
@@ -143,7 +135,5 @@ public class Resource implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

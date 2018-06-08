@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author tharman
  */
 public class Location implements Serializable {
-    
+
     //class instance variables
     private Integer row;
     private Integer column;
@@ -32,8 +32,6 @@ public class Location implements Serializable {
     public void setScenes(ArrayList<Scene> scenes) {
         this.scenes = scenes;
     }
-    
-    
 
     public Map getMap() {
         return map;
@@ -42,7 +40,6 @@ public class Location implements Serializable {
     public void setMap(Map map) {
         this.map = map;
     }
-    
 
     public Integer getRow() {
         return row;
@@ -80,8 +77,6 @@ public class Location implements Serializable {
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", stopsRemaining=" + stopsRemaining + ", map=" + map + '}';
     }
-    
-    
 
     @Override
     public int hashCode() {
@@ -123,9 +118,5 @@ public class Location implements Serializable {
         }
         return true;
     }
-    
-    
-    
-    
-    
+
 }
