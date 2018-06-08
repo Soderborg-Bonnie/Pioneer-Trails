@@ -1,6 +1,8 @@
 
 package byui.cit260.pioneerTrails.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Tamlyn Laurence
@@ -37,7 +39,27 @@ public class StartProgramView {
     }
 
     private String[] getInputs() {
-        char[] arrayVar = new char[1];
+        
+        System.out.println("Would you like to start a new game? Y/N");
+        Scanner inputFromUser = new Scanner(System.in);
+        while (inputFromUser == null){
+           System.out.println("Please input something valid");
+        }
+        if (inputFromUser =="y") || (inputFromUser =="Y"){
+            System.out.println("description/banner");
+    
+    }
+        elseif (inputFromUser == "n") || (inputFromUser == "N") || (inputFromUser == "q") || (inputFromUser == "Q")
+                return (quit?)
+                        
+                        else 
+                               System.out.println("Please input something valid"); 
+                                             
+        
+        //char[] arrayVar = new char[0];
+        
+        
+        
         
         
         
