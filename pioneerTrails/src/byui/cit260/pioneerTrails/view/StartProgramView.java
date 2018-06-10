@@ -69,7 +69,7 @@ public class StartProgramView {
         String playersName = inputs[0];
         Player player = GameControl.savePlayer(playersName);
         if (player == null) {
-            System.out.println("Couldnot create the player."
+            System.out.println("Could not create the player."
                     + "Enter a different name.");
             return false;
         }
