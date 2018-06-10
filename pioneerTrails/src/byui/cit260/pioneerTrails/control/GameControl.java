@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.control;
 
 import byui.cit260.pioneerTrails.model.Player;
+import pioneertrails.PioneerTrails;
 
 /**
  *
@@ -18,6 +19,7 @@ public class GameControl {
         }
         Player player = new Player();
         player.setName(playersName);
+        PioneerTrails.setPlayer(player);
          return new Player();
     }
     

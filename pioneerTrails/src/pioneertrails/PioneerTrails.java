@@ -19,6 +19,26 @@ import java.awt.Point;
 import byui.cit260.pioneerTrails.view.StartProgramView;
 
 public class PioneerTrails {
+    
+    private static Game currentGame = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        PioneerTrails.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        PioneerTrails.player = player;
+    }
+    private static Player player = null;
+    
 
     /*private static Object actorOne;
     
@@ -193,6 +213,7 @@ public static void IndividualTestTamlyn(){
 
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
+        
         // the above 2 lines are from page 9 of Lesson 7 Team
     }
     /*TeamTest();

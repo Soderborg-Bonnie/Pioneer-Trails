@@ -1,6 +1,7 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.model.Player;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -62,36 +63,24 @@ public class StartProgramView {
     }
 
     private boolean doAction(String[] inputs) {
-////        playersName = get the first value in the inputs array
-//player = savePlayer(playersName)
-//IF player == null
-// display “Could not create the player. “ +
-// “Enter a different name.”
-// RETURN false
-//ENDIF
-//DISPLAY "================================================= "
-// + "Welcome to the game " + playersName
-// + "We hope you have a lot of fun!”
-// + "================================================= "
-//mainMenuView = Create a new MainMenuView object
-//mainMenuView.displayMainMenuView()
-//RETURN true 
+
         //System.out.println("***doAction() called***");
         // System.out.println("\tinputs = " + inputs[0]);
-        Player player = GameControl.savePlayer(inputs[0]);
-//if (player == null)
-//    System.out.println("Couldn't create player. Enter a different name.");
-//return false;
+        String playersName = inputs[0];
+        Player player = GameControl.savePlayer(playersName);
+        if (player == null) {
+            System.out.println("Couldnot create the player."
+                    + "Enter a different name.");
+            return false;
+        }
 
-        System.out.println("Welcome to the game, " + player + "! We hope you have lots of fun!");
+        System.out.println("\n============================================="
+                + "\nWelcome to the game, " + playersName + "!"
+                + "\nWe hope you have lots of fun!"
+                + "\n=============================================");
 
         return true;
-//
-//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-////    public void display(){
-////        String[] testCode = getInputs();
-////        doAction(testCode);
+
     }
+
 }
