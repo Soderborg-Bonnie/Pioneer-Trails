@@ -59,56 +59,35 @@ private String[] getInputs() {
     }
 
     private boolean doAction(String[] inputs) {
-        String menuChoice = inputs[0];
-            switch (menuChoice){
-                case "N":
-
         
-                
-                         
+        String menuItem = inputs[0].toUpperCase();
+            switch (menuItem){
+                case "N": startNewGame();
+                break;
+                case "R": restartGame();
+                break;
+                case "H": getHelp();
+                break;
+                case "Q":return true;
+                default: System.out.println("Invalid selection.");
+        }
+        return false;
 
-        return true;
-//System.out.println("\nYour choice is: " + x
+    
     }
-    }
 
-//IF player == null
-// display “Could not create the player. “ +
-// “Enter a different name.”
-// RETURN false
-//ENDIF
-//DISPLAY "================================================= "
-// + "Welcome to the game " + playersName
-// + "We hope you have a lot of fun!”
-// + "================================================= "
-//mainMenuView = Create a new MainMenuView object
-//mainMenuView.displayMainMenuView()
-//RETURN true 
-        //System.out.println("***doAction() called***");
-        // System.out.println("\tinputs = " + inputs[0]);
-//        String playersName = inputs[0];
-//        Player player = GameControl.savePlayer(playersName);
-//        if (player == null) {
-//            System.out.println("Couldnot create the player."
-//                    + "Enter a different name.");
-//            return false;
-//        }
-////if (player == null)
-////    System.out.println("Couldn't create player. Enter a different name.");
-////return false;
-//
-//        System.out.println("\n============================================="
-//                + "\nWelcome to the game, " + playersName + "!"
-//                + "\nWe hope you have lots of fun!"
-//                + "\n=============================================");
-//
-//        MainMenuView mainMenuView = new MainMenuView();
-//        mainMenuView.displayMainMenuView();
-//
-//        //mainMenuView = Create a new MainMenuView object
-//        //mainMenuView.displayMainMenuView()
-        return true;
+ private void startNewGame(){
+    StartNewGame startNewGame = new StartNewGame();
+    startNewGame.displayStartNewGame();
+}
 
-    }   
+private void reloadGame(){
+    RestartGame restartGame = new RestartGame();
+    restartGame.displayRestartGame();
+}
 
-
+private void helpMenu(){
+    GetHelp getHelp = new GetHelp();
+    getHelp.displayGetHelp();
+}
+}

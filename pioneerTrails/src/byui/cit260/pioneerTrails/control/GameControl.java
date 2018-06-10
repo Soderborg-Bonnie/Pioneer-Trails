@@ -24,7 +24,7 @@ public class GameControl {
     }
     
     public static void createNewGame(Player player) {
-        System.out.println("Player Name Saved");
+        System.out.println("Test creating new game.");
     }
    
 }
