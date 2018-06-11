@@ -19,12 +19,17 @@ public class MainMenuView {
     }
   
 void displayMainMenuView() {
-    System.out.println("What would you like to do next?");
-    System.out.println("\nPress 'N' to start a new  game.");
-    System.out.println("\nPress 'R' to reload a saved game.");
-    System.out.println("\nPress 'H' to get help about game.");
-    System.out.println("\nPress 'Q' to quit  game.");
-                ;
+    System.out.println("===============================");
+    System.out.println(" Main Menu");
+    System.out.println("===============================");
+    System.out.println("\n*******************************");
+    System.out.println("* What would you like to do next? *");
+    System.out.println("\n* Press 'N' to start a new  game. *");
+    System.out.println("\n* Press 'R' to reload a saved game. *");
+    System.out.println("\n* Press 'H' to get help about game. *");
+    System.out.println("\n* Press 'Q' to quit  game. *");
+    System.out.println("\n*******************************");
+                
         boolean endOfView = false;
 
         do {
@@ -81,12 +86,12 @@ private String[] getInputs() {
     startNewGame.displayStartNewGame();
 }
 
-private void reloadGame(){
+private void restartGame(){
     RestartGame restartGame = new RestartGame();
     restartGame.displayRestartGame();
 }
 
-private void helpMenu(){
+private void getHelp(){
     GetHelp getHelp = new GetHelp();
     getHelp.displayGetHelp();
 }
