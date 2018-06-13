@@ -24,13 +24,14 @@ public class GameMenuView {
             System.out.println("                Game Menu");
             System.out.println("=========================================");
             System.out.println("\n***************************************");
-            System.out.println("\n* Press 'M' to view map. **************");
+            System.out.println("\n* Press 'M' to view map.              *");
             System.out.println("\n* Press 'L' to view current location. *");
-            System.out.println("\n* Press 'P' to view players. **********");
-            System.out.println("\n* Press 'F' to view resources. ********");
-            System.out.println("\n* Press 'H' to view help menu. ********");
-            System.out.println("\n* Press 'S' to save the game. *********");
-            System.out.println("\n* Press 'Q' to quit  game. ************");
+            System.out.println("\n* Press 'P' to view players.          *");
+            System.out.println("\n* Press 'F' to view resources.        *");
+            System.out.println("\n* Press 'I' to view health concerns.  *");
+            System.out.println("\n* Press 'H' to view help menu.        *");
+            System.out.println("\n* Press 'S' to save the game.         *");
+            System.out.println("\n* Press 'Q' to quit  game.            *");
             System.out.println("\n***************************************");
 
             String[] inputs = this.getInputs();
@@ -79,6 +80,9 @@ public class GameMenuView {
             case "F":
                 getResources();
                 break;
+            case "I":
+                getHealth();
+                break;
             case "H":
                 getHelp();
                 break;
@@ -94,8 +98,11 @@ public class GameMenuView {
 
     }
 
+    private void getHealth() {
+        GetHealth getHealth = new GetHealth();
+        getHealth.displayGetHealth();
+    }
     private void getMap() {
-        System.out.println("map");
         GetMap getMap = new GetMap();
         getMap.displayGetMap();
     }
