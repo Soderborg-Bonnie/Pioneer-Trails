@@ -27,7 +27,7 @@ public class GetHelp {
             System.out.println("===============================");
             System.out.println("\n*************************************");
             System.out.println("\n* G - What is the goal of the game? *");
-            System.out.println("\n* M - How to move                   *");
+            System.out.println("\n* C - How to move                   *");
             System.out.println("\n* E - Estimate resources            *");
             System.out.println("\n* A - Harvest resources             *");
             System.out.println("\n* Q - Quit                          *");
@@ -71,7 +71,7 @@ public class GetHelp {
                 case "G":
                     getGameGoal();
                     break;
-                case "M":
+                case "C":
                     getMoveHelp();
                     break;
                 case "E":

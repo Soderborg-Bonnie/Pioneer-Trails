@@ -12,29 +12,27 @@ import java.util.Scanner;
  * @author Bonnie
  */
 public class GameMenuView {
-    
 
     public GameMenuView() {
     }
-  
-void displayGameMenuView() {
-    boolean endOfView = false;
+
+    void displayGameMenuView() {
+        boolean endOfView = false;
 
         do {
-    System.out.println("=========================================");
-    System.out.println("                Game Menu");
-    System.out.println("=========================================");
-    System.out.println("\n***************************************");
-    System.out.println("\n* Press 'M' to view map. **************");
-    System.out.println("\n* Press 'L' to view current location. *");
-    System.out.println("\n* Press 'P' to view players. **********");
-    System.out.println("\n* Press 'R' to view resources. ********");
-    System.out.println("\n* Press 'H' to view help menu. ********");
-    System.out.println("\n* Press 'S' to save the game. *********");
-    System.out.println("\n* Press 'Q' to quit  game. ************");
-    System.out.println("\n***************************************");
-                
-      
+            System.out.println("=========================================");
+            System.out.println("                Game Menu");
+            System.out.println("=========================================");
+            System.out.println("\n***************************************");
+            System.out.println("\n* Press 'M' to view map. **************");
+            System.out.println("\n* Press 'L' to view current location. *");
+            System.out.println("\n* Press 'P' to view players. **********");
+            System.out.println("\n* Press 'F' to view resources. ********");
+            System.out.println("\n* Press 'H' to view help menu. ********");
+            System.out.println("\n* Press 'S' to save the game. *********");
+            System.out.println("\n* Press 'Q' to quit  game. ************");
+            System.out.println("\n***************************************");
+
             String[] inputs = this.getInputs();
 
             if (inputs[0].equalsIgnoreCase("Q")) {
@@ -44,9 +42,10 @@ void displayGameMenuView() {
             }
         } while (endOfView != true);
 
-}
+    }
 //   
-private String[] getInputs() {
+
+    private String[] getInputs() {
         Scanner scanner = new Scanner(System.in);
         String[] inputs = new String[1];
         Boolean valid = false;
@@ -65,55 +64,65 @@ private String[] getInputs() {
     }
 
     private boolean doAction(String[] inputs) {
-        
+
         String menuItem = inputs[0].toUpperCase();
-            switch (menuItem){
-                case "M": getMap();
+        switch (menuItem) {
+            case "M":
+                getMap();
                 break;
-                case "L": getLocation();
+            case "L":
+                getLocation();
                 break;
-                case "P": getPlayers();
+            case "P":
+                getPlayers();
                 break;
-                case "R": getResources();
+            case "F":
+                getResources();
                 break;
-                case "H": getHelp();
+            case "H":
+                getHelp();
                 break;
-                case "S": saveGame();
+            case "S":
+                saveGame();
                 break;
-                case "Q":return true;
-                default: System.out.println("Invalid selection.");
+            case "Q":
+                return true;
+            default:
+                System.out.println("Invalid selection.");
         }
         return false;
 
-    
     }
 
- private void getMap(){
-     System.out.println("map");
-    GetMap getMap = new GetMap();
-    getMap.displayGetMap();
-}
+    private void getMap() {
+        System.out.println("map");
+        GetMap getMap = new GetMap();
+        getMap.displayGetMap();
+    }
 
-private void getLocation(){
-    GetLocation getLocation = new GetLocation();
-    getLocation.displayGetLocation();
-}
-private void getPlayers(){
-    GetPlayers getPlayers = new GetPlayers();
-    getPlayers.displayGetPlayers();
-}
-private void getResources(){
-    GetResources getResources = new GetResources();
-    getResources.displayGetResources();
-}
+    private void getLocation() {
+        GetLocation getLocation = new GetLocation();
+        getLocation.displayGetLocation();
+    }
 
-private void getHelp(){
-    GetHelp getHelp = new GetHelp();
-    getHelp.displayGetHelp();
-}
-private void saveGame(){
-    SaveGame saveGame = new SaveGame();
-    saveGame.displaySaveGame();
-}
+    private void getPlayers() {
+        GetPlayers getPlayers = new GetPlayers();
+        getPlayers.displayGetPlayers();
+    }
+
+    private void getResources() {
+        GetResources getResources = new GetResources();
+        getResources.displayGetResources();
+    }
+
+    private void getHelp() {
+        GetHelp getHelp = new GetHelp();
+        getHelp.displayGetHelp();
+    }
+
+    private void saveGame() {
+        SaveGame saveGame = new SaveGame();
+        saveGame.displaySaveGame();
+    }
 
 }
