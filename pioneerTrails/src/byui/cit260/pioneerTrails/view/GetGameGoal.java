@@ -7,13 +7,13 @@ package byui.cit260.pioneerTrails.view;
 
 /**
  *
- * @author Bonnie
+ * @author tyler
  */
-class StartNewGame {
+class GetGameGoal {
 
-    void displayStartNewGame() {
-        System.out.println("Yay for new games!");
+    void displayGetGameGoal() {
+        System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
 }

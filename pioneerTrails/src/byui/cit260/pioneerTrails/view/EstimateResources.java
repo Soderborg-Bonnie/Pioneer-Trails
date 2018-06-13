@@ -7,13 +7,13 @@ package byui.cit260.pioneerTrails.view;
 
 /**
  *
- * @author Bonnie
+ * @author tyler
  */
-class StartNewGame {
+class EstimateResources {
 
-    void displayStartNewGame() {
-        System.out.println("Yay for new games!");
+    void displayEstimateResources() {
+        System.out.println("You got estimates? We got resources!");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
 }

@@ -15,11 +15,13 @@ import byui.cit260.pioneerTrails.model.Scene;
 import byui.cit260.pioneerTrails.model.Wagon;
 import byui.cit260.pioneerTrails.model.Illness;
 import byui.cit260.pioneerTrails.model.QuestionScene;
+import byui.cit260.pioneerTrails.view.GetHelp;
+import byui.cit260.pioneerTrails.view.MainMenuView;
 import java.awt.Point;
 import byui.cit260.pioneerTrails.view.StartProgramView;
 
 public class PioneerTrails {
-    
+
     private static Game currentGame = null;
 
     public static Game getCurrentGame() {
@@ -38,7 +40,7 @@ public class PioneerTrails {
         PioneerTrails.player = player;
     }
     private static Player player = null;
-    
+
 
     /*private static Object actorOne;
     
@@ -213,7 +215,13 @@ public static void IndividualTestTamlyn(){
 
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
+
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.displayMainMenuView();
         
+        //GetHelp getHelp = new GetHelp();
+        //getHelp.displayGetHelp();
+
         // the above 2 lines are from page 9 of Lesson 7 Team
     }
     /*TeamTest();

@@ -7,13 +7,13 @@ package byui.cit260.pioneerTrails.view;
 
 /**
  *
- * @author Bonnie
+ * @author tyler
  */
-class StartNewGame {
+class HarvestResources {
 
-    void displayStartNewGame() {
-        System.out.println("Yay for new games!");
+    void displayHarvestResources() {
+        System.out.println("The field is white, and all that.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
 }
