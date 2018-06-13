@@ -6,33 +6,28 @@
 package byui.cit260.pioneerTrails.view;
 
 import java.util.Scanner;
+
 /**
  *
  * @author Bonnie
  */
-
-
-
-
-
 public class StartNewGame {
-    
-    public StartNewGame(){
-    }
 
+    public StartNewGame() {
+    }
 
     void displayStartNewGame() {
         System.out.println("Yay for new games!");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        boolean endOfView = false; 
-        
-        do{
+        boolean endOfView = false;
+
+        do {
             System.out.println("=========================================");
             System.out.println("             Start New Menu");
             System.out.println("=========================================");
-            System.out.println("\n***************************************"); 
-            System.out.println("\n* Press 'A' to acquire food. ********");
-            System.out.println("\n* Press 'Q' to quit  game. ************");
+            System.out.println("\n***************************************");
+            System.out.println("\n* Press 'A' to acquire food.          *");
+            System.out.println("\n* Press 'Q' to quit  game.            *");
             System.out.println("\n***************************************");
 
             String[] inputs = this.getInputs();
@@ -42,9 +37,12 @@ public class StartNewGame {
             } else {
                 endOfView = doAction(inputs);
             }
-        } while (endOfView != true);
+        } 
+        while (endOfView != true);
 
     }
+
+
     private String[] getInputs() {
         Scanner scanner = new Scanner(System.in);
         String[] inputs = new String[1];
@@ -69,28 +67,18 @@ public class StartNewGame {
         switch (menuItem) {
             case "A":
                 System.out.println("hungry?");
-                //getMap();
-                //return false;
+                acquireFood();
                 break;
             case "Q":
                 return true;
-//        String menuItem = inputs[0].toUpperCase();
-//        if (menuItem == "Q")
-//            return true;
-//        else if (menuItem != "A"){
-//            System.out.println("Invalid selection. Try again. " + menuItem);
-//            return false;
-//        }
-//        else{
-//        System.out.println("Let's pick out some food.");
-//        return false;}
-//    }
-}
-        System.out.println("super hungry?");
-        
+            default:
+                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
+        }
         return false;
-    }   
+    }
 
+    private void acquireFood() {
+        AcquireFood acquireFood = new AcquireFood();
+        acquireFood.displayAcquireFood();
+    }
 }
-
-
