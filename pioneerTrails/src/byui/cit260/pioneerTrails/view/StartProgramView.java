@@ -87,10 +87,10 @@ public class StartProgramView {
             return false;
         }
 
-        System.out.println("\n============================================="
+        System.out.println("\n======================================="
                 + "\nWelcome to the game, " + playersName + "!"
                 + "\nWe hope you have lots of fun!"
-                + "\n=============================================");
+                + "\n=======================================");
 
         return true;
 

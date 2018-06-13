@@ -23,13 +23,13 @@ public class GetHelp {
         do {
 
             System.out.println("===============================");
-            System.out.println(" Help Menu");
+            System.out.println("           Help Menu");
             System.out.println("===============================");
             System.out.println("\n*************************************");
             System.out.println("\n* G - What is the goal of the game? *");
             System.out.println("\n* M - How to move                   *");
             System.out.println("\n* E - Estimate resources            *");
-            System.out.println("\n* H - Harvest resources             *");
+            System.out.println("\n* A - Harvest resources             *");
             System.out.println("\n* Q - Quit                          *");
             System.out.println("\n*************************************");
 
@@ -77,7 +77,7 @@ public class GetHelp {
                 case "E":
                     estimateResources();
                     break;
-                case "H":
+                case "A":
                     harvestResources();
                     break;
                 case "Q":

@@ -24,12 +24,13 @@ public class MainMenuView {
 
         do {
 
-            System.out.println("===============================");
-            System.out.println(" Main Menu");
-            System.out.println("===============================");
+            System.out.println("=======================================");
+            System.out.println("              Main Menu");
+            System.out.println("=======================================");
             System.out.println("\n*************************************");
             System.out.println("\n* Press 'N' to start a new  game.   *");
             System.out.println("\n* Press 'R' to reload a saved game. *");
+            System.out.println("\n* Press 'Z' to view Game Menu.      *");
             System.out.println("\n* Press 'H' to get help about game. *");
             System.out.println("\n* Press 'Q' to quit  game.          *");
             System.out.println("\n*************************************");
@@ -67,17 +68,16 @@ public class MainMenuView {
     private boolean doAction(String[] inputs) {
 
         String menuItem = inputs[0].toUpperCase();
-//        if (menuItem != "N" || menuItem != "R" || menuItem != "H" || menuItem != "Q") {
-//            System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
-//        } 
-//        else {
-            switch (menuItem) {
+          switch (menuItem) {
                 case "N":
                     startNewGame();
                     break;
                 case "R":
                     restartGame();
                     break;
+                case "Z":
+                    gameMenuView();
+                    break; 
                 case "H":
                     getHelp();
                     break;
@@ -105,7 +105,10 @@ public class MainMenuView {
         getHelp.displayGetHelp();
     }
         
-
+    private void gameMenuView() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayGameMenuView();
+    }
     }
 
     
