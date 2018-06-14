@@ -25,7 +25,6 @@ public class GameMenuView {
             System.out.println("=========================================");
             System.out.println("\n***************************************");
             System.out.println("\n* Press 'M' to view map.              *");
-            System.out.println("\n* Press 'L' to view current location. *");
             System.out.println("\n* Press 'P' to view players.          *");
             System.out.println("\n* Press 'F' to view resources.        *");
             System.out.println("\n* Press 'I' to view health concerns.  *");
@@ -72,9 +71,6 @@ public class GameMenuView {
             case "M":
                 getMap();
                 break;
-            case "L":
-                getLocation();
-                break;
             case "P":
                 getPlayers();
                 break;
@@ -109,11 +105,6 @@ public class GameMenuView {
     private void getMap() {
         GetMap getMap = new GetMap();
         getMap.displayGetMap();
-    }
-
-    private void getLocation() {
-        GetLocation getLocation = new GetLocation();
-        getLocation.displayGetLocation();
     }
 
     private void getPlayers() {
