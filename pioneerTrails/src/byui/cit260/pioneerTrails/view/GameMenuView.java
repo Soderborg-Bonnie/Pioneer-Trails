@@ -29,6 +29,7 @@ public class GameMenuView {
             System.out.println("\n* Press 'P' to view players.          *");
             System.out.println("\n* Press 'F' to view resources.        *");
             System.out.println("\n* Press 'I' to view health concerns.  *");
+            System.out.println("\n* Press 'G' to go on a hunt.          *");
             System.out.println("\n* Press 'H' to view help menu.        *");
             System.out.println("\n* Press 'S' to save the game.         *");
             System.out.println("\n* Press 'Q' to quit  game.            *");
@@ -83,6 +84,9 @@ public class GameMenuView {
             case "I":
                 getHealth();
                 break;
+            case "G":
+                goHunt();
+                break;
             case "H":
                 getHelp();
                 break;
@@ -130,6 +134,11 @@ public class GameMenuView {
     private void saveGame() {
         SaveGame saveGame = new SaveGame();
         saveGame.displaySaveGame();
+    }
+
+    private void goHunt() {
+        HuntView newHunt = new HuntView();
+        newHunt.displayHuntView();
     }
 
 }
