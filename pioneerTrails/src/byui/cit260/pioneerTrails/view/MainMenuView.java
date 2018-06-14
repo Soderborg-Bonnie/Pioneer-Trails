@@ -91,7 +91,8 @@ public class MainMenuView {
     
 
     private void startNewGame() {
-        StartNewGame startNewGame = new StartNewGame();
+        GameControl.createNewGame();
+        SceneMenu startNewGame = new SceneMenu();
         startNewGame.displayStartNewGame();
     }
 

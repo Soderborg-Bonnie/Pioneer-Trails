@@ -68,9 +68,6 @@ public class GetLocation {
                 case "L":
                     getCurrentLocation();
                     break;
-                case "C":
-                    continueJourney();
-                    break;
                 case "Q":
                     return true;
                 default:

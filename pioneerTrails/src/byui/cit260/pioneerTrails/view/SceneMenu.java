@@ -5,15 +5,17 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.model.Scene;
 import java.util.Scanner;
 
 /**
  *
  * @author Bonnie
  */
-public class StartNewGame {
+public class SceneMenu {
 
-    public StartNewGame() {
+    public SceneMenu() {
     }
 
     void displayStartNewGame() {
@@ -22,11 +24,14 @@ public class StartNewGame {
         boolean endOfView = false;
 
         do {
+            Scene scene = GameControl.getCurrentScene();
+            String msg = "Welcome to " + scene.getName();
             System.out.println("=========================================");
-            System.out.println("             Start New Menu");
+            System.out.println(msg);
             System.out.println("=========================================");
             System.out.println("\n***************************************");
             System.out.println("\n* Press 'A' to acquire food.          *");
+            System.out.println("\n* Press 'C' to continue your journey  *");
             System.out.println("\n* Press 'Q' to quit  game.            *");
             System.out.println("\n***************************************");
 
@@ -37,11 +42,9 @@ public class StartNewGame {
             } else {
                 endOfView = doAction(inputs);
             }
-        } 
-        while (endOfView != true);
+        } while (endOfView != true);
 
     }
-
 
     private String[] getInputs() {
         Scanner scanner = new Scanner(System.in);
@@ -69,6 +72,8 @@ public class StartNewGame {
                 System.out.println("hungry?");
                 acquireFood();
                 break;
+            case "C":
+                return continueJourney();
             case "Q":
                 return true;
             default:
@@ -80,5 +85,19 @@ public class StartNewGame {
     private void acquireFood() {
         AcquireFood acquireFood = new AcquireFood();
         acquireFood.displayAcquireFood();
+    }
+
+    private boolean continueJourney() {
+        if(GameControl.advanceScene()){
+            Scene scene = GameControl.getCurrentScene();
+            String msg = "Congratulations! You made it to " + scene.getName() + " The game is over.";
+         System.out.println(msg);
+         return true;
+        }
+        // todo: if we die, display we died   return true
+        else {
+            return false;
+        }
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -15,13 +15,22 @@ import java.util.Objects;
 public class Game implements Serializable {
 
     //class instance variables
-    private Integer time;
-    private Integer numPeeps;
+    private int time;
+    private int numPeeps;
     private Player player;
     private Wagon wagon;
     private ArrayList<Actor> actors = new ArrayList<Actor>();
     private Map map;
     private ArrayList<Resource> resources = new ArrayList<Resource>();
+    private int currentScene;
+
+    public int getCurrentScene() {
+        return currentScene;
+    }
+
+    public void setCurrentScene(int currentScene) {
+        this.currentScene = currentScene;
+    }
 
     public ArrayList<Resource> getResources() {
         return resources;
@@ -71,15 +80,15 @@ public class Game implements Serializable {
         return time;
     }
 
-    public void setTime(Integer time) {
+    public void setTime(int time) {
         this.time = time;
     }
 
-    public Integer getNumPeeps() {
+    public int getNumPeeps() {
         return numPeeps;
     }
 
-    public void setNumPeeps(Integer numPeeps) {
+    public void setNumPeeps(int numPeeps) {
         this.numPeeps = numPeeps;
     }
 

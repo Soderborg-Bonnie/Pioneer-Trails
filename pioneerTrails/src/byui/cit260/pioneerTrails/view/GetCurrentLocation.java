@@ -5,6 +5,9 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.control.*;
+import byui.cit260.pioneerTrails.model.*;
+
 /**
  *
  * @author tyler
@@ -13,7 +16,8 @@ package byui.cit260.pioneerTrails.view;
     
 
      void displayGetCurrentLocation() {
-        System.out.println("You are currently at ...");
+         Scene scene = GameControl.getCurrentScene();
+        System.out.println("You are currently at " + scene.getName());
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
