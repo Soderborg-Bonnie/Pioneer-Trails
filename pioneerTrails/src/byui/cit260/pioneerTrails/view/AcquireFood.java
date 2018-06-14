@@ -33,8 +33,8 @@ public class AcquireFood {
             System.out.println("\n* Press '3' for a 50 gallon barrel of flour---350#     *");
             System.out.println("\n* Press '4' for a 30 gallon barrel of sugar---270#     *");
             System.out.println("\n* Press '5' for a 50 gallon barrel of sugar---450#     *");
-            System.out.println("\n* Press '6' for a 5 gallon barrel of oil-------50#      *");
-            System.out.println("\n* Press '7' for a 5 gallon barrel of salt------70#      *");
+            System.out.println("\n* Press '6' for a 5 gallon barrel of oil-------50#     *");
+            System.out.println("\n* Press '7' for a 5 gallon barrel of salt------70#     *");
             System.out.println("\n* Press 'D' to add up your choices.                    *");
             System.out.println("\n* Press 'Q' to quit game          .                    *");
             System.out.println("\n********************************************************");
