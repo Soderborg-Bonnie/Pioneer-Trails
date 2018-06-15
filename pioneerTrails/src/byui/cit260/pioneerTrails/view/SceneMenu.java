@@ -30,6 +30,7 @@ public class SceneMenu {
             System.out.println(msg);
             System.out.println("=========================================");
             System.out.println("\n***************************************");
+            System.out.println("\n* Press 'G' to view Game Menu.        *");
             System.out.println("\n* Press 'A' to acquire food.          *");
             System.out.println("\n* Press 'C' to continue your journey  *");
             System.out.println("\n* Press 'Q' to quit  game.            *");
@@ -68,6 +69,9 @@ public class SceneMenu {
 
         String menuItem = inputs[0].toUpperCase();
         switch (menuItem) {
+            case "G":
+                    gameMenuView();
+                    break; 
             case "A":
                 System.out.println("hungry?");
                 acquireFood();
@@ -82,6 +86,11 @@ public class SceneMenu {
         return false;
     }
 
+    private void gameMenuView() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayGameMenuView();
+    }
+    
     private void acquireFood() {
         AcquireFood acquireFood = new AcquireFood();
         acquireFood.displayAcquireFood();
@@ -90,7 +99,8 @@ public class SceneMenu {
     private boolean continueJourney() {
         if(GameControl.advanceScene()){
             Scene scene = GameControl.getCurrentScene();
-            String msg = "Congratulations! You made it to " + scene.getName() + " The game is over.";
+            String msg = "Congratulations! You made it to " + scene.getName() + "." +  scene.getDescription()
+            + " The game is over.";
          System.out.println(msg);
          return true;
         }

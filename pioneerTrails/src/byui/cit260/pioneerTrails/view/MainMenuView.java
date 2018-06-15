@@ -30,7 +30,6 @@ public class MainMenuView {
             System.out.println("\n*************************************");
             System.out.println("\n* Press 'N' to start a new  game.   *");
             System.out.println("\n* Press 'R' to reload a saved game. *");
-            System.out.println("\n* Press 'Z' to view Game Menu.      *");
             System.out.println("\n* Press 'H' to get help about game. *");
             System.out.println("\n* Press 'Q' to quit  game.          *");
             System.out.println("\n*************************************");
@@ -75,9 +74,6 @@ public class MainMenuView {
                 case "R":
                     restartGame();
                     break;
-                case "Z":
-                    gameMenuView();
-                    break; 
                 case "H":
                     getHelp();
                     break;
@@ -104,11 +100,6 @@ public class MainMenuView {
     private void getHelp() {
         GetHelp getHelp = new GetHelp();
         getHelp.displayGetHelp();
-    }
-        
-    private void gameMenuView() {
-        GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
     }
     }
 

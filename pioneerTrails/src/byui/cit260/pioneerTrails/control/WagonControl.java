@@ -44,7 +44,8 @@ public class WagonControl {
                 break;
         }
 
-        if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium" && terrainDifficulty != "Difficult") {
+       private static String terrainDifficulty(){
+        if (scene.GetDifficulty != "Normal" && terrainDifficulty != "Medium" && terrainDifficulty != "Difficult") {
             return -999;
         }
 

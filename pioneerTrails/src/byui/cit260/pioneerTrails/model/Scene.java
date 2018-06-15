@@ -17,7 +17,7 @@ public class Scene implements Serializable {
     private String name;
     private String description;
     private String symbol;
-    private Integer difficulty;  // todo: terrainDifficulty
+    private String difficulty;  // todo: terrainDifficulty
     private Boolean hindrance;  //todo: Illness
     private Location location;  //todo: coords
     private Resource[] resources;
@@ -26,7 +26,7 @@ public class Scene implements Serializable {
         return resources;
     }
     
-    public Scene(String name, String description, String symbol, Integer difficulty, Boolean hindrance, Location location, Resource[] resources) {
+    public Scene(String name, String description, String symbol, String difficulty, Boolean hindrance, Location location, Resource[] resources) {
         this.name = name;
         this.description = description;
         this.symbol = symbol;
@@ -55,7 +55,7 @@ public class Scene implements Serializable {
 
     
 
-    public Integer getDifficulty() {
+    public String getDifficulty() {
         return difficulty;
     }
 
