@@ -23,7 +23,8 @@ public class WagonControl {
      * calcWagonWheelDegradation >1 && <100 calcWagonWheelDegradation =
      * wagonWheelDurability RETURN wagonWheelDurability END *
      */
-    public static double calcWagonWheelDegradation(double wagonWheelDurability, double normalDegradation, String terrainDifficulty) {
+    public static double calcWagonWheelDegradation(double wagonWheelDurability,
+            double normalDegradation, String terrainDifficulty) {
         double terrainValue = 0;
 
         if (wagonWheelDurability < 1 || wagonWheelDurability > 100) {
@@ -44,11 +45,13 @@ public class WagonControl {
                 break;
         }
 
-        if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium" && terrainDifficulty != "Difficult") {
+        if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium" && 
+                terrainDifficulty != "Difficult") {
             return -999;
         }
 
-        double calcWagonWheelDegradation = wagonWheelDurability - (normalDegradation + terrainValue);
+        double calcWagonWheelDegradation = wagonWheelDurability - 
+                (normalDegradation + terrainValue);
         {
             if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
                 return -4;
