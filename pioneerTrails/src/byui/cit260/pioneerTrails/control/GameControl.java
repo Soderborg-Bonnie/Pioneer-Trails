@@ -36,9 +36,6 @@ public class GameControl {
      return SCENES[game.getCurrentScene()];   
     }
     
-    public static Scene getDifficulty(){
-        return SCENES[game.getDifficulty()];
-    }
     
     //Scene(String name, String description, String symbol, Integer difficulty, Boolean hindrance, Location location, Resource[] resources
     private static final Scene[] SCENES = {
@@ -70,17 +67,16 @@ public class GameControl {
 
     public static boolean advanceScene() {
        int newScene = game.getCurrentScene()+1;
-       if (newScene < SCENES.length) {
+       while (newScene < SCENES.length) {
          game.setCurrentScene(newScene);  
        }
        
        return (newScene >= SCENES.length -1);
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    public static String terrainDifficulty(){
-        
-    }
+           
 }
+
 
    
     
