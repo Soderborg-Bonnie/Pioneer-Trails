@@ -20,7 +20,8 @@ public class ResourceControl {
      * double waterResource = availableWater - (numPeople*time*waterRation) IF
      * waterResource
      */
-    public static double calcWaterConsumption(double availableWater, double numPeople, double time, double waterRation) {
+    public static double calcWaterConsumption(double availableWater,
+            double numPeople, double time, double waterRation) {
         if (availableWater < 0 || availableWater > 100) {
             return -1;
         }

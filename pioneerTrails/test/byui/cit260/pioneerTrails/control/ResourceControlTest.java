@@ -35,10 +35,12 @@ public class ResourceControlTest {
         //expected output return value
         double expResult = 15.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        double result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        double result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -55,10 +57,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = -999.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -75,10 +79,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = -2.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -95,10 +101,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = -1.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -115,10 +123,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = -4.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -135,10 +145,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = 9.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -155,10 +167,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = -999.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
@@ -175,10 +189,12 @@ public class ResourceControlTest {
         //expected output return value
         expResult = -999.0;
 
-        System.out.println("calcWaterConsumption(" + availableWater + ", " + numPeople + ", " + time + ", " + waterRation + ")");
+        System.out.println("calcWaterConsumption(" + availableWater + ", " 
+                + numPeople + ", " + time + ", " + waterRation + ")");
 
         //call function to run test
-        result = ResourceControl.calcWaterConsumption(availableWater, numPeople, time, waterRation);
+        result = ResourceControl.calcWaterConsumption(availableWater, 
+                numPeople, time, waterRation);
 
         System.out.println(result);
         //compare expected and actual return values
