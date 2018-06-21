@@ -5,19 +5,17 @@
  */
 package byui.cit260.pioneerTrails.view;
 
-import java.util.Scanner;
+
 
 /**
  *
  * @author Bonnie
  */
-public class GameMenuView extends View{
 
-//    public GameMenuView() {
-//    }
-    private String menuText="";
-    GameMenuView(){
-        menuText="==========================================" +
+public class GameMenuView extends View{
+    
+    public GameMenuView(){
+          super("==========================================" +
                            "\nGame Menu" +
             "\n=========================================" +
 "\n***************************************" +
@@ -29,8 +27,14 @@ public class GameMenuView extends View{
 "\n* Press 'H' to view help menu.        *" +
 "\n* Press 'S' to save the game.         *" +
 "\n* Press 'Q' to quit  game.            *" +
-"\n***************************************";
+"\n***************************************");
+    } 
+  @Override
+    public void display() {
     }
+    
+    
+
 //    void displayGameMenuView() {
 //        boolean endOfView = false;
 //
@@ -79,9 +83,9 @@ public class GameMenuView extends View{
 //        return inputs;
 //    }
 
-    private boolean doAction(String[] inputs) {
+    public boolean doAction(String inputs) {
 
-        String menuItem = inputs[0].toUpperCase();
+        String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "M":
                 getMap();
@@ -147,4 +151,8 @@ public class GameMenuView extends View{
         newHunt.displayHuntView();
     }
 
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

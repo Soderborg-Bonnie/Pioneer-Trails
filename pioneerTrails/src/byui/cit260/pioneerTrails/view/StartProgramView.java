@@ -10,15 +10,11 @@ import java.util.Scanner;
  *
  * @author Tamlyn Laurence
  */
-public class StartProgramView {
+public class StartProgramView extends View {
 
     public StartProgramView() {
 
-    }
-
-    public void display() {
-
-        System.out.println("\\__/\\\\\\\\\\\\\\\\\\\\\\\\\\____________________________________________________________________________________________/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_____________________________________/\\\\\\\\\\\\_________________        \n"
+        super("\\__/\\\\\\\\\\\\\\\\\\\\\\\\\\____________________________________________________________________________________________/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_____________________________________/\\\\\\\\\\\\_________________        \n"
                 + " _\\/\\\\\\/////////\\\\\\_________________________________________________________________________________________\\///////\\\\\\/////_____________________________________\\////\\\\\\_________________       \n"
                 + "  _\\/\\\\\\_______\\/\\\\\\__/\\\\\\_________________________________________________________________________________________\\/\\\\\\_____________________________________/\\\\\\____\\/\\\\\\_________________      \n"
                 + "   _\\/\\\\\\\\\\\\\\\\\\\\\\\\\\/__\\///______/\\\\\\\\\\_____/\\\\/\\\\\\\\\\\\_______/\\\\\\\\\\\\\\\\______/\\\\\\\\\\\\\\\\___/\\\\/\\\\\\\\\\\\\\__________________\\/\\\\\\________/\\\\/\\\\\\\\\\\\\\___/\\\\\\\\\\\\\\\\\\____\\///_____\\/\\\\\\_____/\\\\\\\\\\\\\\\\\\\\_     \n"
@@ -39,12 +35,16 @@ public class StartProgramView {
                 + "You will have the opportunity to hunt if you have weapons and ammunition when you spot a bison, or an elk. If you have the needed supplies you could repair your damaged wagon, and fish when arriving at a lake or river. \n"
                 + "You will also have to stop to rest from time to time, due to weak animals or to obtain food. The game is over when at least two family members have reached Zion. \n"
                 + "Good luck as you travel on the Pioneer Trails! \n"
-                + "======================================================================================================================================================================================================================================================="
-        );
+                + "=======================================================================================================================================================================================================================================================" 
+                + "\nInput name, please: ");
 
-        boolean endOfView = false;
+    }
 
-        do {
+   
+
+    
+
+    /* do {
             String[] inputs = this.getInputs();
 
             if (inputs[0].equalsIgnoreCase("Q")) {
@@ -73,13 +73,13 @@ public class StartProgramView {
 
         }
         return inputs;
-    }
-
-    private boolean doAction(String[] inputs) {
+    }*/
+    @Override
+    public boolean doAction(String inputs) {
 
         //System.out.println("***doAction() called***");
         // System.out.println("\tinputs = " + inputs[0]);
-        String playersName = inputs[0];
+        String playersName = inputs;
         Player player = GameControl.savePlayer(playersName);
         if (player == null) {
             System.out.println("Could not create the player."
@@ -94,6 +94,20 @@ public class StartProgramView {
 
         return true;
 
+    }
+
+    /*
+    public String getInputs() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }*/
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

@@ -26,7 +26,8 @@ public class Scene implements Serializable {
         return resources;
     }
     
-    public Scene(String name, String description, String symbol, String difficulty, Boolean hindrance, Location location, Resource[] resources) {
+    public Scene(String name, String description, String symbol, 
+        String difficulty, Boolean hindrance, Location location, Resource[] resources) {
         this.name = name;
         this.description = description;
         this.symbol = symbol;

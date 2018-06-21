@@ -112,7 +112,7 @@ public class GetHealth {
         
     private void gameMenuView() {
         GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayGameMenuView();
+        gameMenuView.display();
     }
 
    

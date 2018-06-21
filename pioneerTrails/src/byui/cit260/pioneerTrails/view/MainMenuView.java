@@ -13,60 +13,63 @@ import java.util.Scanner;
  *
  * @author tyler
  */
-public class MainMenuView {
+public class MainMenuView extends View {
 
     public MainMenuView() {
+        super(
+            "\n=======================================" +
+            "\n              Main Menu" +
+            "\n=======================================" +
+            "\n*************************************" +
+            "\n* Press 'N' to start a new  game.   *" +
+            "\n* Press 'R' to reload a saved game. *" +
+            "\n* Press 'H' to get help about game. *" +
+            "\n* Press 'Q' to quit  game.          *" +
+            "\n*************************************");
     }
 
-    public void displayMainMenuView() {
+//    public void display() {
+//
+//        boolean endOfView = false;
+//
+////        do {
+//
+//            
+//
+//            String[] inputs = this.getInputs();
+//
+//            if (inputs[0].equalsIgnoreCase("Q")) {
+//                return;
+//            } else {
+//                endOfView = doAction(inputs);
+//            }
+//        } while (endOfView != true);
+//
+//    }
+////   
+//
+//    private String[] getInputs() {
+//        Scanner scanner = new Scanner(System.in);
+//        String[] inputs = new String[1];
+//        Boolean valid = false;
+//        while (!valid) {
+//            System.out.println("Please select an option: ");
+//            inputs[0] = scanner.nextLine();
+//            inputs[0] = inputs[0].trim();
+//            if (inputs[0].length() < 1) {
+//                System.out.println("try again");
+//                continue;
+//            }
+//            valid = true;
+//
+//        }
+//        return inputs;
+    //}
 
-        boolean endOfView = false;
+    @Override
+    public boolean doAction(String inputs) {
 
-        do {
-
-            System.out.println("=======================================");
-            System.out.println("              Main Menu");
-            System.out.println("=======================================");
-            System.out.println("\n*************************************");
-            System.out.println("\n* Press 'N' to start a new  game.   *");
-            System.out.println("\n* Press 'R' to reload a saved game. *");
-            System.out.println("\n* Press 'H' to get help about game. *");
-            System.out.println("\n* Press 'Q' to quit  game.          *");
-            System.out.println("\n*************************************");
-
-            String[] inputs = this.getInputs();
-
-            if (inputs[0].equalsIgnoreCase("Q")) {
-                return;
-            } else {
-                endOfView = doAction(inputs);
-            }
-        } while (endOfView != true);
-
-    }
-//   
-
-    private String[] getInputs() {
-        Scanner scanner = new Scanner(System.in);
-        String[] inputs = new String[1];
-        Boolean valid = false;
-        while (!valid) {
-            System.out.println("Please select an option: ");
-            inputs[0] = scanner.nextLine();
-            inputs[0] = inputs[0].trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("try again");
-                continue;
-            }
-            valid = true;
-
-        }
-        return inputs;
-    }
-
-    private boolean doAction(String[] inputs) {
-
-        String menuItem = inputs[0].toUpperCase();
+        String menuItem = inputs.toUpperCase();
           switch (menuItem) {
                 case "N":
                     startNewGame();
@@ -101,7 +104,13 @@ public class MainMenuView {
         GetHelp getHelp = new GetHelp();
         getHelp.displayGetHelp();
     }
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+}
 
     
 

@@ -217,7 +217,7 @@ public static void IndividualTestTamlyn(){
         startProgramView.display();
 
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
         
         //GetHelp getHelp = new GetHelp();
         //getHelp.displayGetHelp();
