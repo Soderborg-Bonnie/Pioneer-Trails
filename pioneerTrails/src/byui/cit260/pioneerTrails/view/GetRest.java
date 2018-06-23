@@ -9,11 +9,26 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author tharman
  */
-class GetRest {
+public class GetRest extends View {
 
-    void displayGetRest() {
-         System.out.println("You took some much needed rest. It has the following effect: ");   //stub since we don't have items created yet
+    public GetRest() {
+
+        super("You took some much needed rest. It has the following effect: ");   //stub since we don't have items created yet
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displayGetRest() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

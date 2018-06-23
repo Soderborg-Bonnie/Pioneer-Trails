@@ -9,11 +9,25 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author tyler
  */
-class GetMoveHelp {
+public class GetMoveHelp extends View {
 
-    void displayGetMoveHelp() {
-        System.out.println("Who do you think I am, the Elder's Quorum?");
+    public GetMoveHelp() {
+        super("Who do you think I am, the Elder's Quorum?");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displayGetMoveHelp() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

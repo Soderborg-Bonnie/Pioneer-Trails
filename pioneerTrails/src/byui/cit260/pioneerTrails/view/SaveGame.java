@@ -9,11 +9,25 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author Bonnie
  */
-class SaveGame {
+public class SaveGame extends View {
 
-    void displaySaveGame() {
-        System.out.println("Save the hard work.");
+    public SaveGame() {
+        super("Save the hard work.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displaySaveGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

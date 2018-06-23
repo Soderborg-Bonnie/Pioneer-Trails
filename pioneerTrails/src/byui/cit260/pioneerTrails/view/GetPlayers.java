@@ -9,11 +9,26 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author Bonnie
  */
-class GetPlayers {
+public class GetPlayers extends View {
 
-    void displayGetPlayers() {
-        System.out.println("Marco! Polo!");
+    public GetPlayers() {
+
+        super("Marco! Polo!");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displayGetPlayers() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

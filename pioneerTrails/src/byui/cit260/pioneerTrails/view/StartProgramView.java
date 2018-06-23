@@ -4,7 +4,7 @@ import byui.cit260.pioneerTrails.control.GameControl;
 import byui.cit260.pioneerTrails.model.Player;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 /**
  *
@@ -35,45 +35,12 @@ public class StartProgramView extends View {
                 + "You will have the opportunity to hunt if you have weapons and ammunition when you spot a bison, or an elk. If you have the needed supplies you could repair your damaged wagon, and fish when arriving at a lake or river. \n"
                 + "You will also have to stop to rest from time to time, due to weak animals or to obtain food. The game is over when at least two family members have reached Zion. \n"
                 + "Good luck as you travel on the Pioneer Trails! \n"
-                + "=======================================================================================================================================================================================================================================================" 
+                + "======================================================================================================================================================================================================================================================="
                 + "\nInput name, please: ");
 
     }
 
-   
-
     
-
-    /* do {
-            String[] inputs = this.getInputs();
-
-            if (inputs[0].equalsIgnoreCase("Q")) {
-                return;
-            } else {
-                endOfView = doAction(inputs);
-            }
-        } while (endOfView != true);
-
-    }
-
-    private String[] getInputs() {
-
-        Scanner scanner = new Scanner(System.in);
-        String[] inputs = new String[1];
-        Boolean valid = false;
-        while (!valid) {
-            System.out.println("Input name, please: ");
-            inputs[0] = scanner.nextLine();
-            inputs[0] = inputs[0].trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("try again");
-                continue;
-            }
-            valid = true;
-
-        }
-        return inputs;
-    }*/
     @Override
     public boolean doAction(String inputs) {
 
@@ -105,9 +72,9 @@ public class StartProgramView extends View {
     public String getInput(String menuText) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }*/
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public String getInput(String menuText) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
 }

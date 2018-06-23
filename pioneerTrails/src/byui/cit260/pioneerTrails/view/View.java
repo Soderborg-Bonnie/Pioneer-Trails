@@ -13,13 +13,13 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
 
-    protected String menuText;
+    protected String promptMessage;
 
     public View() {
     }
 
     public View(String message) {
-        this.menuText = message;
+        this.promptMessage = message;
     }
 
     @Override
@@ -29,16 +29,7 @@ public abstract class View implements ViewInterface {
 
         do {
 
-//            System.out.println("=======================================");
-//            System.out.println("              Main Menu");
-//            System.out.println("=======================================");
-//            System.out.println("\n*************************************");
-//            System.out.println("\n* Press 'N' to start a new  game.   *");
-//            System.out.println("\n* Press 'R' to reload a saved game. *");
-//            System.out.println("\n* Press 'H' to get help about game. *");
-//            System.out.println("\n* Press 'Q' to quit  game.          *");
-//            System.out.println("\n*************************************");
-            System.out.println(menuText);
+            //System.out.println(menuText);
             String inputs = this.getInputs();
 
             if (inputs.equalsIgnoreCase("Q")) {
@@ -49,14 +40,17 @@ public abstract class View implements ViewInterface {
         } while (endOfView != true);
 
     }
-
+  @Override
+  public String getInputs(){
+  return getInput(this.promptMessage);
+  }
     @Override
-    public String getInputs() {
+    public String getInput(String menuText) {
         Scanner scanner = new Scanner(System.in);
         String inputs = "";
         Boolean valid = false;
         while (!valid) {
-            //System.out.println("Please input your choice: ");
+            System.out.println(menuText);
             inputs = scanner.nextLine();
             inputs = inputs.trim();
             if (inputs.length() < 1) {

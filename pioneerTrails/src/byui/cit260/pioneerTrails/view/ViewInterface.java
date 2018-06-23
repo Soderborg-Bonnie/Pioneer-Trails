@@ -10,19 +10,13 @@ package byui.cit260.pioneerTrails.view;
  * @author tyler
  */
 public interface ViewInterface {
-    
-    public void display(); 
-    
+
+    public void display();
 
     public String getInputs();
-    
-        
-    
+
     public String getInput(String menuText);
-    
 
     public boolean doAction(String inputs);
-    
 
-    
 }

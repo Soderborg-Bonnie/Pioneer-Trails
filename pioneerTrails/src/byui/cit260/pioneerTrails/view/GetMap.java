@@ -9,11 +9,25 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author Bonnie
  */
-class GetMap {
+public class GetMap extends View {
 
-    void displayGetMap() {
-        System.out.println("I'm the map! I'm the map! I'm the map!");
+    public GetMap() {
+        super("I'm the map! I'm the map! I'm the map!");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displayGetMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

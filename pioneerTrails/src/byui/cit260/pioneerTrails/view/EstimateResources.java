@@ -9,11 +9,25 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author tyler
  */
-class EstimateResources {
+public class EstimateResources extends View {
 
-    void displayEstimateResources() {
-        System.out.println("You got estimates? We got resources!");
+    public EstimateResources() {
+        super("You got estimates? We got resources!");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displayEstimateResources() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

@@ -69,9 +69,9 @@ public class SceneMenu {
 
         String menuItem = inputs[0].toUpperCase();
         switch (menuItem) {
-            case "G":
-                    gameMenuView();
-                    break; 
+//            case "G":
+//                    gameMenuView();
+//                    break; 
             case "A":
                 System.out.println("hungry?");
                 acquireFood();
@@ -86,14 +86,14 @@ public class SceneMenu {
         return false;
     }
 
-    private void gameMenuView() {
-        GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.display();
-    }
+//    private void gameMenuView() {
+//        GameMenuView gameMenuView = new GameMenuView();
+//        gameMenuView.display();
+//    }
     
     private void acquireFood() {
         AcquireFood acquireFood = new AcquireFood();
-        acquireFood.displayAcquireFood();
+        acquireFood.display();
     }
 
     private boolean continueJourney() {
@@ -109,5 +109,9 @@ public class SceneMenu {
             return false;
         }
 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

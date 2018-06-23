@@ -5,92 +5,57 @@
  */
 package byui.cit260.pioneerTrails.view;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
  * @author Bonnie
  */
-public class GetHelp {
+public class GetHelp extends View {
 
     public GetHelp() {
-    }
+        super("\n==============================="
+                + "\n          Help Menu"
+                + "\n==============================="
+                + "\n*************************************"
+                + "\n* G - What is the goal of the game? *"
+                + "\n* C - How to move                   *"
+                + "\n* E - Estimate resources            *"
+                + "\n* A - Harvest resources             *"
+                + "\n* Q - Quit                          *"
+                + "\n*************************************");
+}
+
     
-    public void displayGetHelp(){
-        
-        boolean endOfView = false;
 
-        do {
+    @Override
+    public boolean doAction(String inputs) {
 
-            System.out.println("===============================");
-            System.out.println("           Help Menu");
-            System.out.println("===============================");
-            System.out.println("\n*************************************");
-            System.out.println("\n* G - What is the goal of the game? *");
-            System.out.println("\n* C - How to move                   *");
-            System.out.println("\n* E - Estimate resources            *");
-            System.out.println("\n* A - Harvest resources             *");
-            System.out.println("\n* Q - Quit                          *");
-            System.out.println("\n*************************************");
+        String menuItem = inputs.toUpperCase();
 
-            String[] inputs = this.getInputs();
-
-            if (inputs[0].equalsIgnoreCase("Q")) {
-                return;
-            } else {
-                endOfView = doAction(inputs);
-            }
-        } while (endOfView != true);
-
-    }
-//   
-
-    private String[] getInputs() {
-        Scanner scanner = new Scanner(System.in);
-        String[] inputs = new String[1];
-        Boolean valid = false;
-        while (!valid) {
-            System.out.println("Please select an option: ");
-            inputs[0] = scanner.nextLine();
-            inputs[0] = inputs[0].trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("try again");
-                continue;
-            }
-            valid = true;
-
+        switch (menuItem) {
+            case "G":
+                getGameGoal();
+                break;
+            case "C":
+                getMoveHelp();
+                break;
+            case "E":
+                estimateResources();
+                break;
+            case "A":
+                harvestResources();
+                break;
+            case "Q":
+                return true;
+            default:
+                System.out.println("You've come to the right place. You clearly need HELP. Select a valid option");
         }
-        return inputs;
-    }
 
-    private boolean doAction(String[] inputs) {
-
-        String menuItem = inputs[0].toUpperCase();
-        
-            switch (menuItem) {
-                case "G":
-                    getGameGoal();
-                    break;
-                case "C":
-                    getMoveHelp();
-                    break;
-                case "E":
-                    estimateResources();
-                    break;
-                case "A":
-                    harvestResources();
-                    break;
-                case "Q":
-                    return true;
-                default:
-                    System.out.println("You've come to the right place. You clearly need HELP. Select a valid option");
-            }
-        
         return false;
 
     }
 
-   
     private void getGameGoal() {
         GetGameGoal getGameGoal = new GetGameGoal();
         getGameGoal.displayGetGameGoal();
@@ -110,11 +75,13 @@ public class GetHelp {
         HarvestResources harvestResources = new HarvestResources();
         harvestResources.displayHarvestResources();
     }
+
+//    @Override
+//    public String getInput(String menuText) {
+//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+
+//    void displayGetHelp() {
+//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
-
-
-
-    
-    
-
-

@@ -9,13 +9,22 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author tyler
  */
- class ContinueJourney {
-    
-   
+public class ContinueJourney extends View {
 
-     void displayContinueJourney() {
-        System.out.println("You continue your journey and arrive at ...");
+    public ContinueJourney() {
+
+        super("You continue your journey and arrive at ...");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

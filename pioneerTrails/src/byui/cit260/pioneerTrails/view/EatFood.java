@@ -9,11 +9,25 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author tharman
  */
-class EatFood {
+public class EatFood extends View {
 
-    void displayEatFood() {
-         System.out.println("You ate food. It has the following effect: ");   //stub since we don't have items created yet
+    public EatFood() {
+        super("You ate food. It has the following effect: ");   //stub since we don't have items created yet
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public String getInput(String menuText) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void displayEatFood() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
