@@ -30,7 +30,6 @@ public class GameMenuView extends View {
 //    @Override
 //    public void display() {
 //    }
-
 //    
     @Override
     public boolean doAction(String inputs) {
@@ -69,7 +68,7 @@ public class GameMenuView extends View {
 
     private void getHealth() {
         GetHealth getHealth = new GetHealth();
-        getHealth.displayGetHealth();
+        getHealth.display();
     }
 
     private void getMap() {
