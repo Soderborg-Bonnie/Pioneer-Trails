@@ -47,7 +47,7 @@ public class GetHealth extends View {
                 getRest();
                 break;
             case "H":
-                getHelp();
+                HealthTips();
                 break;
             case "Q":
                 return true;
@@ -80,6 +80,10 @@ public class GetHealth extends View {
     private void gameMenuView() {
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
+    }
+
+    private void HealthTips() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
