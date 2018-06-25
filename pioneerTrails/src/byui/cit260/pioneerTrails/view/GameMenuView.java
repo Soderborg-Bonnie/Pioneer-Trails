@@ -101,8 +101,5 @@ public class GameMenuView extends View {
         newHunt.displayHuntView();
     }
 
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }

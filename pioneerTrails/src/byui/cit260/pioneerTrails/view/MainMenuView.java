@@ -33,7 +33,7 @@ public class MainMenuView extends View {
         String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "N":
-                startNewGame();
+                gameMenuView();
                 break;
             case "R":
                 restartGame();
@@ -49,11 +49,6 @@ public class MainMenuView extends View {
         return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame();
-      SceneMenu startNewGame = new SceneMenu();
-        startNewGame.display();
-    }
 
     private void restartGame() {
         RestartGame restartGame = new RestartGame();
@@ -64,6 +59,15 @@ public class MainMenuView extends View {
         GetHelp getHelp = new GetHelp();
         getHelp.display();
     }
+
+    private void gameMenuView() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.display();
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
+
 
     
 

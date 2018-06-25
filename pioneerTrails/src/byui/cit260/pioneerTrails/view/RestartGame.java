@@ -22,9 +22,26 @@ public class RestartGame extends View {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
 //
-    @Override
+   @Override
     public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+//        String menuItem = inputs.toUpperCase();
+//        switch (menuItem) {
+//            case "N":
+//                gameMenuView();
+//                break;
+//            case "R":
+//                restartGame();
+//                break;
+//            case "H":
+//                getHelp();
+//                break;
+//            case "Q":
+//                return true;
+//            default:
+//                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
+//        }
+        return false;
     }
 
   
