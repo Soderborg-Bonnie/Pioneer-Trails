@@ -15,8 +15,7 @@ import pioneertrails.PioneerTrails;
  */
 public class GameControl {
 
-    private static Game game;
-    private static Game scene;
+    //private static Game scene;
 
     public static Player savePlayer(String playersName) {
         if (playersName.length() < 1) {
@@ -29,11 +28,13 @@ public class GameControl {
     }
 
     public static void createNewGame() {
-        game = new Game();
+        Game game = new Game();
+        PioneerTrails.setCurrentGame(game);
+        game.setCurrentScene(0);
     }
 
     public static Scene getCurrentScene() {
-        return SCENES[game.getCurrentScene()];
+        return SCENES[PioneerTrails.getCurrentGame().getCurrentScene()];
     }
 
     //Scene(String name, String description, String symbol, Integer difficulty, Boolean hindrance, Location location, Resource[] resources
@@ -64,9 +65,9 @@ public class GameControl {
         new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "symbol", "Normal", false, new Location(), new Resource[]{}),};
 
     public static boolean advanceScene() {
-        int newScene = game.getCurrentScene() + 1;
-        while (newScene < SCENES.length) {
-            game.setCurrentScene(newScene);
+        int newScene = PioneerTrails.getCurrentGame().getCurrentScene() + 1;
+        if (newScene < SCENES.length) {
+            PioneerTrails.getCurrentGame().setCurrentScene(newScene);
         }
 
         return (newScene >= SCENES.length - 1);

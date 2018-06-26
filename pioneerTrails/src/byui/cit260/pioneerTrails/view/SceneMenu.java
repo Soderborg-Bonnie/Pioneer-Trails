@@ -55,7 +55,8 @@ public class SceneMenu extends View {
     }
 
     private void continueJourney() {
-        ContinueJourney continueJourney = new ContinueJourney();
-        continueJourney.display();
+        System.out.println("Work in progress.");
+//        ContinueJourney continueJourney = new ContinueJourney();
+//        continueJourney.display();
     }
 }

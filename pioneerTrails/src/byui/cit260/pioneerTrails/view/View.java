@@ -32,7 +32,7 @@ public abstract class View implements ViewInterface {
             //System.out.println(menuText);
             String inputs = this.getInputs();
 
-            if (inputs.equalsIgnoreCase("Q")) {
+            if (inputs.isEmpty() || inputs.equalsIgnoreCase("Q")) {
                 return;
             } else {
                 endOfView = doAction(inputs);

@@ -42,6 +42,7 @@ public class HuntView extends View {
             String animal = animals[rand.nextInt(animals.length)];
             System.out.println("\t# " + animal + " has been spotted! #\n");
 
+            OUTER:
             while (animalAlertness > 0) {
                 System.out.println("\tYour energy level: " + energy);
                 System.out.println("\t" + animal + "'s alertness: " + animalAlertness);
@@ -49,37 +50,36 @@ public class HuntView extends View {
                 System.out.println("\t1. Shoot");
                 System.out.println("\t2. Eat some dry bread");
                 System.out.println("\t3. Run!");
-
                 String input = in.nextLine();
-                if (input.equals("1")) {
-                    int shotDealt = rand.nextInt(alertnessDamage);
-                    int damageEnergy = rand.nextInt(huntEnergyDrain);
-
-                    animalAlertness -= shotDealt;
-                    energy -= damageEnergy;
-
-                    System.out.println("\t> You hit the " + animal + " with " + shotDealt + "% damage.");
-                    System.out.println("\t> You used " + damageEnergy + "% of your energy!");
-
-                    if (energy < 1) {
-                        System.out.println("\t> You have used all your energy reserves.");
+                switch (input) {
+                    case "1":
+                        int shotDealt = rand.nextInt(alertnessDamage);
+                        int damageEnergy = rand.nextInt(huntEnergyDrain);
+                        animalAlertness -= shotDealt;
+                        energy -= damageEnergy;
+                        System.out.println("\t> You hit the " + animal + " with " + shotDealt + "% damage.");
+                        System.out.println("\t> You used " + damageEnergy + "% of your energy!");
+                        if (energy < 1) {
+                            System.out.println("\t> You have used all your energy reserves.");
+                            break OUTER;
+                        }
                         break;
-                    }
-                } else if (input.equals("2")) {
-                    if (numDryBread > 0) {
-                        energy += dryBreadHealAmount;
-                        numDryBread--;
-                        System.out.println("\t> You ate some dry bread, rejuvinating yourself by " + dryBreadHealAmount + "%."
-                                + "\n\t> You now have " + energy + " % energy."
-                                + "\n\t> You have " + numDryBread + " dry bread left.\n");
-                    } else {
-                        System.out.println("\t> You have no Dry Bread left! Shoot well so you can get some meat!\n");
-                    }
-                } else if (input.equals("3")) {
-                    System.out.println("\tYou run away from the " + animal + "!");
-                    continue GAME;
-                } else {
-                    System.out.println("\tInvalid command!");
+                    case "2":
+                        if (numDryBread > 0) {
+                            energy += dryBreadHealAmount;
+                            numDryBread--;
+                            System.out.println("\t> You ate some dry bread, rejuvinating yourself by " + dryBreadHealAmount + "%."
+                                    + "\n\t> You now have " + energy + " % energy."
+                                            + "\n\t> You have " + numDryBread + " dry bread left.\n");
+                        } else {
+                            System.out.println("\t> You have no Dry Bread left! Shoot well so you can get some meat!\n");
+                        }   break;
+                    case "3":
+                        System.out.println("\tYou run away from the " + animal + "!");
+                        continue GAME;
+                    default:
+                        System.out.println("\tInvalid command!");
+                        break;
                 }
             }
 

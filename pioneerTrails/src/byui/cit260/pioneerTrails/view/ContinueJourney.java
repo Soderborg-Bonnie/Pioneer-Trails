@@ -15,24 +15,28 @@ import byui.cit260.pioneerTrails.model.Scene;
 public class ContinueJourney extends View {
 
     public ContinueJourney() {
+        this.promptMessage = getScenePrompt();
     }
-
-    @Override
-    public boolean doAction(String inputs) {
-        if (GameControl.advanceScene()) {
+public String getScenePrompt() {
+    if (GameControl.advanceScene()) {
             Scene scene = GameControl.getCurrentScene();
             String endMsg = "Congratulations! You made it to " + scene.getName() + "." + scene.getDescription()
-                    + " The game is over.";
-            System.out.println(endMsg);
-            return true;
+                    + " The game is over. Press \"Enter\" to exit the game.";
+            //System.out.println(endMsg);
+            return endMsg;
         } // todo: if we die, display we died   return true
         else {
             Scene scene = GameControl.getCurrentScene();
             String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
-                    + ".";
-            System.out.println(msg);
-            return false;
+                    + "." + "What would you like to do now?";
+            //System.out.println(msg);
+            return msg;
         }
+}
+    @Override
+    public boolean doAction(String inputs) {
+        System.out.println("You want to " + inputs);
+        return true;
     }
 
 }
