@@ -17,6 +17,7 @@ import byui.cit260.pioneerTrails.model.Illness;
 import byui.cit260.pioneerTrails.model.QuestionScene;
 import byui.cit260.pioneerTrails.view.GetHelp;
 import byui.cit260.pioneerTrails.view.MainMenuView;
+import byui.cit260.pioneerTrails.view.SceneMenu;
 import java.awt.Point;
 import byui.cit260.pioneerTrails.view.StartProgramView;
 
@@ -218,10 +219,12 @@ public static void IndividualTestTamlyn(){
 
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
-        
+
+        SceneMenu sceneMenu = new SceneMenu();
+        sceneMenu.display();
+
         //GetHelp getHelp = new GetHelp();
         //getHelp.displayGetHelp();
-
         // the above 2 lines are from page 9 of Lesson 7 Team
     }
     /*TeamTest();

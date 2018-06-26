@@ -25,9 +25,9 @@ public class Scene implements Serializable {
     public Resource[] getResources() {
         return resources;
     }
-    
-    public Scene(String name, String description, String symbol, 
-        String difficulty, Boolean hindrance, Location location, Resource[] resources) {
+
+    public Scene(String name, String description, String symbol,
+            String difficulty, Boolean hindrance, Location location, Resource[] resources) {
         this.name = name;
         this.description = description;
         this.symbol = symbol;
@@ -35,46 +35,32 @@ public class Scene implements Serializable {
         this.hindrance = hindrance;
         this.location = location;
         this.resources = resources;
-        
+
     }
 
     public String getName() {
         return name;
     }
 
-    
-
     public String getDescription() {
         return description;
     }
-
-   
 
     public String getSymbol() {
         return symbol;
     }
 
-    
-
     public String getDifficulty() {
         return difficulty;
     }
-
-    
 
     public Boolean getHindrance() {
         return hindrance;
     }
 
-    
-
     public Location getLocations() {
         return location;
     }
-
-    
-
-    
 
     @Override
     public String toString() {

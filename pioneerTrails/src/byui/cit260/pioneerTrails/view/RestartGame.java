@@ -22,7 +22,7 @@ public class RestartGame extends View {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
 //
-   @Override
+    @Override
     public boolean doAction(String inputs) {
 
 //        String menuItem = inputs.toUpperCase();
@@ -44,11 +44,8 @@ public class RestartGame extends View {
         return false;
     }
 
-  
     public void displayRestartGame() {
         display();//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
 
 }

@@ -5,7 +5,6 @@ import byui.cit260.pioneerTrails.model.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  *
  * @author Tamlyn Laurence
@@ -40,7 +39,6 @@ public class StartProgramView extends View {
 
     }
 
-    
     @Override
     public boolean doAction(String inputs) {
 
@@ -76,5 +74,4 @@ public class StartProgramView extends View {
 //    public String getInput(String menuText) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
 }

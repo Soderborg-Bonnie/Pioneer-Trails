@@ -7,13 +7,13 @@ import java.util.Scanner;
  *
  * @author Tamlyn Laurence
  */
-public class HuntView {
+public class HuntView extends View {
 
     public HuntView() {
     }
 
-    public void displayHuntView() {
-
+    @Override
+    public boolean doAction(String inputs) {
         //  System objects
         Scanner in = new Scanner(System.in);
         Random rand = new Random();
@@ -118,6 +118,6 @@ public class HuntView {
         System.out.println("########################");
         System.out.println("#  Thanks for hunting  #");
         System.out.println("########################");
-
+        return false;
     }
 }

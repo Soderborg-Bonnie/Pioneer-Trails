@@ -8,7 +8,6 @@ package byui.cit260.pioneerTrails.view;
 import byui.cit260.pioneerTrails.control.GameControl;
 import byui.cit260.pioneerTrails.model.Player;
 
-
 /**
  *
  * @author tyler
@@ -49,7 +48,6 @@ public class MainMenuView extends View {
         return false;
     }
 
-
     private void restartGame() {
         RestartGame restartGame = new RestartGame();
         restartGame.display();
@@ -65,10 +63,5 @@ public class MainMenuView extends View {
         gameMenuView.display();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-  
-
-
-    
 
 }

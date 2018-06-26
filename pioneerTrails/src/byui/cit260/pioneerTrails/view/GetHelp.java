@@ -6,7 +6,6 @@
 package byui.cit260.pioneerTrails.view;
 
 //import java.util.Scanner;
-
 /**
  *
  * @author Bonnie
@@ -24,9 +23,7 @@ public class GetHelp extends View {
                 + "\n* A - Harvest resources             *"
                 + "\n* Q - Quit                          *"
                 + "\n*************************************");
-}
-
-    
+    }
 
     @Override
     public boolean doAction(String inputs) {
@@ -58,29 +55,28 @@ public class GetHelp extends View {
 
     private void getGameGoal() {
         GetGameGoal getGameGoal = new GetGameGoal();
-        getGameGoal.displayGetGameGoal();
+        getGameGoal.display();
     }
 
     private void getMoveHelp() {
         GetMoveHelp getMoveHelp = new GetMoveHelp();
-        getMoveHelp.displayGetMoveHelp();
+        getMoveHelp.display();
     }
 
     private void estimateResources() {
         EstimateResources estimateResources = new EstimateResources();
-        estimateResources.displayEstimateResources();
+        estimateResources.display();
     }
 
     private void harvestResources() {
         HarvestResources harvestResources = new HarvestResources();
-        harvestResources.displayHarvestResources();
+        harvestResources.display();
     }
 
 //    @Override
 //    public String getInput(String menuText) {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
 //    void displayGetHelp() {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }

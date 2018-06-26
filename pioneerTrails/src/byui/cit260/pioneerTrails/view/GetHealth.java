@@ -29,7 +29,6 @@ public class GetHealth extends View {
                 + "\n* Press 'Q' to return to the previous menu   *"
                 + "\n**********************************************");
 
-
     }
 
     @Override
@@ -85,8 +84,5 @@ public class GetHealth extends View {
     private void HealthTips() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
-    
 
 }

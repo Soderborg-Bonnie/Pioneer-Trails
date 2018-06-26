@@ -32,11 +32,11 @@ public class WagonControlTest {
 
         //Expected output return value
         double expResult = 90.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        double result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        double result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -51,11 +51,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = 60.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -70,11 +70,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = 30.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -89,11 +89,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -1.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -108,11 +108,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -1.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -127,11 +127,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -2.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -146,11 +146,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -999.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -165,11 +165,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -4.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -184,11 +184,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = 90.0;
-        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability 
+        System.out.println("calcWagonWheelDegradation(" + wagonWheelDurability
                 + ", " + normalDegradation + ", " + terrainDifficulty + ")");
 
         //Call function to test result
-        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability, 
+        result = WagonControl.calcWagonWheelDegradation(wagonWheelDurability,
                 normalDegradation, terrainDifficulty);
         System.out.println(result);
 
@@ -212,11 +212,11 @@ public class WagonControlTest {
 
         //Expected output return value
         double expResult = 450.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
-        double result = WagonControl.calcFoodWeight(resourceItemWeight, 
+        double result = WagonControl.calcFoodWeight(resourceItemWeight,
                 quantityResourceItem, percentSpoiled);
         System.out.println(result);
 
@@ -231,11 +231,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -1.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
-        result = WagonControl.calcFoodWeight(resourceItemWeight, 
+        result = WagonControl.calcFoodWeight(resourceItemWeight,
                 quantityResourceItem, percentSpoiled);
         System.out.println(result);
 
@@ -250,11 +250,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -2.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
-        result = WagonControl.calcFoodWeight(resourceItemWeight, 
+        result = WagonControl.calcFoodWeight(resourceItemWeight,
                 quantityResourceItem, percentSpoiled);
         System.out.println(result);
 
@@ -269,7 +269,7 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -3.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
@@ -288,11 +288,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = 0.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
-        result = WagonControl.calcFoodWeight(resourceItemWeight, 
+        result = WagonControl.calcFoodWeight(resourceItemWeight,
                 quantityResourceItem, percentSpoiled);
         System.out.println(result);
 
@@ -307,11 +307,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = -4.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
-        result = WagonControl.calcFoodWeight(resourceItemWeight, 
+        result = WagonControl.calcFoodWeight(resourceItemWeight,
                 quantityResourceItem, percentSpoiled);
         System.out.println(result);
 
@@ -326,11 +326,11 @@ public class WagonControlTest {
 
         //Expected output return value
         expResult = 1440.0;
-        System.out.println("calcFoodWeight(" + resourceItemWeight + ", " 
+        System.out.println("calcFoodWeight(" + resourceItemWeight + ", "
                 + quantityResourceItem + ", " + percentSpoiled + ")");
 
         //Call function to test result
-        result = WagonControl.calcFoodWeight(resourceItemWeight, 
+        result = WagonControl.calcFoodWeight(resourceItemWeight,
                 quantityResourceItem, percentSpoiled);
         System.out.println(result);
 

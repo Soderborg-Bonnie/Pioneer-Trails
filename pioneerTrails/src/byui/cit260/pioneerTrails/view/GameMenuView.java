@@ -20,6 +20,7 @@ public class GameMenuView extends View {
                 + "\n* Press 'P' to view players.          *"
                 + "\n* Press 'F' to view resources.        *"
                 + "\n* Press 'I' to view health concerns.  *"
+                + "\n* Press 'L' to view location menu.    *"
                 + "\n* Press 'G' to go on a hunt.          *"
                 + "\n* Press 'H' to view help menu.        *"
                 + "\n* Press 'S' to save the game.         *"
@@ -48,6 +49,9 @@ public class GameMenuView extends View {
             case "I":
                 getHealth();
                 break;
+            case "L":
+                sceneMenu();
+                break;
             case "G":
                 goHunt();
                 break;
@@ -73,17 +77,17 @@ public class GameMenuView extends View {
 
     private void getMap() {
         GetMap getMap = new GetMap();
-        getMap.displayGetMap();
+        getMap.display();
     }
 
     private void getPlayers() {
         GetPlayers getPlayers = new GetPlayers();
-        getPlayers.displayGetPlayers();
+        getPlayers.display();
     }
 
     private void getResources() {
         GetResources getResources = new GetResources();
-        getResources.displayGetResources();
+        getResources.display();
     }
 
     private void getHelp() {
@@ -93,13 +97,17 @@ public class GameMenuView extends View {
 
     private void saveGame() {
         SaveGame saveGame = new SaveGame();
-        saveGame.displaySaveGame();
+        saveGame.display();
     }
 
     private void goHunt() {
         HuntView newHunt = new HuntView();
-        newHunt.displayHuntView();
+        newHunt.display();
     }
 
-    
+    private void sceneMenu() {
+        SceneMenu sceneMenu = new SceneMenu();
+        sceneMenu.display();
+    }
+
 }

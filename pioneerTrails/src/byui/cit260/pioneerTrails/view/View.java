@@ -40,10 +40,12 @@ public abstract class View implements ViewInterface {
         } while (endOfView != true);
 
     }
-  @Override
-  public String getInputs(){
-  return getInput(this.promptMessage);
-  }
+
+    @Override
+    public String getInputs() {
+        return getInput(this.promptMessage);
+    }
+
     @Override
     public String getInput(String menuText) {
         Scanner scanner = new Scanner(System.in);

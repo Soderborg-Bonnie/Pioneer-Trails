@@ -11,26 +11,26 @@ import java.util.Scanner;
  *
  * @author Bonnie
  */
-public class AcquireFood extends View{
+public class AcquireFood extends View {
 
     public AcquireFood() {
-   super("\n==========================================================" +
-            "\n                     Food Options" +
-            "\n==========================================================" +
-            "\n********************************************************" +
-            "\n* You are allowed a total of 1500 pounds               *" +
-            "\n* of food and water on this trip.                      *" +
-            "\n* Choose wisely.                                       *" +
-            "\n* Press '1' for a 50 gallon barrel of water---450#     *" +
-            "\n* Press '2' for a 30 gallon barrel of flour---210#     *" +
-            "\n* Press '3' for a 50 gallon barrel of flour---350#     *" +
-            "\n* Press '4' for a 30 gallon barrel of sugar---270#     *" +
-            "\n* Press '5' for a 50 gallon barrel of sugar---450#     *" +
-            "\n* Press '6' for a 5 gallon barrel of oil-------50#     *" +
-            "\n* Press '7' for a 5 gallon barrel of salt------70#     *" +
-            "\n* Press 'D' to add up your choices.                    *" +
-            "\n* Press 'Q' to quit game          .                    *" +
-            "\n********************************************************");
+        super("\n=========================================================="
+                + "\n                     Food Options"
+                + "\n=========================================================="
+                + "\n********************************************************"
+                + "\n* You are allowed a total of 1500 pounds               *"
+                + "\n* of food and water on this trip.                      *"
+                + "\n* Choose wisely.                                       *"
+                + "\n* Press '1' for a 50 gallon barrel of water---450#     *"
+                + "\n* Press '2' for a 30 gallon barrel of flour---210#     *"
+                + "\n* Press '3' for a 50 gallon barrel of flour---350#     *"
+                + "\n* Press '4' for a 30 gallon barrel of sugar---270#     *"
+                + "\n* Press '5' for a 50 gallon barrel of sugar---450#     *"
+                + "\n* Press '6' for a 5 gallon barrel of oil-------50#     *"
+                + "\n* Press '7' for a 5 gallon barrel of salt------70#     *"
+                + "\n* Press 'D' to add up your choices.                    *"
+                + "\n* Press 'Q' to quit game          .                    *"
+                + "\n********************************************************");
     }
 //            String[] inputs = this.getInputs();
 //
@@ -44,11 +44,6 @@ public class AcquireFood extends View{
 //    @Override
 //    public boolean doAction(String inputs) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
-
-
-    
-   
 
 //    private String[] getInputs() {
 //        Scanner scanner = new Scanner(System.in);
@@ -67,10 +62,12 @@ public class AcquireFood extends View{
 //        }
 //        return inputs;
 //    }
- public static double foodWeight = 0;
-    private boolean doAction(String[] inputs) {
+    public static double foodWeight = 0;
 
-        String menuItem = inputs[0].toUpperCase();
+    @Override
+    public boolean doAction(String inputs) {
+
+        String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "1":
                 foodWeight += 450;
@@ -96,23 +93,18 @@ public class AcquireFood extends View{
             case "D":
                 if (foodWeight <= 1500) {
                     System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
-                           
+
                     return true;
                 } else {
                     foodWeight = 0;
-                     System.out.println("Too greedy. Lost all your food. Try again.");
+                    System.out.println("Too greedy. Lost all your food. Try again.");
                     return false;
                 }
             case "Q":
                 return true;
             default:
-                 System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
+                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
         }
         return false;
-    }
-
-    @Override
-    public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -13,107 +13,49 @@ import java.util.Scanner;
  *
  * @author Bonnie
  */
-public class SceneMenu {
+public class SceneMenu extends View {
 
     public SceneMenu() {
+
+        super("\n======================================="
+                + "\n             Location Menu             "
+                + "\n======================================="
+                + "\n***************************************"
+                + "\n* Press 'A' to acquire food.          *"
+                + "\n* Press 'C' to continue your journey  *"
+                + "\n* Press 'Q' to quit  game.            *"
+                + "\n***************************************");
     }
 
-    void displayStartNewGame() {
-        System.out.println("Yay for new games!");
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        boolean endOfView = false;
+    @Override
+    public boolean doAction(String inputs) {
 
-        do {
-            Scene scene = GameControl.getCurrentScene();
-            String msg = "Welcome to " + scene.getName();
-            System.out.println("=========================================");
-            System.out.println(msg);
-            System.out.println("=========================================");
-            System.out.println("\n***************************************");
-            System.out.println("\n* Press 'G' to view Game Menu.        *");
-            System.out.println("\n* Press 'A' to acquire food.          *");
-            System.out.println("\n* Press 'C' to continue your journey  *");
-            System.out.println("\n* Press 'Q' to quit  game.            *");
-            System.out.println("\n***************************************");
-
-            String[] inputs = this.getInputs();
-
-            if (inputs[0].equalsIgnoreCase("Q")) {
-                return;
-            } else {
-                endOfView = doAction(inputs);
-            }
-        } while (endOfView != true);
-
-    }
-
-    private String[] getInputs() {
-        Scanner scanner = new Scanner(System.in);
-        String[] inputs = new String[1];
-        Boolean valid = false;
-        while (!valid) {
-            System.out.println("Please input your choice: ");
-            inputs[0] = scanner.nextLine();
-            inputs[0] = inputs[0].trim();
-            if (inputs[0].length() < 1) {
-                System.out.println("try again");
-                continue;
-            }
-            valid = true;
-
-        }
-        return inputs;
-    }
-
-    private boolean doAction(String[] inputs) {
-
-        String menuItem = inputs[0].toUpperCase();
+        String menuItem = inputs.toUpperCase();
         switch (menuItem) {
 //            case "G":
 //                    gameMenuView();
 //                    break; 
             case "A":
-                System.out.println("hungry?");
                 acquireFood();
                 break;
             case "C":
-                return continueJourney();
+                continueJourney();
+                break;
             case "Q":
                 return true;
             default:
-                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
+                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
         }
         return false;
     }
 
-//    private void gameMenuView() {
-//        GameMenuView gameMenuView = new GameMenuView();
-//        gameMenuView.display();
-//    }
-    
     private void acquireFood() {
         AcquireFood acquireFood = new AcquireFood();
         acquireFood.display();
     }
 
-    private boolean continueJourney() {
-        if(GameControl.advanceScene()){
-            Scene scene = GameControl.getCurrentScene();
-            String msg = "Congratulations! You made it to " + scene.getName() + "." +  scene.getDescription()
-            + " The game is over.";
-         System.out.println(msg);
-         return true;
-        }
-        // todo: if we die, display we died   return true
-        else {
-            return false;
-        }
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
-
-    void display() {
-       //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void continueJourney() {
+        ContinueJourney continueJourney = new ContinueJourney();
+        continueJourney.display();
     }
 }

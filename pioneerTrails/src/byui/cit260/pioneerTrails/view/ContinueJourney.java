@@ -5,6 +5,9 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.model.Scene;
+
 /**
  *
  * @author tyler
@@ -12,19 +15,24 @@ package byui.cit260.pioneerTrails.view;
 public class ContinueJourney extends View {
 
     public ContinueJourney() {
-
-        super("You continue your journey and arrive at ...");
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (GameControl.advanceScene()) {
+            Scene scene = GameControl.getCurrentScene();
+            String endMsg = "Congratulations! You made it to " + scene.getName() + "." + scene.getDescription()
+                    + " The game is over.";
+            System.out.println(endMsg);
+            return true;
+        } // todo: if we die, display we died   return true
+        else {
+            Scene scene = GameControl.getCurrentScene();
+            String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
+                    + ".";
+            System.out.println(msg);
+            return false;
+        }
     }
 
 }
