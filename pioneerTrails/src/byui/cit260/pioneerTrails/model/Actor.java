@@ -22,27 +22,27 @@ public class Actor implements Serializable {
     //class instance variables
     private String name;
     private Boolean aliveState;
-    private Player player;
-    private Game game;
+    //private Player player;
+    //private Game game;
 
     public Actor() {
     }
 
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
+//    public Game getGame() {
+//        return game;
+//    }
+//
+//    public void setGame(Game game) {
+//        this.game = game;
+//    }
+//
+//    public Player getPlayer() {
+//        return player;
+//    }
+//
+//    public void setPlayer(Player player) {
+//        this.player = player;
+//    }
 
     public String getName() {
         return name;

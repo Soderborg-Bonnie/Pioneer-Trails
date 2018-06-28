@@ -26,12 +26,58 @@ public class GameControl {
         PioneerTrails.setPlayer(player);
         return new Player();
     }
+    
+/*    public static int createNewGame(Player player) {
+    if (player == null)
+        return -1
+    
+    game = create a new Game object
+    Save a reference to the Player object in the game
+    Save a reference to the game in the main class
+    
+    actors = createActors()
+    Save the list of actors in the Game object
+    Assign an actor to the player
+    
+    items = createItems()
+    Save the list of items in the game
+    
+    map = createMap(noOfRows, noOfColumns, items)
+    IF map == null THEN
+        RETURN -1
+    ENDIF
+    
+    Assign the map to the game
+    RETURN 1 // indicates success
+    
+}*/
 
     public static void createNewGame() {
         Game game = new Game();
         PioneerTrails.setCurrentGame(game);
         game.setCurrentScene(0);
     }
+    
+    public static Resource createItems(String name) {
+        Resource resources = new Resource();
+        resources.setName(name);
+        return new Resource();
+    }
+    
+    
+    public static Actor[] createActors() = {
+           Actor actors = new Actor();
+           actors[0] = "Dad";
+           
+           
+    }
+    
+    public static Map createMap() {
+            Map map = new Map(); 
+            game.setMap();
+            return new Map();
+    }
+                
 
     public static Scene getCurrentScene() {
         return SCENES[PioneerTrails.getCurrentGame().getCurrentScene()];

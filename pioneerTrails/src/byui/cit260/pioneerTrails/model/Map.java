@@ -16,10 +16,10 @@ public class Map implements Serializable {
 
     //class instance variables
     private String description;
-    private Integer currentRow;
-    private Integer currentCol;
-    private Integer totalRows;
-    private Integer totalColumns;
+    private int currentRow;
+    private int currentCol;
+    private int totalRows;
+    private int totalColumns;
     private ArrayList<Game> games = new ArrayList<Game>();
     private ArrayList<Location> locations = new ArrayList<Location>();
 
@@ -50,35 +50,35 @@ public class Map implements Serializable {
         this.description = description;
     }
 
-    public Integer getCurrentRow() {
+    public int getCurrentRow() {
         return currentRow;
     }
 
-    public void setCurrentRow(Integer currentRow) {
+    public void setCurrentRow(int currentRow) {
         this.currentRow = currentRow;
     }
 
-    public Integer getCurrentCol() {
+    public int getCurrentCol() {
         return currentCol;
     }
 
-    public void setCurrentCol(Integer currentCol) {
+    public void setCurrentCol(int currentCol) {
         this.currentCol = currentCol;
     }
 
-    public Integer getTotalRows() {
+    public int getTotalRows() {
         return totalRows;
     }
 
-    public void setTotalRows(Integer totalRows) {
+    public void setTotalRows(int totalRows) {
         this.totalRows = totalRows;
     }
 
-    public Integer getTotalColumns() {
+    public int getTotalColumns() {
         return totalColumns;
     }
 
-    public void setTotalColumns(Integer totalColumns) {
+    public void setTotalColumns(int totalColumns) {
         this.totalColumns = totalColumns;
     }
 
