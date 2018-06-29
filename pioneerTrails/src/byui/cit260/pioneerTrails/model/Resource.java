@@ -31,14 +31,7 @@ public class Resource implements Serializable {
         this.weight = weight;
     }
     
-    private static Resource[] resources = {
-        new Resource("Hammer",1,10),
-        new Resource("Bullets", 50, 50),
-        new Resource("Wheel", 1, 100),
-        new Resource("Food", 1,450 ),
-        new Resource("Axe", 1,15),
-        new Resource("Wood", 10, 50),
-        new Resource("Water", 1, 450)};
+    
 
     public Wagon getWagon() {
         return wagon;

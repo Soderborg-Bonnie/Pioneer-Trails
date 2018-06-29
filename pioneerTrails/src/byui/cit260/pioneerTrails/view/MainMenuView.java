@@ -59,7 +59,10 @@ public class MainMenuView extends View {
     }
 
     private void gameMenuView() {
-        GameControl.createNewGame();
+        if (GameControl.createNewGame() == -1){
+            System.out.println("Could not create game.");
+            return;
+        }
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

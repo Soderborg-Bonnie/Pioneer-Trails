@@ -19,9 +19,9 @@ public class Game implements Serializable {
     private int numPeeps;
     private Player player;
     private Wagon wagon;
-    private ArrayList<Actor> actors = new ArrayList<Actor>();
+    private Actor[] actors;
     private Map map;
-    private ArrayList<Resource> resources = new ArrayList<Resource>();
+    private Resource[] resources;
 //    private Resource[] resource;
     private int currentScene;
 
@@ -33,11 +33,11 @@ public class Game implements Serializable {
         this.currentScene = currentScene;
     }
 
-    public ArrayList<Resource> getResources() {
+    public Resource[] getResources() {
         return resources;
     }
 
-    public void setResources(ArrayList<Resource> resources) {
+    public void setResources(Resource[] resources) {
         this.resources = resources;
     }
 
@@ -52,11 +52,11 @@ public class Game implements Serializable {
         this.map = map;
     }
 
-    public ArrayList<Actor> getActors() {
+    public Actor[] getActors() {
         return actors;
     }
 
-    public void setActor(ArrayList<Actor> actors) {
+    public void setActors(Actor[] actors) {
         this.actors = actors;
 
     }
@@ -127,12 +127,8 @@ public class Game implements Serializable {
         return true;
     }
 
-    public void setName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
-    public void setMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }

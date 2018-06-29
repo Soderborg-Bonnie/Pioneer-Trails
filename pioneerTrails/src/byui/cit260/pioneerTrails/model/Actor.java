@@ -32,12 +32,6 @@ public class Actor implements Serializable {
         this.aliveState = aliveState;
     }
     
-    private static Actor[] actors = {
-        new Actor("Dad", true),
-        new Actor("Mom", true),
-        new Actor("Child1", true),
-        new Actor("Child2", true),
-        new Actor("Child3", true)};
 
     public Actor() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
