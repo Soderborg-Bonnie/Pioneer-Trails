@@ -51,30 +51,53 @@ public class GameControl {
     RETURN 1 // indicates success
     
 }*/
-
-    public static void createNewGame() {
+    public static int createNewGame(Player player){
+        if (player == null)
+            return -1;
+    
+//    public static void createNewGame(Player player) {
         Game game = new Game();
         PioneerTrails.setCurrentGame(game);
         game.setCurrentScene(0);
+        
+//        Player player = new Player();
+        game.setPlayer(player);
+        
+        Resource resources = new Resource();
+        game.setName();
+        
+        Actor actors = new Actor();
+        game.setName();
+        
+        Map map = new Map();
+        game.setMap();
+        return 0;
     }
     
     public static Resource createItems(String name) {
         Resource resources = new Resource();
-        resources.setName(name);
+//        resources.setName(name);
         return new Resource();
     }
-    
-    
-    public static Actor[] createActors() = {
-           Actor actors = new Actor();
-           actors[0] = "Dad";
-           
-           
-    }
+//    
+//    
+//    public static Actor[] createActors() {
+//           Actor actors = new Actor();
+////           ArrayList<Actor>actors=
+//           Actor[0]={"Dad",true};
+//           actors[1]=("Mom",true);
+//           actors[2]=("kid1",true);
+//           actors[3]=("kid2",true);
+//           actors[4]=("kid3",true);
+//        
+//           
+//           
+//           
+//    }
     
     public static Map createMap() {
             Map map = new Map(); 
-            game.setMap();
+            map.setMap();
             return new Map();
     }
                 
@@ -120,4 +143,9 @@ public class GameControl {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public static void createNewGame() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }

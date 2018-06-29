@@ -22,6 +22,7 @@ public class Game implements Serializable {
     private ArrayList<Actor> actors = new ArrayList<Actor>();
     private Map map;
     private ArrayList<Resource> resources = new ArrayList<Resource>();
+//    private Resource[] resource;
     private int currentScene;
 
     public int getCurrentScene() {
@@ -124,6 +125,14 @@ public class Game implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public void setName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
