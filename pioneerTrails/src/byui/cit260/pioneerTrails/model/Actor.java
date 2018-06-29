@@ -25,8 +25,24 @@ public class Actor implements Serializable {
     //private Player player;
     //private Game game;
 
-    public Actor() {
+    /*public Actor() {
+    }*/
+    public Actor(String name, Boolean aliveState) {
+        this.name = name;
+        this.aliveState = aliveState;
     }
+    
+    private static Actor[] actors = {
+        new Actor("Dad", true),
+        new Actor("Mom", true),
+        new Actor("Child1", true),
+        new Actor("Child2", true),
+        new Actor("Child3", true)};
+
+    public Actor() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
 
 //    public Game getGame() {
 //        return game;
@@ -93,12 +109,6 @@ public class Actor implements Serializable {
         }
 
         return true;
-    }
-
-    Actor(String name, Boolean aliveState) {
-        this.name = name;
-        this.aliveState = aliveState;
-
     }
 
 }

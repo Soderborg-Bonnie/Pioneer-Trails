@@ -22,6 +22,7 @@ public class Map implements Serializable {
     private int totalColumns;
     private ArrayList<Game> games = new ArrayList<Game>();
     private ArrayList<Location> locations = new ArrayList<Location>();
+    private String symbol;
 
     public Map() {
     }

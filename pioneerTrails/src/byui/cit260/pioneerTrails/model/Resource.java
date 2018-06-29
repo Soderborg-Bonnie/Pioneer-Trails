@@ -15,13 +15,30 @@ public class Resource implements Serializable {
 
     //class instance variables
     private String name;
-    private Integer quantity;
-    private Integer weight;
-    private Boolean need;
-    private Boolean broken;
+    private int quantity;
+    private int weight;
+    
+
+    //private Boolean need;
+    //private Boolean broken;
     private Scene scene;
     private Game game;
     private Wagon wagon;
+    
+    public Resource(String name, int quantity, int weight) {
+        this.name = name;
+        this.quantity = quantity;
+        this.weight = weight;
+    }
+    
+    private static Resource[] resources = {
+        new Resource("Hammer",1,10),
+        new Resource("Bullets", 50, 50),
+        new Resource("Wheel", 1, 100),
+        new Resource("Food", 1,450 ),
+        new Resource("Axe", 1,15),
+        new Resource("Wood", 10, 50),
+        new Resource("Water", 1, 450)};
 
     public Wagon getWagon() {
         return wagon;
@@ -58,41 +75,41 @@ public class Resource implements Serializable {
         this.name = name;
     }
 
-    public Integer getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public Integer getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(Integer weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public Boolean getNeed() {
-        return need;
-    }
-
-    public void setNeed(Boolean need) {
-        this.need = need;
-    }
-
-    public Boolean getBroken() {
-        return broken;
-    }
-
-    public void setBroken(Boolean broken) {
-        this.broken = broken;
-    }
+//    public Boolean getNeed() {
+//        return need;
+//    }
+//
+//    public void setNeed(Boolean need) {
+//        this.need = need;
+//    }
+//
+//    public Boolean getBroken() {
+//        return broken;
+//    }
+//
+//    public void setBroken(Boolean broken) {
+//        this.broken = broken;
+//    }
 
     @Override
     public String toString() {
-        return "Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + ", need=" + need + ", broken=" + broken + '}';
+        return "Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + '}';
     }
 
     @Override
@@ -101,8 +118,7 @@ public class Resource implements Serializable {
         hash = 53 * hash + Objects.hashCode(this.name);
         hash = 53 * hash + Objects.hashCode(this.quantity);
         hash = 53 * hash + Objects.hashCode(this.weight);
-        hash = 53 * hash + Objects.hashCode(this.need);
-        hash = 53 * hash + Objects.hashCode(this.broken);
+     // hash = 53 * hash + Objects.hashCode(this.broken);
         return hash;
     }
 
@@ -127,12 +143,12 @@ public class Resource implements Serializable {
         if (!Objects.equals(this.weight, other.weight)) {
             return false;
         }
-        if (!Objects.equals(this.need, other.need)) {
-            return false;
-        }
-        if (!Objects.equals(this.broken, other.broken)) {
-            return false;
-        }
+//        if (!Objects.equals(this.need, other.need)) {
+//            return false;
+//        }
+//        if (!Objects.equals(this.broken, other.broken)) {
+//            return false;
+//        }
         return true;
     }
 

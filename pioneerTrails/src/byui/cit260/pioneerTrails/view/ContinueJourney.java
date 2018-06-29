@@ -18,15 +18,15 @@ public class ContinueJourney extends View {
         this.promptMessage = getScenePrompt();
     }
 public String getScenePrompt() {
-    if (GameControl.advanceScene()) {
-            Scene scene = GameControl.getCurrentScene();
+    if (Scene.advanceScene()) {
+            Scene scene = Scene.getCurrentScene();
             String endMsg = "Congratulations! You made it to " + scene.getName() + "." + scene.getDescription()
                     + " The game is over. Press \"Enter\" to exit the game.";
             //System.out.println(endMsg);
             return endMsg;
         } // todo: if we die, display we died   return true
         else {
-            Scene scene = GameControl.getCurrentScene();
+            Scene scene = Scene.getCurrentScene();
             String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
                     + "." + "What would you like to do now?";
             //System.out.println(msg);

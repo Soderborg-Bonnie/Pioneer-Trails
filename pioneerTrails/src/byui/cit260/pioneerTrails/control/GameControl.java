@@ -102,12 +102,12 @@ public class GameControl {
     }
                 
 
-    public static Scene getCurrentScene() {
-        return SCENES[PioneerTrails.getCurrentGame().getCurrentScene()];
-    }
+//    public static Scene getCurrentScene() {
+//        return SCENES[PioneerTrails.getCurrentGame().getCurrentScene()];
+//    }
 
     //Scene(String name, String description, String symbol, Integer difficulty, Boolean hindrance, Location location, Resource[] resources
-    private static final Scene[] SCENES = {
+    /*private static final Scene[] SCENES = {
         new Scene("Nauvoo", "Description", "symbol", "Normal", false, new Location(), new Resource[]{}),
         new Scene("Sugar Creek", "Description", "symbol", "Normal", false, new Location(), new Resource[]{}),
         new Scene("Chariton River Crossing", "Description", "symbol", "Medium", false, new Location(), new Resource[]{}),
@@ -132,20 +132,21 @@ public class GameControl {
         new Scene("Golden Pass Road", "Description", "symbol", "Normal", false, new Location(), new Resource[]{}),
         new Scene("Emigration Canyon", "Description", "symbol", "Normal", false, new Location(), new Resource[]{}),
         new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "symbol", "Normal", false, new Location(), new Resource[]{}),};
-
-    public static boolean advanceScene() {
-        int newScene = PioneerTrails.getCurrentGame().getCurrentScene() + 1;
-        if (newScene < SCENES.length) {
-            PioneerTrails.getCurrentGame().setCurrentScene(newScene);
-        }
-
-        return (newScene >= SCENES.length - 1);
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+*/
+//    public static boolean advanceScene() {
+//        int newScene = PioneerTrails.getCurrentGame().getCurrentScene() + 1;
+//        if (newScene < SCENES.length) {
+//            PioneerTrails.getCurrentGame().setCurrentScene(newScene);
+//        }
+//
+//        return (newScene >= SCENES.length - 1);
+//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     public static void createNewGame() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 
     
 }
