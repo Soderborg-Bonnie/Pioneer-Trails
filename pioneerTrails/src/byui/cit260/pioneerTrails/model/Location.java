@@ -15,12 +15,12 @@ import java.util.Objects;
 public class Location implements Serializable {
 
     //class instance variables
-    private Integer row;
-    private Integer column;
+    private int row;
+    private int column;
     private Boolean visited;
-    private Integer stopsRemaining;
+    private int stopsRemaining;
     private Map map;
-    private ArrayList<Scene> scenes = new ArrayList<Scene>();
+    private ArrayList<Scene> scenes = new ArrayList<>();
 
     public Location() {
     }
@@ -41,19 +41,19 @@ public class Location implements Serializable {
         this.map = map;
     }
 
-    public Integer getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(Integer row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public Integer getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(Integer column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 
@@ -65,11 +65,11 @@ public class Location implements Serializable {
         this.visited = visited;
     }
 
-    public Integer getStopsRemaining() {
+    public int getStopsRemaining() {
         return stopsRemaining;
     }
 
-    public void setStopsRemaining(Integer stopsRemaining) {
+    public void setStopsRemaining(int stopsRemaining) {
         this.stopsRemaining = stopsRemaining;
     }
 

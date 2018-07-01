@@ -20,8 +20,8 @@ public class Map implements Serializable {
     private int currentCol;
     private int totalRows;
     private int totalColumns;
-    private ArrayList<Game> games = new ArrayList<Game>();
-    private ArrayList<Location> locations = new ArrayList<Location>();
+    private ArrayList<Game> games = new ArrayList<>();
+    private ArrayList<Location> locations = new ArrayList<>();
     private String symbol;
 
     public Map() {

@@ -98,11 +98,7 @@ public class GameControl {
         return actors;
     }
     
-    public static Resource createItems(String name) {
-        Resource resources = new Resource();
-//        resources.setName(name);
-        return new Resource();
-    }
+    
 //    
 //    
 //    public static Actor[] createActors() {
