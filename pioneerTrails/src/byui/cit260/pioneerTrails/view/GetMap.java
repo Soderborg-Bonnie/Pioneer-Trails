@@ -43,15 +43,15 @@ public class GetMap extends View {
            rightIndicator = "<"; // same as above
         }
        System.out.print("|"); // start map with a |
-        if(locations[row][column].getScene() == null)
-        {
+        if(locations[row][column].getScene() == null) {
+        
              // No scene assigned here so use ?? for the symbol
              System.out.print(leftIndicator + "??" + rightIndicator);
         }
         else
           System.out.print(leftIndicator
              + locations[row][column].getScene()
-             + Scene.getSymbol()
+             //+ Scene.getSymbol()
              + rightIndicator);
       }
      System.out.println("|");
@@ -60,28 +60,14 @@ public class GetMap extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("We suck at maps");
+        return true;
     }
        
         
     }
 
-    @Override
-    public String getInput(String menuText) {
-        return null;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean doAction(String inputs) {
-        return false;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void displayGetMap(){
-    System.out.println("found the maps");
-    }
-
+    
     
 
-}
+
