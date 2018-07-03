@@ -22,6 +22,7 @@ public class SceneMenu extends View {
                 + "\n======================================="
                 + "\n***************************************"
                 + "\n* Press 'A' to acquire food.          *"
+                + "\n* Press 'V' to view location symbols. *"
                 + "\n* Press 'C' to continue your journey  *"
                 + "\n* Press 'Q' to quit  game.            *"
                 + "\n***************************************");
@@ -37,6 +38,9 @@ public class SceneMenu extends View {
 //                    break; 
             case "A":
                 acquireFood();
+                break;
+            case "V":
+                viewSymbols();
                 break;
             case "C":
                 continueJourney();
@@ -58,5 +62,10 @@ public class SceneMenu extends View {
         //System.out.println("Work in progress.");
         ContinueJourney continueJourney = new ContinueJourney();
         continueJourney.display();
+    }
+
+    private void viewSymbols() {
+        ViewSymbols viewSymbols = new ViewSymbols();
+        viewSymbols.display();
     }
 }

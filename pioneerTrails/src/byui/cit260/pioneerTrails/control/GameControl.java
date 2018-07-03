@@ -125,7 +125,12 @@ public class GameControl {
     public static Scene getCurrentScene() {
         return SCENES[PioneerTrails.getCurrentGame().getCurrentScene()];
     }
-    private static final Scene[] SCENES = {
+    
+    public static Scene[] getSymbol(){
+        for( SCENES < SCENES.length; SCENES ++)
+//        return GameControl.SCENES;
+    }
+    public static final Scene[] SCENES = {
         new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, new Location(0,0,true,24), new Resource[]{}),
         new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Normal", false, new Location(0,0,true,24), new Resource[]{}),
         new Scene("Chariton River Crossing", "called Missouri's Grand Divide", "CC", "Medium", false, new Location(0,0,true,23), new Resource[]{}),
