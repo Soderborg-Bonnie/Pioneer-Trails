@@ -17,7 +17,7 @@ public class Scene implements Serializable {
 
     private String name;
     private String description;
-    private String symbol;
+    public String symbol;
     private String difficulty;  // todo: terrainDifficulty
     private Boolean hindrance;  //todo: Illness
     private Location location;  //todo: coords

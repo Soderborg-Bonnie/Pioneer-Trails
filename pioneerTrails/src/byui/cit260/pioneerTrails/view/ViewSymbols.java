@@ -13,22 +13,25 @@ import byui.cit260.pioneerTrails.model.Scene;
  * @author tyler
  */
 public class ViewSymbols extends View {
-    
+
     public ViewSymbols() {
-        this.promptMessage = getSymbolPrompt(); 
-}
+        this.promptMessage = getSymbolPrompt();
+    }
+
+    public String getSymbolPrompt() {
+        Scene[] scene = GameControl.SCENES;
+        int i = 0;
+        String msg = "";
+        for (i = 0; i < scene.length; i++) {
+            msg += "The symbol for " + scene[i].getName() + " is " + scene[i].getSymbol()
+                    + ". \n";
+        }
+        return msg;
+    }
 
     @Override
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String getSymbolPrompt() {
-        Scene[] scene = GameControl.getSymbol();
-        String msg = "The symbol for " + scene.getName() + " is, " + scene.getSymbol()
-                    + ".";
-            //System.out.println(msg);
-            return msg; 
-    }
-    
 }
