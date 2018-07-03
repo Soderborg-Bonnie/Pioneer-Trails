@@ -5,6 +5,8 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.model.Map;
+
 /**
  *
  * @author Bonnie
@@ -75,7 +77,7 @@ public class GameMenuView extends View {
         getHealth.display();
     }
 
-    private void getMap() {
+    public void getMap() {
         GetMap getMap = new GetMap();
         getMap.display();
     }

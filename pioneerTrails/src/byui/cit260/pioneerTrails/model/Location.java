@@ -22,9 +22,13 @@ public class Location implements Serializable {
     private Map map;
     private ArrayList<Scene> scenes = new ArrayList<>();
 
-    public Location() {
+    public Location(int row, int column, Boolean visited, int stopsRemaining) {
+        this.row= row;
+        this.column=column;
+        this.visited=visited;
+        this.stopsRemaining=stopsRemaining;
     }
-
+    
     public ArrayList<Scene> getScenes() {
         return scenes;
     }
@@ -117,6 +121,14 @@ public class Location implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public boolean isVisited() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Object getScene() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
