@@ -5,6 +5,8 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import byui.cit260.pioneerTrails.view.AcquireFood;
+
 /**
  *
  * @author tyler
@@ -44,4 +46,39 @@ public class ResourceControl {
             }
         }
     }
+
+    public static AcquireFood createListOfItems() {
+
+        ListOfItems listOfItems = new ListOfItems();
+        listOfItems.getAcquireFood();
+        int al = listOfItems.length;
+        int k;
+        for (int a = al; a >= 0; a--) {
+            for (int i = 0; 1 < al - 1; i++) {
+                k = i + 1;
+                if (listOfItems[i] > listOfItems[k]) {
+                    swapSpots(i, k, listOfItems);
+                }
+            }
+        }
+        return listOfItems[];
+    }
+
+    private static void swapSpots(int i, int k, String[] listOfItems) {
+        String temp;
+        temp = listOfItems[i];
+        listOfItems[i] == listOfItems[k];
+        listOfItems[k] == temp;
+        return new listOfItems();
+    }
+
+    private static void printList();
+
+    {
+        for (int i = 0, i <al; i++) {
+            System.out.println(listOfItems[i] + ", ");
+        }
+    }
+}
+
 }

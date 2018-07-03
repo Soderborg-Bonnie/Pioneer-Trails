@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,8 @@ import java.util.Scanner;
  * @author Bonnie
  */
 public class AcquireFood extends View {
+
+    public int length;
 
     public AcquireFood() {
         super("\n=========================================================="
@@ -32,19 +35,24 @@ public class AcquireFood extends View {
                 + "\n* Press 'Q' to quit game          .                    *"
                 + "\n********************************************************");
     }
-//            String[] inputs = this.getInputs();
+//            String inputs = this.getInputs();
 //
 //            if (inputs[0].equalsIgnoreCase("Q")) {
 //                return;
 //            } else {
 //                endOfView = doAction(inputs);
 //            }
+//
+//    @Override
+//    public boolean doAction(String inputs) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 //        } while (endOfView!= true);
 //
 //    @Override
 //    public boolean doAction(String inputs) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
+//
 //    private String[] getInputs() {
 //        Scanner scanner = new Scanner(System.in);
 //        String[] inputs = new String[1];
@@ -63,7 +71,8 @@ public class AcquireFood extends View {
 //        return inputs;
 //    }
     public static double foodWeight = 0;
-
+    ArrayList<String> listOfItems = new ArrayList<String>();
+//    public static ArrayList listOfItems[];
     @Override
     public boolean doAction(String inputs) {
 
@@ -71,24 +80,31 @@ public class AcquireFood extends View {
         switch (menuItem) {
             case "1":
                 foodWeight += 450;
+                listOfItems.add("water, 50 gallon barrel");
                 return false;
             case "2":
                 foodWeight += 210;
+                listOfItems.add("flour, 30 gallon barrel");
                 return false;
             case "3":
                 foodWeight += 350;
+                listOfItems.add("flour, 50 gallon barrel");
                 return false;
             case "4":
                 foodWeight += 270;
+                listOfItems.add("sugar 30 gallon barrel");
                 return false;
             case "5":
                 foodWeight += 450;
+                listOfItems.add("sugar, 50 gallon barrel");
                 return false;
             case "6":
                 foodWeight += 50;
+                listOfItems.add("oil, 5 gallon barrel");
                 return false;
             case "7":
                 foodWeight += 70;
+                listOfItems.add("salt, 5 gallon barrel");
                 return false;
             case "D":
                 if (foodWeight <= 1500) {

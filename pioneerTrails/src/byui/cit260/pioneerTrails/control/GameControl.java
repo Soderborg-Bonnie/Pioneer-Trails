@@ -101,21 +101,7 @@ public class GameControl {
     }
     
     
-//    
-//    
-//    public static Actor[] createActors() {
-//           Actor actors = new Actor();
-////           ArrayList<Actor>actors=
-//           Actor[0]={"Dad",true};
-//           actors[1]=("Mom",true);
-//           actors[2]=("kid1",true);
-//           actors[3]=("kid2",true);
-//           actors[4]=("kid3",true);
-//        
-//           
-//           
-//           
-//    }
+
     
     public static Map createMap() {
             Map map = new Map(); 
