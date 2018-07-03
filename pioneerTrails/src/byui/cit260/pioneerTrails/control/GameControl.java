@@ -7,6 +7,7 @@ package byui.cit260.pioneerTrails.control;
 
 import static byui.cit260.pioneerTrails.control.GameControl.SCENES;
 import byui.cit260.pioneerTrails.model.*;
+import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.util.ArrayList;
 import pioneertrails.PioneerTrails;
 
@@ -121,7 +122,11 @@ public class GameControl {
             map.setMap();
             return new Map();
     }
-                
+    public static AcquireFood createAcquireFood(){
+            AcquireFood acquireFood = new AcquireFood();
+            acquireFood.setAcquireFood();
+            return new AcquireFood();
+    }            
 
     public static Scene getCurrentScene() {
         return SCENES[PioneerTrails.getCurrentGame().getCurrentScene()];

@@ -107,4 +107,8 @@ public class AcquireFood extends View {
         }
         return false;
     }
+
+    public void setAcquireFood() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
