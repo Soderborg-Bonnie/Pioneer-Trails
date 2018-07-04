@@ -6,7 +6,10 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.model.Location;
+import byui.cit260.pioneerTrails.model.Map;
 import byui.cit260.pioneerTrails.model.Scene;
+import pioneertrails.PioneerTrails;
 
 /**
  *
@@ -19,12 +22,15 @@ public class ViewSymbols extends View {
     }
 
     public String getSymbolPrompt() {
-        Scene[] scene = GameControl.SCENES;
-        int i = 0;
+        Map map = PioneerTrails.getCurrentGame().getMap();
+        Location[][] location = map.getLocations();
         String msg = "";
-        for (i = 0; i < scene.length; i++) {
-            msg += "The symbol for " + scene[i].getName() + " is " + scene[i].getSymbol()
-                    + ". \n";
+        for (int row = 0; row < map.getTotalRows(); row++) {
+            for (int column = 0; column < map.getTotalColumns(); column++) {
+                Scene scene = map.getLocations()[row][column].getScene();
+                msg += "The symbol for " + scene.getName() + " is " + scene.getSymbol()
+                        + ". \n";
+            }
         }
         return msg;
     }

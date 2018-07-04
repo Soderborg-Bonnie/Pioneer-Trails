@@ -20,28 +20,33 @@ public class Map implements Serializable {
     private int currentCol;
     private int totalRows;
     private int totalColumns;
-    private ArrayList<Game> games = new ArrayList<>();
-    private ArrayList<Location> locations = new ArrayList<>();
+    private Location[][] locations;
+    private Resource[] resources;
+
+    public Resource[] getResources() {
+        return resources;
+    }
+
+    public void setResources(Resource[] resources) {
+        this.resources = resources;
+    }
    
 
     public Map() {
     }
+    
+    public Scene getCurrentScene() {
+       return  locations[currentRow][currentCol].getScene();
+    }
 
-    public ArrayList<Location> getLocations() {
+    public Location[][] getLocations() {
         return locations;
     }
 
-    public void setLocations(ArrayList<Location> locations) {
+    public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
 
-    public ArrayList<Game> getGames() {
-        return games;
-    }
-
-    public void setGames(ArrayList<Game> games) {
-        this.games = games;
-    }
 
     public String getDescription() {
         return description;
@@ -129,8 +134,5 @@ public class Map implements Serializable {
         return true;
     }
 
-    public void setMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }

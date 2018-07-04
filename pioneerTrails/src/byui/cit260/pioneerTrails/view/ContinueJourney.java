@@ -18,7 +18,7 @@ public class ContinueJourney extends View {
         this.promptMessage = getScenePrompt();
     }
 public String getScenePrompt() {
-    if (GameControl.advanceScene()) {
+    if (GameControl.advanceLocation()) {
             Scene scene = GameControl.getCurrentScene();
             String endMsg = "Congratulations! You made it to " + scene.getName() + "." + scene.getDescription()
                     + " The game is over. Press \"Enter\" to exit the game.";

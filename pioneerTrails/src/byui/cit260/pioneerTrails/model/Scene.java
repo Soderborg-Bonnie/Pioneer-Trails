@@ -20,23 +20,48 @@ public class Scene implements Serializable {
     public String symbol;
     private String difficulty;  // todo: terrainDifficulty
     private Boolean hindrance;  //todo: Illness
-    private Location location;  //todo: coords
-    private Resource[] resources;
+    private Resource resource;
 
-    public Resource[] getResources() {
-        return resources;
+    public Resource getResource() {
+        return resource;
     }
+    public Scene() {
+    
+}
 
     public Scene(String name, String description, String symbol,
-            String difficulty, Boolean hindrance, Location location, Resource[] resources) {
+            String difficulty, Boolean hindrance, Resource resource) {
         this.name = name;
         this.description = description;
         this.symbol = symbol;
         this.difficulty = difficulty;
         this.hindrance = hindrance;
-        this.location = location;
-        this.resources = resources;
+        this.resource = resource;
 
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public void setHindrance(Boolean hindrance) {
+        this.hindrance = hindrance;
+    }
+
+    public void setResource(Resource resource) {
+        this.resource = resource;
     }
 
     
@@ -61,14 +86,9 @@ public class Scene implements Serializable {
         return hindrance;
     }
 
-    public Location getLocations() {
-        return location;
-    }
+    
 
-    @Override
-    public String toString() {
-        return "Scene{" + "name=" + name + ", description=" + description + ", symbol=" + symbol + ", difficulty=" + difficulty + ", hindrance=" + hindrance + ", location=" + location + '}';
-    }
+   
 
     @Override
     public boolean equals(Object obj) {
@@ -97,9 +117,7 @@ public class Scene implements Serializable {
         if (!Objects.equals(this.hindrance, other.hindrance)) {
             return false;
         }
-        if (!Objects.equals(this.location, other.location)) {
-            return false;
-        }
+        
         return true;
     }
 
