@@ -45,9 +45,9 @@ public class GameMenuView extends View {
             case "P":
                 getPlayers();
                 break;
-            case "F":
-                getResources();
-                break;
+//            case "F":
+//                getResources();
+//                break;
             case "I":
                 getHealth();
                 break;
@@ -87,10 +87,10 @@ public class GameMenuView extends View {
         getPlayers.display();
     }
 
-    private void getResources() {
-        GetResources getResources = new GetResources();
-        getResources.display();
-    }
+//    private void getResources() {
+//        GetResources getResources = new GetResources();
+//        getResources.display();
+//    }
 
     private void getHelp() {
         GetHelp getHelp = new GetHelp();

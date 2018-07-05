@@ -64,30 +64,21 @@ public class GameControl {
 //        Player player = new Player();
         game.setPlayer(PioneerTrails.getPlayer());
 
-        Resource[] resources = createResources();
-
+               
+        Resource[] resource = Resource.createResources();
+        
+        
         Actor[] actors = createActors();
         game.setActors(actors);
 
-        Map map = MapControl.createMap(5, 5, resources);
+        Map map = MapControl.createMap(5, 5, resource);
         Scene[] scenes = createScenes();
         assignScenesToLocations(scenes, map.getLocations());
         game.setMap(map);
         return 0;
     }
 
-    private static Resource[] createResources() {
-        Resource[] resources = new Resource[7];
-        resources[0] = new Resource("Hammer", 1, 10);
-        resources[1] = new Resource("Bullets", 50, 50);
-        resources[2] = new Resource("Wheel", 1, 100);
-        resources[3] = new Resource("Food", 1, 450);
-        resources[4] = new Resource("Axe", 1, 15);
-        resources[5] = new Resource("Wood", 10, 50);
-        resources[6] = new Resource("Water", 1, 450);
-        return resources;
-    }
-
+   
     public static Actor[] createActors() {
         Actor[] actors = new Actor[5];
         actors[0] = new Actor("Dad", true);
@@ -110,32 +101,32 @@ public class GameControl {
 
     public static Scene[] createScenes() { //take out location from Scene
         Scene[] scenes = new Scene[25];
-        Resource[] resources = PioneerTrails.getCurrentGame().getMap().getResources();
-        scenes[0] = new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, resources[0]);
-        new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Normal", false, resources[1]);
-        new Scene("Chariton River Crossing", "called Missouri's Grand Divide", "CC", "Medium", false, resources[2]);
-        new Scene("Locust Creek", "where 'Come, Come Ye Saints' was written", "LC", "Difficult", false, resources[3]);
-        new Scene("Garden Grove", "there are wild onions as far as the eye can see", "GG", "Normal", false, resources[4]);
-        new Scene("Nishnabotna River", "Be on the lookout for the Pottawattamie Indians", "NR", "Medium", false, resources[5]);
-        new Scene("Grand Encampment", "This broad, open area looks like a great stopping place as you approach the Missouri River.", "GE", "Normal", false, resources[6]);
-        new Scene("Council Bluffs", "Here, Colonel Allen of the US Army conscripted 500 tired pioneers to fight in the war against Mexico", "CB", "Difficult", false, resources[7]);
-        new Scene("Winter Quarters", "temporary headquarters of the Church for less than a year", "WQ", "Normal", false, resources[8]);
-        new Scene("Elkhorn River Crossing", "one of the major river crossings faced by westbound immigrants", "ER", "Medium", false, resources[9]);
-        new Scene("Platte River", "was given its name by the Otoe people, meaning flat water", "PR", "Medium", false, resources[10]);
-        new Scene("Fort Kearny", "a safe haven in this new and hostile land", "FK", "Normal", false, resources[11]);
-        new Scene("Confluence Point", "birthplace of the roadometer", "CP", "Medium", false, resources[12]);
-        new Scene("Ash Hollow", "It's a steep drop down from here with a 25 degree angle for 300 feet", "AH", "Difficult", false, resources[13]);
-        new Scene("Chimney Rock", "a prominent geological rock formation that serves as landmark along the trail", "CR", "Normal", false, resources[14]);
-        new Scene("Scottsbluff", "which gets it's namesake from a bluff overlooking the North Platt River", "SB", "Medium", false, resources[15]);
-        new Scene("Fort Laramie", "was named Fort William, then Fort John, before Fort Laramie", "FL", "Normal", false, resources[16]);
-        new Scene("Sweetwater River", "the easiest pass across the Atlantic and Pacific drainages", "SR", "Difficult", false, resources[17]);
-        new Scene("Independence Rock", "known as the Register of the Desert", "IR", "Normal", false, resources[18]);
-        new Scene("Fort Bridger", "named after Jim Bridger, the Daniel Boone of the Rockies", "FB", "Medium", false, resources[19]);
-        new Scene("Echo Canyon", "the oldest trail out of Zion Canyon", "EC", "Medium", false, resources[20]);
-        new Scene("Golden Pass Road", "known as Parley's Canyon", "GP", "Normal", false, resources[21]);
-        new Scene("Emigration Canyon", "Brigham Young - 'This is the right place. Drive on.'", "EM", "Normal", false, resources[22]);
-        new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, resources[23]);
-        new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, resources[24]);
+        Resource[] resource = Resource.createResources();
+        scenes[0] = new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, resource[0]);
+        scenes[1] = new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Normal", false, null);
+        scenes[2] = new Scene("Chariton River Crossing", "called Missouri's Grand Divide", "CC", "Medium", false, null);
+        scenes[3] = new Scene("Locust Creek", "where 'Come, Come Ye Saints' was written", "LC", "Difficult", false, null);
+        scenes[4] = new Scene("Garden Grove", "there are wild onions as far as the eye can see", "GG", "Normal", false, null);
+        scenes[5] = new Scene("Nishnabotna River", "Be on the lookout for the Pottawattamie Indians", "NR", "Medium", false, null);
+        scenes[6] = new Scene("Grand Encampment", "This broad, open area looks like a great stopping place as you approach the Missouri River.", "GE", "Normal", false, null);
+        scenes[7] = new Scene("Council Bluffs", "Here, Colonel Allen of the US Army conscripted 500 tired pioneers to fight in the war against Mexico", "CB", "Difficult", false, null);
+        scenes[8] = new Scene("Winter Quarters", "temporary headquarters of the Church for less than a year", "WQ", "Normal", false, null);
+        scenes[9] = new Scene("Elkhorn River Crossing", "one of the major river crossings faced by westbound immigrants", "ER", "Medium", false, null);
+        scenes[10] = new Scene("Platte River", "was given its name by the Otoe people, meaning flat water", "PR", "Medium", false, null);
+        scenes[11] = new Scene("Fort Kearny", "a safe haven in this new and hostile land", "FK", "Normal", false, null);
+        scenes[12] = new Scene("Confluence Point", "birthplace of the roadometer", "CP", "Medium", false, null);
+        scenes[13] = new Scene("Ash Hollow", "It's a steep drop down from here with a 25 degree angle for 300 feet", "AH", "Difficult", false, null);
+        scenes[14] = new Scene("Chimney Rock", "a prominent geological rock formation that serves as landmark along the trail", "CR", "Normal", false, null);
+        scenes[15] = new Scene("Scottsbluff", "which gets it's namesake from a bluff overlooking the North Platt River", "SB", "Medium", false, null);
+        scenes[16] = new Scene("Fort Laramie", "was named Fort William, then Fort John, before Fort Laramie", "FL", "Normal", false, null);
+        scenes[17] = new Scene("Sweetwater River", "the easiest pass across the Atlantic and Pacific drainages", "SR", "Difficult", false, null);
+        scenes[18] = new Scene("Independence Rock", "known as the Register of the Desert", "IR", "Normal", false, null);
+        scenes[19] = new Scene("Fort Bridger", "named after Jim Bridger, the Daniel Boone of the Rockies", "FB", "Medium", false, null);
+        scenes[20] = new Scene("Echo Canyon", "the oldest trail out of Zion Canyon", "EC", "Medium", false, null);
+        scenes[21] = new Scene("Golden Pass Road", "known as Parley's Canyon", "GP", "Normal", false,null );
+        scenes[22] = new Scene("Emigration Canyon", "Brigham Young - 'This is the right place. Drive on.'", "EM", "Normal", false, null);
+        scenes[23] = new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, null);
+        scenes[24] = new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, null);
         return scenes;
     }
 

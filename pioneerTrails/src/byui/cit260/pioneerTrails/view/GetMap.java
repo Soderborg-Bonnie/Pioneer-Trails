@@ -8,6 +8,7 @@ package byui.cit260.pioneerTrails.view;
 import byui.cit260.pioneerTrails.control.MapControl;
 import byui.cit260.pioneerTrails.model.Game;
 import byui.cit260.pioneerTrails.model.Location;
+import byui.cit260.pioneerTrails.model.Map;
 import byui.cit260.pioneerTrails.model.Scene;
 import pioneertrails.PioneerTrails;
 
@@ -19,7 +20,7 @@ public class GetMap extends View {
 
     public GetMap() {
        Game game = PioneerTrails.getCurrentGame();
-       Location[][] locations = MapControl.getLocations();
+       Location[][] locations = MapControl.createLocations();
        System.out.print(" |");
        for(int column = 0; column<locations[0].length;column++){
         System.out.print("  " + column + " |"); 
@@ -32,7 +33,7 @@ public class GetMap extends View {
          // set default indicators as blanks
          String leftIndicator = " ";
          String rightIndicator = " ";
-        if(locations[row][column] == MapControl.getCurrentLocation()){
+        if(locations[row][column] == Scene.getCurrentScene());
           // Set star indicators to show this is the current location.
           leftIndicator = "*"; 
           rightIndicator = "*"; 
