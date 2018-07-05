@@ -35,41 +35,7 @@ public class AcquireFood extends View {
                 + "\n* Press 'Q' to quit game          .                    *"
                 + "\n********************************************************");
     }
-//            String inputs = this.getInputs();
-//
-//            if (inputs[0].equalsIgnoreCase("Q")) {
-//                return;
-//            } else {
-//                endOfView = doAction(inputs);
-//            }
-//
-//    @Override
-//    public boolean doAction(String inputs) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//        } while (endOfView!= true);
-//
-//    @Override
-//    public boolean doAction(String inputs) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//
-//    private String[] getInputs() {
-//        Scanner scanner = new Scanner(System.in);
-//        String[] inputs = new String[1];
-//        Boolean valid = false;
-//        while (!valid) {
-//            "Please select an option: ");
-//            inputs[0] = scanner.nextLine();
-//            inputs[0] = inputs[0].trim();
-//            if (inputs[0].length() < 1) {
-//                "try again");
-//                continue;
-//            }
-//            valid = true;
-//
-//        }
-//        return inputs;
-//    }
+
     public static double foodWeight = 0;
     ArrayList<String> listOfItems = new ArrayList<String>();
 //    public static ArrayList listOfItems[];
