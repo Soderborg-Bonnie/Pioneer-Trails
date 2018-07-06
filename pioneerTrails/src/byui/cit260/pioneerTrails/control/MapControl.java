@@ -96,10 +96,10 @@ public class MapControl {
 //       return  locations[currentRow][currentCol].getScene();
 //    }
     
-    public static Location getCurrentLocation() {
-        return locations[currentRow][currentCol];
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public static Location getCurrentLocation() {
+//        return locations[currentRow][currentCol];
+//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
         
         
        

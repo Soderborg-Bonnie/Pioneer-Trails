@@ -15,6 +15,10 @@ import pioneertrails.PioneerTrails;
  */
 public class Scene implements Serializable {
 
+    public static Location getCurrentScene() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private String name;
     private String description;
     public String symbol;

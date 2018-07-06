@@ -33,16 +33,17 @@ public class GetMap extends View {
          // set default indicators as blanks
          String leftIndicator = " ";
          String rightIndicator = " ";
-        if(locations[row][column] == Scene.getCurrentScene());
+        if(locations[row][column] == Scene.getCurrentScene()){
           // Set star indicators to show this is the current location.
           leftIndicator = "*"; 
           rightIndicator = "*"; 
-        } 
+      } 
         else if(locations[row][column].isVisited()){
            // Set < > indicators to show this location has been visited.
            leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
            rightIndicator = "<"; // same as above
         }
+        
        System.out.print("|"); // start map with a |
         if(locations[row][column].getScene() == null) {
         
@@ -57,6 +58,8 @@ public class GetMap extends View {
       }
      System.out.println("|");
     }
+
+    
  }
 
     @Override
