@@ -30,36 +30,7 @@ public class Resource implements Serializable {
         this.quantity = quantity;
         this.weight = weight;
     }
-    public static Resource[] createResources() {
-        Resource[] resources = new Resource[25];
-        resources[0] = new Resource("Hammer", 1, 10);
-        resources[1] = new Resource("Bullets", 50, 50);
-        resources[2] = new Resource("Wheel", 1, 100);
-        resources[3] = new Resource("Food", 1, 450);
-        resources[4] = new Resource("Axe", 1, 15);
-        resources[5] = new Resource("Wood", 10, 50);
-        resources[6] = new Resource("Water", 1, 450);
-        resources[7] = new Resource("Hammer", 1, 10);
-        resources[8] = new Resource("Bullets", 50, 50);
-        resources[9] = new Resource("Wheel", 1, 100);
-        resources[10] = new Resource("Food", 1, 450);
-        resources[11] = new Resource("Axe", 1, 15);
-        resources[12] = new Resource("Wood", 10, 50);
-        resources[13] = new Resource("Water", 1, 450);
-        resources[14] = new Resource("Bullets", 50, 50);
-        resources[15] = new Resource("Wheel", 1, 100);
-        resources[16] = new Resource("Food", 1, 450);
-        resources[17] = new Resource("Axe", 1, 15);
-        resources[18] = new Resource("Wood", 10, 50);
-        resources[19] = new Resource("Water", 1, 450);
-        resources[20] = new Resource("Bullets", 50, 50);
-        resources[21] = new Resource("Wheel", 1, 100);
-        resources[22] = new Resource("Food", 1, 450);
-        resources[23] = new Resource("Axe", 1, 15);
-        resources[24] = new Resource("Wood", 10, 50);
-             
-        return resources;
-    }
+    
     
 
     public Wagon getWagon() {

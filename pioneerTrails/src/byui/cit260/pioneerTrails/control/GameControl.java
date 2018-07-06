@@ -64,21 +64,18 @@ public class GameControl {
 //        Player player = new Player();
         game.setPlayer(PioneerTrails.getPlayer());
 
-               
-        Resource[] resource = Resource.createResources();
-        
-        
+        Resource[] resources = createResources();
+        game.setResources(resources);
         Actor[] actors = createActors();
         game.setActors(actors);
 
-        Map map = MapControl.createMap(5, 5, resource);
+        Map map = MapControl.createMap(5, 5);
         Scene[] scenes = createScenes();
         assignScenesToLocations(scenes, map.getLocations());
         game.setMap(map);
         return 0;
     }
 
-   
     public static Actor[] createActors() {
         Actor[] actors = new Actor[5];
         actors[0] = new Actor("Dad", true);
@@ -99,10 +96,41 @@ public class GameControl {
         return PioneerTrails.getCurrentGame().getMap().getCurrentScene();
     }
 
+    public static Resource[] createResources() {
+        Resource[] resources = new Resource[25];
+        resources[0] = new Resource("Hammer", 1, 10);
+        resources[1] = new Resource("Bullets", 50, 50);
+        resources[2] = new Resource("Wheel", 1, 100);
+        resources[3] = new Resource("Food", 1, 450);
+        resources[4] = new Resource("Axe", 1, 15);
+        resources[5] = new Resource("Wood", 10, 50);
+        resources[6] = new Resource("Water", 1, 450);
+        resources[7] = new Resource("Hammer", 1, 10);
+        resources[8] = new Resource("Bullets", 50, 50);
+        resources[9] = new Resource("Wheel", 1, 100);
+        resources[10] = new Resource("Food", 1, 450);
+        resources[11] = new Resource("Axe", 1, 15);
+        resources[12] = new Resource("Wood", 10, 50);
+        resources[13] = new Resource("Water", 1, 450);
+        resources[14] = new Resource("Bullets", 50, 50);
+        resources[15] = new Resource("Wheel", 1, 100);
+        resources[16] = new Resource("Food", 1, 450);
+        resources[17] = new Resource("Axe", 1, 15);
+        resources[18] = new Resource("Wood", 10, 50);
+        resources[19] = new Resource("Water", 1, 450);
+        resources[20] = new Resource("Bullets", 50, 50);
+        resources[21] = new Resource("Wheel", 1, 100);
+        resources[22] = new Resource("Food", 1, 450);
+        resources[23] = new Resource("Axe", 1, 15);
+        resources[24] = new Resource("Wood", 10, 50);
+
+        return resources;
+    }
+
     public static Scene[] createScenes() { //take out location from Scene
         Scene[] scenes = new Scene[25];
-        Resource[] resource = Resource.createResources();
-        scenes[0] = new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, resource[0]);
+        Resource[] resources = PioneerTrails.getCurrentGame().getResources();
+        scenes[0] = new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, resources[0]);
         scenes[1] = new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Normal", false, null);
         scenes[2] = new Scene("Chariton River Crossing", "called Missouri's Grand Divide", "CC", "Medium", false, null);
         scenes[3] = new Scene("Locust Creek", "where 'Come, Come Ye Saints' was written", "LC", "Difficult", false, null);
@@ -123,7 +151,7 @@ public class GameControl {
         scenes[18] = new Scene("Independence Rock", "known as the Register of the Desert", "IR", "Normal", false, null);
         scenes[19] = new Scene("Fort Bridger", "named after Jim Bridger, the Daniel Boone of the Rockies", "FB", "Medium", false, null);
         scenes[20] = new Scene("Echo Canyon", "the oldest trail out of Zion Canyon", "EC", "Medium", false, null);
-        scenes[21] = new Scene("Golden Pass Road", "known as Parley's Canyon", "GP", "Normal", false,null );
+        scenes[21] = new Scene("Golden Pass Road", "known as Parley's Canyon", "GP", "Normal", false, null);
         scenes[22] = new Scene("Emigration Canyon", "Brigham Young - 'This is the right place. Drive on.'", "EM", "Normal", false, null);
         scenes[23] = new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, null);
         scenes[24] = new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, null);
@@ -136,10 +164,12 @@ public class GameControl {
             if (map.getCurrentRow() >= map.getTotalRows() - 1) {
                 return false;
             } else {
+                map.getLocations()[map.getCurrentRow()][map.getCurrentCol()].setVisited(Boolean.TRUE);
                 map.setCurrentRow(map.getCurrentRow() + 1);
                 map.setCurrentCol(0);
             }
         } else {
+            map.getLocations()[map.getCurrentRow()][map.getCurrentCol()].setVisited(Boolean.TRUE);
             map.setCurrentCol(map.getCurrentCol() + 1);
         }
         return true;
@@ -147,6 +177,31 @@ public class GameControl {
 
     private static void assignScenesToLocations(Scene[] scenes, Location[][] locations) {
         locations[0][0].setScene(scenes[0]);
+        locations[0][1].setScene(scenes[1]);
+        locations[0][2].setScene(scenes[2]);
+        locations[0][3].setScene(scenes[3]);
+        locations[0][4].setScene(scenes[4]);
+        locations[1][0].setScene(scenes[5]);
+        locations[1][1].setScene(scenes[6]);
+        locations[1][2].setScene(scenes[7]);
+        locations[1][3].setScene(scenes[8]);
+        locations[1][4].setScene(scenes[9]);
+        locations[2][0].setScene(scenes[10]);
+        locations[2][1].setScene(scenes[11]);
+        locations[2][2].setScene(scenes[12]);
+        locations[2][3].setScene(scenes[13]);
+        locations[2][4].setScene(scenes[14]);
+        locations[3][0].setScene(scenes[15]);
+        locations[3][1].setScene(scenes[16]);
+        locations[3][2].setScene(scenes[17]);
+        locations[3][3].setScene(scenes[18]);
+        locations[3][4].setScene(scenes[19]);
+        locations[4][0].setScene(scenes[20]);
+        locations[4][1].setScene(scenes[21]);
+        locations[4][2].setScene(scenes[22]);
+        locations[4][3].setScene(scenes[23]);
+        locations[4][4].setScene(scenes[24]);
+
     }
 
 }

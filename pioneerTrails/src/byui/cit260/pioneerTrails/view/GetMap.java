@@ -20,6 +20,7 @@ public class GetMap extends View {
 
     public GetMap() {
        Game game = PioneerTrails.getCurrentGame();
+       Map map = game.getMap();
        Location[][] locations = MapControl.createLocations();
        System.out.print(" |");
        for(int column = 0; column<locations[0].length;column++){
@@ -33,7 +34,7 @@ public class GetMap extends View {
          // set default indicators as blanks
          String leftIndicator = " ";
          String rightIndicator = " ";
-        if(locations[row][column] == Scene.getCurrentScene()){
+        if(locations[row][column].getScene() == map.getCurrentScene()){
           // Set star indicators to show this is the current location.
           leftIndicator = "*"; 
           rightIndicator = "*"; 

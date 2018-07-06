@@ -8,6 +8,7 @@ package byui.cit260.pioneerTrails.control;
 import byui.cit260.pioneerTrails.model.Location;
 import byui.cit260.pioneerTrails.model.Map;
 import byui.cit260.pioneerTrails.model.Resource;
+import pioneertrails.PioneerTrails;
 
 
 
@@ -39,18 +40,17 @@ public class MapControl {
 //return map
 //}
     
-    public static Map createMap(int totalRows, int totalColumns, Resource[] resources){
+    public static Map createMap(int totalRows, int totalColumns){
         //System.out.println("createMap() called ***");
         if (totalRows < 0 || totalColumns < 0)
             return null;
-        if(resources == null || resources.length < 1)
-            return null;
+        
         
         Map map = new Map();
         map.setTotalRows(totalRows);
         map.setTotalColumns(totalColumns); 
         map.setLocations(createLocations());
-        map.setResources(resources);
+        
         return map;
     }
         
@@ -65,7 +65,7 @@ public class MapControl {
         locations[0][3] = new Location(false,21);
         locations[0][4] = new Location(false,20);
         locations[1][0] = new Location(false,19);
-        locations[1][2] = new Location(false,18);
+        locations[1][1] = new Location(false,18);
         locations[1][2] = new Location(false,17);
         locations[1][3] = new Location(false,16);
         locations[1][4] = new Location(false,15);
@@ -96,26 +96,14 @@ public class MapControl {
 //       return  locations[currentRow][currentCol].getScene();
 //    }
     
-//    public static Location getCurrentLocation() {
-//        return locations[currentRow][currentCol];
+//    public static Location[][] getCurrentLocation() {
+//         Map map = PioneerTrails.getCurrentGame().getMap();
+//        Location locations = new Location[5][5];
+//        return map(map.getCurrentRow(),map.getCurrentCol());
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-        
-        
-       
-       
-    
-
-    
-
-        
-    
-
-   
- 
-
-    
- 
+//        
+     
        
 
         private void setTotalRows() {

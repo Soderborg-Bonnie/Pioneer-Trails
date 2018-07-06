@@ -21,15 +21,9 @@ public class Map implements Serializable {
     private int totalRows;
     private int totalColumns;
     private Location[][] locations;
-    private Resource[] resources;
+   
 
-    public Resource[] getResources() {
-        return resources;
-    }
-
-    public void setResources(Resource[] resources) {
-        this.resources = resources;
-    }
+    
    
 
     public Map() {
