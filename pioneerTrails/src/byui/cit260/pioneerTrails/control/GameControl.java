@@ -86,11 +86,11 @@ public class GameControl {
         return actors;
     }
 
-    public static AcquireFood createAcquireFood() {
-        AcquireFood acquireFood = new AcquireFood();
-        acquireFood.setAcquireFood();
-        return new AcquireFood();
-    }
+//    public static AcquireFood createAcquireFood() {
+//        AcquireFood acquireFood = new AcquireFood();
+//        acquireFood.setAcquireFood();
+//        return new AcquireFood();
+//    }
 
     public static Scene getCurrentScene() {
         return PioneerTrails.getCurrentGame().getMap().getCurrentScene();

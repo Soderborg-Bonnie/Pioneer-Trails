@@ -6,7 +6,7 @@
 package byui.cit260.pioneerTrails.control;
 
 import byui.cit260.pioneerTrails.view.AcquireFood;
-
+import java.util.ArrayList;
 /**
  *
  * @author tyler
@@ -47,13 +47,16 @@ public class ResourceControl {
         }
     }
 
-//    public static AcquireFood createListOfItems() {
+
+
+//    public static AcquireFood createSortedListOfItems() {
 //
-//        ListOfItems listOfItems = new ListOfItems();
-//        listOfItems.getAcquireFood();
+////        ListOfItems listOfItems = new ListOfItems();
+//        
+//        String listOfItems = listOfItems.getAcquireFood();
 //        int al = listOfItems.length;
 //        int k;
-//        for (int a = al; a >= 0; a--) {
+//        for (int k = al; k >= 0; k--) {
 //            for (int i = 0; 1 < al - 1; i++) {
 //                k = i + 1;
 //                if (listOfItems[i] > listOfItems[k]) {
