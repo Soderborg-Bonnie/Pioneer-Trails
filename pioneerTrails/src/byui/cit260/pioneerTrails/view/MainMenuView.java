@@ -59,13 +59,18 @@ public class MainMenuView extends View {
     }
 
     private void gameMenuView() {
-        if (GameControl.createNewGame() == -1){
-            System.out.println("Could not create game.");
-            return;
-        }
+//        try {
+            if (GameControl.createNewGame() == -1) {
+                System.out.println("Could not create game.");
+                return;
+            }
+//        } catch (MapControlException mce) {
+//            System.out.println(mce.getMessage());
+//        }
         GameMenuView gameMenuView = new GameMenuView();
         gameMenuView.display();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
 }

@@ -82,7 +82,7 @@ public class AcquireFood extends View {
                 if (foodWeight <= 1500) {
                     System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
                     System.out.println(listOfItems);
-
+                    
           
 
 
