@@ -14,6 +14,10 @@ import java.util.Scanner;
  */
 public class AcquireFood extends View {
 
+    public static AcquireFood getListOfItems() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int length;
 
     public AcquireFood() {
@@ -81,6 +85,7 @@ public class AcquireFood extends View {
             case "D":
                 if (foodWeight <= 1500) {
                     System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
+                    
                     System.out.println(listOfItems);
                     
           
@@ -100,9 +105,9 @@ return true;
         return false;
     }
 //public static createSortedListOfItems() {
-
-//        ListOfItems listOfItems = new ListOfItems();
-        
+//
+//        AcquireFood listOfItems = new ListOfItems();
+//        
 //        String listOfItems = listOfItems.getAcquireFood();
 //        int al = listOfItems.length;
 //        int k;

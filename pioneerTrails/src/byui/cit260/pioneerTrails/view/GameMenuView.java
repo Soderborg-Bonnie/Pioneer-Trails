@@ -24,7 +24,7 @@ public class GameMenuView extends View {
                 + "\n***************************************"
                 + "\n* Press 'M' to view map.              *"
                 + "\n* Press 'P' to view players.          *"
-                + "\n* Press 'F' to view resources.        *"
+                + "\n* Press 'F' to view current resources.*"
                 + "\n* Press 'I' to view health concerns.  *"
                 + "\n* Press 'L' to view location menu.    *"
                 + "\n* Press 'G' to go on a hunt.          *"
@@ -49,9 +49,9 @@ public class GameMenuView extends View {
             case "P":
                 getPlayers();
                 break;
-//            case "F":
-//                getResources();
-//                break;
+            case "F":
+                getCurrentResources();
+                break;
             case "I":
                 getHealth();
                 break;
@@ -131,10 +131,10 @@ public class GameMenuView extends View {
         getPlayers.display();
     }
 
-//    private void getResources() {
-//        GetResources getResources = new GetResources();
-//        getResources.display();
-//    }
+    private void getCurrentResources() {
+        ViewCurrentResources viewCurrentResources = new ViewCurrentResources();
+        viewCurrentResources.display();
+    }
 
     private void getHelp() {
         GetHelp getHelp = new GetHelp();
@@ -155,5 +155,7 @@ public class GameMenuView extends View {
         SceneMenu sceneMenu = new SceneMenu();
         sceneMenu.display();
     }
+
+    
 
 }

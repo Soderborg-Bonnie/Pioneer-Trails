@@ -47,9 +47,15 @@ public class ResourceControl {
         }
     }
 
+//public String creatSortedListOfItems(){
+//    AcquireFood listOfItems = AcquireFood.getListOfItems();
+//    for (int i = 0; i<listOfItems.length-1; i++){
+//    System.out.println('listOfItems[i]');
+//    return listOfItems;
+//    }
+//}
 
-
-//    public static AcquireFood createSortedListOfItems() {
+//    public String createSortedListOfItems() {
 //
 ////        ListOfItems listOfItems = new ListOfItems();
 //        
