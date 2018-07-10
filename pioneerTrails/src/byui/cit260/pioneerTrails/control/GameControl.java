@@ -5,6 +5,8 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
+import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.*;
 import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.util.ArrayList;
@@ -17,9 +19,9 @@ import pioneertrails.PioneerTrails;
 public class GameControl {
 
     //private static Game scene;
-    public static Player savePlayer(String playersName) {
+    public static Player savePlayer(String playersName) throws GameControlExceptions{
         if (playersName.length() < 1) {
-            return null;
+            throw new GameControlExceptions("Your name has to have at least a charcter. Hitting 'enter' wothout anything else is not ok.");
         }
         Player player = new Player();
         player.setName(playersName);
@@ -51,9 +53,9 @@ public class GameControl {
     RETURN 1 // indicates success
     
 }*/
-    public static int createNewGame() {
+    public static int createNewGame() throws GameControlExceptions, MapControlExceptions{
         if (PioneerTrails.getPlayer() == null) {
-            return -1;
+            throw new GameControlExceptions("Your name has to have at least a charcter. Hitting 'enter' wothout anything else is not ok.");
         }
 
 //    public static void createNewGame(Player player) {

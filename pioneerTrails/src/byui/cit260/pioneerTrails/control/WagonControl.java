@@ -5,6 +5,8 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import byui.cit260.pioneerTrails.exceptions.WagonControlExceptions;
+
 /**
  *
  * @author tyler
@@ -24,14 +26,14 @@ public class WagonControl {
      * wagonWheelDurability RETURN wagonWheelDurability END *
      */
     public static double calcWagonWheelDegradation(double wagonWheelDurability,
-            double normalDegradation, String terrainDifficulty) {
+            double normalDegradation, String terrainDifficulty) throws WagonControlExceptions {
         double terrainValue = 0;
 
         if (wagonWheelDurability < 1 || wagonWheelDurability > 100) {
-            return -1;
+            throw new WagonControlExceptions("Your wagon wheel's durability needs to be between 1-99%.");
         }
         if (normalDegradation != 10) {
-            return -2;
+             throw new WagonControlExceptions("Wagon wheel degradation is anything but normal.");
         }
         switch (terrainDifficulty) {
             case "Normal":
@@ -47,14 +49,14 @@ public class WagonControl {
 
         if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium"
                 && terrainDifficulty != "Difficult") {
-            return -999;
+             throw new WagonControlExceptions("Terrain difficulty must be normal. medium or difficult.");
         }
 
         double calcWagonWheelDegradation = wagonWheelDurability
                 - (normalDegradation + terrainValue);
         {
             if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
-                return -4;
+                 throw new WagonControlExceptions("Your wagon wheel needs repair.");
             }
 
             return calcWagonWheelDegradation;
@@ -72,23 +74,27 @@ public class WagonControl {
      * (totalWeight > 1500) RETURN -4 //update totalWeight & continue game
      * RETURN double totalWeight END*
      */
-    public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled) {
-        if (resourceItemWeight < 0 || resourceItemWeight > 400) {
-            return -1;
+    public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled) 
+        throws WagonControlExceptions {
+        
+        if (resourceItemWeight < 0 || resourceItemWeight > 450) {
+//            
+            throw new WagonControlExceptions("The weight needs to be between 0-450 pounds. Not more, not less.");
         }
         if (quantityResourceItem <= 0 || quantityResourceItem > 5) {
-            return -2;
+            throw new WagonControlExceptions("You can have between 0-5 of any item. Not more, not less.");
         }
         if (percentSpoiled < 0 || percentSpoiled > 1) {
-            return -3;
+            throw new WagonControlExceptions("You can't have less than 0% or more than 100% of spoiled food.");
         }
         double totalWeight = (resourceItemWeight * quantityResourceItem) - (resourceItemWeight * quantityResourceItem * percentSpoiled);
         {
             if (totalWeight > 1500) {
-                return -4;
+                throw new WagonControlExceptions("Your total weight of your resources can't exceed 1500 pounds.");
             }
             //update totalWeight & continue game
             return totalWeight;
         }
+        
     }
 }

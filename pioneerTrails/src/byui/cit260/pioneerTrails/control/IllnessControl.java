@@ -5,25 +5,27 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import byui.cit260.pioneerTrails.exceptions.IllnessControlExceptions;
+
 /**
  *
  * @author Tamlyn Laurence
  */
 public class IllnessControl {
 
-    public static int calcIllnessOutcome(int choice, int mortalityRate, int chance) {
+    public static int calcIllnessOutcome(int choice, int mortalityRate, int chance) throws IllnessControlExceptions{
         if (choice < 1 || choice > 2) {
-            return -1;
+            throw new IllnessControlExceptions("Your choice has to be 1 or 2.");
         }
         if (mortalityRate < 1 || mortalityRate > 9) {
-            return -2;
+            throw new IllnessControlExceptions("According to your mortality rate, you're either dead or translated. Shouldn't be the case.");
         }
         if (chance < 1 || chance > 9) {
-            return -3;
+            throw new IllnessControlExceptions("If your chances are 0% or less or higher than 100%, something's up.");
         } else {
             int calcFutureLife = (choice * mortalityRate) + chance;
             if (calcFutureLife > 13) {
-                return -4;
+                throw new IllnessControlExceptions("Your numbers aren't looking good for life in the game.");
             }
             return calcFutureLife;
 

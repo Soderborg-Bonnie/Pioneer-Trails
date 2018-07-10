@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.Location;
 import byui.cit260.pioneerTrails.model.Map;
 import byui.cit260.pioneerTrails.model.Resource;
@@ -40,10 +41,10 @@ public class MapControl {
 //return map
 //}
     
-    public static Map createMap(int totalRows, int totalColumns){
+    public static Map createMap(int totalRows, int totalColumns) throws MapControlExceptions{
         //System.out.println("createMap() called ***");
         if (totalRows < 0 || totalColumns < 0)
-            return null;
+            throw new MapControlExceptions("You can't be in negative territory in your rows or columns.");
         
         
         Map map = new Map();

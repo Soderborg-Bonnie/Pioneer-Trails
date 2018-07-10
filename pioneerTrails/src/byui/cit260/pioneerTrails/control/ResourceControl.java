@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import byui.cit260.pioneerTrails.exceptions.ResourceControlExceptions;
 import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.util.ArrayList;
 /**
@@ -23,24 +24,24 @@ public class ResourceControl {
      * waterResource
      */
     public static double calcWaterConsumption(double availableWater,
-            double numPeople, double time, double waterRation) {
-        if (availableWater < 0 || availableWater > 100) {
-            return -1;
+            double numPeople, double time, double waterRation) throws ResourceControlExceptions{
+        if (availableWater < 0 || availableWater > 100){
+            throw new ResourceControlExceptions ("The available water needs to be between 0-100%. Not more, not less.");
         }
         if (waterRation < 1 || waterRation > 1) {
-            return -2;
+            throw new ResourceControlExceptions ("Your water ration is limited to 1.");
         }
         if (time < 1 || time > 20) {
-            return -3;
+            throw new ResourceControlExceptions ("Your days between water refills can't be negative. Neither can it be longer than 20 days.");
         }
         if (numPeople < 0 || numPeople > 5) {
-            return -4;
-        }
+            throw new ResourceControlExceptions ("If you have zero people in your group, water's the least of your worries. If you have more than five people in your group, you''l deplete your supplies too quickly. The number of people should be between 1-5.");
+                    }
 
         double waterResource = availableWater - (numPeople * time * waterRation);
         {
             if (waterResource <= 0) {
-                return -999;
+                throw new ResourceControlExceptions ("You've run out of water.");
             } else {
                 return waterResource;
             }
