@@ -15,9 +15,9 @@ import java.util.Scanner;
  */
 public class AcquireFood extends View {
 
-    public static AcquireFood getListOfItems() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public static AcquireFood getListOfItems() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     public int length;
 
@@ -101,7 +101,7 @@ public class AcquireFood extends View {
     }
 
 //    
-    public void setAcquireFood() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public void setAcquireFood() {
+//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }

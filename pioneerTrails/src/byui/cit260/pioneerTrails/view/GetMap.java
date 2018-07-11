@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.MapControl;
+import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.Game;
 import byui.cit260.pioneerTrails.model.Location;
 import byui.cit260.pioneerTrails.model.Map;

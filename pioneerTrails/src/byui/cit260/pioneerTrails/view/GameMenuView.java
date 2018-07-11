@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.MapControl;
+import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.Game;
 import byui.cit260.pioneerTrails.model.Location;
 import byui.cit260.pioneerTrails.model.Map;
@@ -82,47 +83,46 @@ public class GameMenuView extends View {
     }
 
     public void displayMap() {
-       Game game = PioneerTrails.getCurrentGame();
-       Map map = game.getMap();
-       Location[][] locations = map.getLocations(); //MapControl.createLocations();
-       System.out.print(" |");
-       for(int column = 0; column<locations[0].length;column++){
-        System.out.print("  " + column + " |"); 
-       }
-          // Now build the map.  For each row, show the column information
-    System.out.println();
-    for( int row = 0; row < locations.length; row++){
-     System.out.print(row + " "); // print row numbers to side of map
-      for( int column = 0; column < locations[row].length; column++){
-         // set default indicators as blanks
-         String leftIndicator = " ";
-         String rightIndicator = " ";
-        if(locations[row][column].getScene() == map.getCurrentScene()){
-          // Set star indicators to show this is the current location.
-          leftIndicator = "*"; 
-          rightIndicator = "*"; 
-      } 
-        else if(locations[row][column].isVisited()){
-           // Set < > indicators to show this location has been visited.
-           leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
-           rightIndicator = "<"; // same as above
+        Game game = PioneerTrails.getCurrentGame();
+        Map map = game.getMap();
+        Location[][] locations = map.getLocations(); //MapControl.createLocations();
+        System.out.print(" |");
+        for(int column = 0; column<locations[0].length;column++){
+            System.out.print("  " + column + " |");
         }
-        
-       System.out.print("|"); // start map with a |
-        if(locations[row][column].getScene() == null) {
-        
-             // No scene assigned here so use ?? for the symbol
-             System.out.print(leftIndicator + "??" + rightIndicator);
+        // Now build the map.  For each row, show the column information
+        System.out.println();
+        for( int row = 0; row < locations.length; row++){
+            System.out.print(row + " "); // print row numbers to side of map
+            for( int column = 0; column < locations[row].length; column++){
+                // set default indicators as blanks
+                String leftIndicator = " ";
+                String rightIndicator = " ";
+                if(locations[row][column].getScene() == map.getCurrentScene()){
+                    // Set star indicators to show this is the current location.
+                    leftIndicator = "*";
+                    rightIndicator = "*";
+                }
+                else if(locations[row][column].isVisited()){
+                    // Set < > indicators to show this location has been visited.
+                    leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
+                    rightIndicator = "<"; // same as above
+                }
+                
+                System.out.print("|"); // start map with a |
+                if(locations[row][column].getScene() == null) {
+                    
+                    // No scene assigned here so use ?? for the symbol
+                    System.out.print(leftIndicator + "??" + rightIndicator);
+                }
+                else
+                    System.out.print(leftIndicator
+                            + locations[row][column].getScene().getSymbol()
+                            //+ Scene.getSymbol()
+                            + rightIndicator);
+            }
+            System.out.println("|");
         }
-        else
-          System.out.print(leftIndicator
-             + locations[row][column].getScene().getSymbol()
-             //+ Scene.getSymbol()
-             + rightIndicator);
-      }
-     System.out.println("|");
-    }
-
     
  }
 
@@ -155,6 +155,8 @@ public class GameMenuView extends View {
         SceneMenu sceneMenu = new SceneMenu();
         sceneMenu.display();
     }
+
+   
 
     
 
