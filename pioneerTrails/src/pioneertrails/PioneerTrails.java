@@ -213,7 +213,7 @@ public static void IndividualTestTamlyn(){
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        try{
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
 
@@ -222,7 +222,11 @@ public static void IndividualTestTamlyn(){
 
         SceneMenu sceneMenu = new SceneMenu();
         sceneMenu.display();
-
+        }catch (Throwable e){
+            System.out.println("Someting went wrong with the game. Hold on while we figure it out.");
+            e.printStackTrace();
+        }
+        }
         //GetHelp getHelp = new GetHelp();
         //getHelp.displayGetHelp();
         // the above 2 lines are from page 9 of Lesson 7 Team
@@ -232,4 +236,4 @@ public static void IndividualTestTamlyn(){
         IndividualTestTyler();
         IndividualTestTamlyn();
      */
-}
+

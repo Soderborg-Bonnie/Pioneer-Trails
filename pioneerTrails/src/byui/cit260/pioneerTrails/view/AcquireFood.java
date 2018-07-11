@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.view;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -82,7 +83,7 @@ public class AcquireFood extends View {
             case "D":
                 if (foodWeight <= 1500) {
                     System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
-
+                    Collections.sort(listOfItems);
                     System.out.println(listOfItems);
 
                     return true;
@@ -99,40 +100,7 @@ public class AcquireFood extends View {
         return false;
     }
 
-//    public static ArrayList<String> createSortedListOfItems(ArrayList<String> listSelectedItems) {
-////        ArrayList<String> sortedListOfItems = new ArrayList<String>();
-////        AcquireFood listOfItems = new ListOfItems();
-//
-////        String listOfItems = listOfItems.getAcquireFood();
-//        int al = listSelectedItems.size();
-//        
-//        for (int k = al; k >= 0; k--) {
-//            for (int i = 0; 1 < al - 1; i++) {
-//                k = i + 1;
-//                if (listSelectedItems.get(i)] > listSelectedItems.get(k) {
-//                    swapSpots(i, k, listSelectedItems);
-//                }
-//            }
-//        }
-//        return listSelectedItems;
-//    }
-//
-//    private static void swapSpots(int i, int k, ArrayList<String> listSelectedItems) {
-//        String temp;
-//        temp = listOfItems[i];
-//        listSelectedItems[i] == listSelectedItems[k];
-//        listSelectedItems[k] == temp;
-//        return new listSelectedItems();
-//    }
-//
-//    private static void printList();
-//
-//    {
-//        for (int i = 0, i   <al; i++) {
-//            System.out.println(listOfItems[i] + ", ");
-//        }
-//    }
-
+//    
     public void setAcquireFood() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
