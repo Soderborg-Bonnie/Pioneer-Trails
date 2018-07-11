@@ -38,16 +38,13 @@ public class AcquireFood extends View {
                 + "\n* Press 'D' to add up your choices.                    *"
                 + "\n* Press 'Q' to quit game          .                    *"
                 + "\n********************************************************");
-    
-    
+
     }
 
     public static double foodWeight = 0;
 //    String[] listOfItems;
     ArrayList<String> listOfItems = new ArrayList<String>();
 //    public static ArrayList listOfItems[];
-   
-        
 
     @Override
     public boolean doAction(String inputs) {
@@ -85,13 +82,10 @@ public class AcquireFood extends View {
             case "D":
                 if (foodWeight <= 1500) {
                     System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
-                    
+
                     System.out.println(listOfItems);
-                    
-          
 
-
-return true;
+                    return true;
                 } else {
                     foodWeight = 0;
                     System.out.println("Too greedy. Lost all your food. Try again.");
@@ -104,39 +98,41 @@ return true;
         }
         return false;
     }
-//public static createSortedListOfItems() {
+
+//    public static ArrayList<String> createSortedListOfItems(ArrayList<String> listSelectedItems) {
+////        ArrayList<String> sortedListOfItems = new ArrayList<String>();
+////        AcquireFood listOfItems = new ListOfItems();
 //
-//        AcquireFood listOfItems = new ListOfItems();
+////        String listOfItems = listOfItems.getAcquireFood();
+//        int al = listSelectedItems.size();
 //        
-//        String listOfItems = listOfItems.getAcquireFood();
-//        int al = listOfItems.length;
-//        int k;
-//        for (int a = al; a >= 0; a--) {
+//        for (int k = al; k >= 0; k--) {
 //            for (int i = 0; 1 < al - 1; i++) {
 //                k = i + 1;
-//                if (listOfItems[i] > listOfItems[k]) {
-//                    swapSpots(i, k, listOfItems);
+//                if (listSelectedItems.get(i)] > listSelectedItems.get(k) {
+//                    swapSpots(i, k, listSelectedItems);
 //                }
 //            }
 //        }
-//        return listOfItems[];
+//        return listSelectedItems;
 //    }
 //
-//    private static void swapSpots(int i, int k, String[] listOfItems) {
+//    private static void swapSpots(int i, int k, ArrayList<String> listSelectedItems) {
 //        String temp;
 //        temp = listOfItems[i];
-//        listOfItems[i] == listOfItems[k];
-//        listOfItems[k] == temp;
-//        return new listOfItems();
+//        listSelectedItems[i] == listSelectedItems[k];
+//        listSelectedItems[k] == temp;
+//        return new listSelectedItems();
 //    }
 //
 //    private static void printList();
 //
 //    {
-//        for (int i = 0, i <al; i++) {
+//        for (int i = 0, i   <al; i++) {
 //            System.out.println(listOfItems[i] + ", ");
 //        }
 //    }
+
     public void setAcquireFood() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
