@@ -15,10 +15,10 @@ public class IllnessControl {
 
     public static int calcIllnessOutcome(int choice, int mortalityRate, int chance) throws IllnessControlExceptions{
         if (choice < 1 || choice > 2) {
-            throw new IllnessControlExceptions("Your choice has to be 1 or 2.");
+            throw new IllnessControlExceptions("Your choice must be '1' or '2'.");
         }
         if (mortalityRate < 1 || mortalityRate > 9) {
-            throw new IllnessControlExceptions("According to your mortality rate, you're either dead or translated. Shouldn't be the case.");
+            throw new IllnessControlExceptions("According to your mortality rate, you're either dead or translated. That shouldn't be the case.");
         }
         if (chance < 1 || chance > 9) {
             throw new IllnessControlExceptions("If your chances are 0% or less or higher than 100%, something's up.");

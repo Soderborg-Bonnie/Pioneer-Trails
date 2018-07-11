@@ -30,10 +30,10 @@ public class WagonControl {
         double terrainValue = 0;
 
         if (wagonWheelDurability < 1 || wagonWheelDurability > 100) {
-            throw new WagonControlExceptions("Your wagon wheel's durability needs to be between 1-99%.");
+            throw new WagonControlExceptions("Your wagon wheel's durability needs to be between 1-100%.");
         }
         if (normalDegradation != 10) {
-             throw new WagonControlExceptions("Wagon wheel degradation is anything but normal.");
+             throw new WagonControlExceptions("The wagon wheels automatically degrade by 10 every time the location changes.");
         }
         switch (terrainDifficulty) {
             case "Normal":
@@ -49,14 +49,14 @@ public class WagonControl {
 
         if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium"
                 && terrainDifficulty != "Difficult") {
-             throw new WagonControlExceptions("Terrain difficulty must be normal. medium or difficult.");
+             throw new WagonControlExceptions("Terrain difficulty must be 'Normal,' 'Medium,' or 'Difficult'.");
         }
 
         double calcWagonWheelDegradation = wagonWheelDurability
                 - (normalDegradation + terrainValue);
         {
             if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
-                 throw new WagonControlExceptions("Your wagon wheel needs repair.");
+                 throw new WagonControlExceptions("Your wagon wheel needs repair before you can continue.");
             }
 
             return calcWagonWheelDegradation;
@@ -90,7 +90,7 @@ public class WagonControl {
         double totalWeight = (resourceItemWeight * quantityResourceItem) - (resourceItemWeight * quantityResourceItem * percentSpoiled);
         {
             if (totalWeight > 1500) {
-                throw new WagonControlExceptions("Your total weight of your resources can't exceed 1500 pounds.");
+                throw new WagonControlExceptions("The total weight of your resources can't exceed 1500 pounds.");
             }
             //update totalWeight & continue game
             return totalWeight;

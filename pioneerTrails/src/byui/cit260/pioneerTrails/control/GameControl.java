@@ -21,7 +21,7 @@ public class GameControl {
     //private static Game scene;
     public static Player savePlayer(String playersName) throws GameControlExceptions{
         if (playersName.length() < 1) {
-            throw new GameControlExceptions("Your name has to have at least a charcter. Hitting 'enter' wothout anything else is not ok.");
+            throw new GameControlExceptions("Your name has to have at least a character. Hitting 'enter' without anything else is not ok.");
         }
         Player player = new Player();
         player.setName(playersName);
@@ -133,7 +133,7 @@ public class GameControl {
         Scene[] scenes = new Scene[25];
         Resource[] resources = PioneerTrails.getCurrentGame().getResources();
         scenes[0] = new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, resources[0]);
-        scenes[1] = new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Normal", false, resources[1]);
+        scenes[1] = new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Norml", false, resources[1]);
         scenes[2] = new Scene("Richardson's Point", "Camp of Israel", "RP", "Normal", false, resources[2]);
         scenes[3] = new Scene("Chariton River Crossing", "called Missouri's Grand Divide", "CC", "Medium", false, resources[3]);
         scenes[4] = new Scene("Locust Creek", "where 'Come, Come Ye Saints' was written", "LC", "Difficult", false, resources[4]);

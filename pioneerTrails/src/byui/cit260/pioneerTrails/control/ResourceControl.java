@@ -35,7 +35,7 @@ public class ResourceControl {
             throw new ResourceControlExceptions ("Your days between water refills can't be negative. Neither can it be longer than 20 days.");
         }
         if (numPeople < 0 || numPeople > 5) {
-            throw new ResourceControlExceptions ("If you have zero people in your group, water's the least of your worries. If you have more than five people in your group, you''l deplete your supplies too quickly. The number of people should be between 1-5.");
+            throw new ResourceControlExceptions ("If you have zero people in your group, water's the least of your worries. If you have more than five people in your group, you'll deplete your supplies too quickly. The number of people must be between 1-5.");
                     }
 
         double waterResource = availableWater - (numPeople * time * waterRation);

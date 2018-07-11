@@ -6,7 +6,11 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
+import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.Player;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -32,7 +36,15 @@ public class MainMenuView extends View {
         String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "N":
+        {
+            try {
                 gameMenuView();
+            } catch (GameControlExceptions ex) {
+                System.out.println(ex.getMessage());
+            } catch (MapControlExceptions ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
                 break;
             case "R":
                 restartGame();
@@ -58,7 +70,7 @@ public class MainMenuView extends View {
         getHelp.display();
     }
 
-    private void gameMenuView() {
+    private void gameMenuView() throws GameControlExceptions, MapControlExceptions {
 //        try {
             if (GameControl.createNewGame() == -1) {
                 System.out.println("Could not create game.");

@@ -1,9 +1,13 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
 import byui.cit260.pioneerTrails.model.Player;
+import byui.cit260.pioneerTrails.model.Scene;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -45,7 +49,12 @@ public class StartProgramView extends View {
         //System.out.println("***doAction() called***");
         // System.out.println("\tinputs = " + inputs[0]);
         String playersName = inputs;
-        Player player = GameControl.savePlayer(playersName);
+        Player player = null;
+        try {
+            player = GameControl.savePlayer(playersName);
+        } catch (GameControlExceptions ex) {
+            System.out.println(ex.getMessage());
+        }
         if (player == null) {
             System.out.println("Could not create the player."
                     + "Enter a different name.");
@@ -56,6 +65,12 @@ public class StartProgramView extends View {
                 + "\nWelcome to the game, " + playersName + "!"
                 + "\nWe hope you have lots of fun!"
                 + "\n=======================================");
+        
+//        Scene scene = GameControl.getCurrentScene();
+//            String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
+//                    + "." + "What would you like to do now?";
+//            //System.out.println(msg);
+//            return msg;
 
         return true;
 
