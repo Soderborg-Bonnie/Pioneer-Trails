@@ -20,9 +20,29 @@ import byui.cit260.pioneerTrails.view.MainMenuView;
 import byui.cit260.pioneerTrails.view.SceneMenu;
 import java.awt.Point;
 import byui.cit260.pioneerTrails.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 public class PioneerTrails {
+    private static PrintWriter outFile = null;
 
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        PioneerTrails.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        PioneerTrails.inFile = inFile;
+    }
+    private static BufferedReader inFile = null;
+    
     private static Game currentGame = null;
 
     public static Game getCurrentGame() {
@@ -214,6 +234,8 @@ public static void IndividualTestTamlyn(){
      */
     public static void main(String[] args) {
         try{
+            
+            
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
 
