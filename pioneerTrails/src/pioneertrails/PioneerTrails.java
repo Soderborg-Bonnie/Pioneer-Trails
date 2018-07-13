@@ -21,9 +21,14 @@ import byui.cit260.pioneerTrails.view.SceneMenu;
 import java.awt.Point;
 import byui.cit260.pioneerTrails.view.StartProgramView;
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PioneerTrails {
+
     private static PrintWriter outFile = null;
 
     public static PrintWriter getOutFile() {
@@ -42,7 +47,7 @@ public class PioneerTrails {
         PioneerTrails.inFile = inFile;
     }
     private static BufferedReader inFile = null;
-    
+
     private static Game currentGame = null;
 
     public static Game getCurrentGame() {
@@ -233,29 +238,43 @@ public static void IndividualTestTamlyn(){
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        try{
-            
-            
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
+        try {
+            PioneerTrails.inFile = new BufferedReader(new InputStreamReader(System.in));
+            PioneerTrails.outFile = new PrintWriter(System.out, true);
 
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.display();
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.display();
 
-        SceneMenu sceneMenu = new SceneMenu();
-        sceneMenu.display();
-        }catch (Throwable e){
+            MainMenuView mainMenuView = new MainMenuView();
+            mainMenuView.display();
+
+            SceneMenu sceneMenu = new SceneMenu();
+            sceneMenu.display();
+        } catch (Throwable e) {
             System.out.println("Someting went wrong with the game. Hold on while we figure it out.");
             e.printStackTrace();
+        } finally {
+            try {
+                if (PioneerTrails.inFile != null) 
+                    PioneerTrails.inFile.close();
+                
+                if (PioneerTrails.outFile != null)
+                    PioneerTrails.outFile.close();
+
+            } catch (IOException ex) {
+//                Logger.getLogger(PioneerTrails.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("File didn't close properly.");
+                return;
+            }
+
         }
-        }
-        //GetHelp getHelp = new GetHelp();
-        //getHelp.displayGetHelp();
-        // the above 2 lines are from page 9 of Lesson 7 Team
     }
-    /*TeamTest();
+    //GetHelp getHelp = new GetHelp();
+    //getHelp.displayGetHelp();
+    // the above 2 lines are from page 9 of Lesson 7 Team
+}
+/*TeamTest();
         IndividualTestBonnie();
         IndividualTestTyler();
         IndividualTestTamlyn();
-     */
-
+ */
