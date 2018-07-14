@@ -66,7 +66,7 @@ public class GameMenuView extends View {
                 getHelp();
                 break;
             case "S":
-                saveGame();
+                this.saveGame();
                 break;
             case "Q":
                 return true;
@@ -142,8 +142,8 @@ public class GameMenuView extends View {
     }
 
     private void saveGame() {
-        SaveGame saveGame = new SaveGame();
-        saveGame.display();
+        SaveGameView saveGameView = new SaveGameView();
+        saveGameView.display();
     }
 
     private void goHunt() {

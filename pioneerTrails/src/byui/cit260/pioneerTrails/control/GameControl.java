@@ -12,6 +12,7 @@ import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.util.ArrayList;
 import pioneertrails.PioneerTrails;
 
+
 /**
  *
  * @author tyler
@@ -206,5 +207,18 @@ public class GameControl {
         locations[4][4].setScene(scenes[24]);
 
     }
+    
+    
+
+    private void saveGame(Game game, String filePath) {
+        System.out.println("saveGame() in GameControl class.");
+              return ;
+    }
+
+    public static Game saveGame(String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 
 }
