@@ -15,7 +15,7 @@ public class HuntView extends View {
     @Override
     public boolean doAction(String inputs) {
         //  System objects
-        Scanner in = new Scanner(System.in);
+        
         Random rand = new Random();
 
         //  Game variables

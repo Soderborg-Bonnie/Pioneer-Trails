@@ -5,7 +5,13 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import pioneertrails.PioneerTrails;
 
 /**
  *
@@ -14,6 +20,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     protected String promptMessage;
+    
+    protected final BufferedReader keyboard = PioneerTrails.getInFile();
+     protected final PrintWriter console = PioneerTrails.getOutFile();
 
     public View() {
     }
@@ -48,18 +57,22 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput(String menuText) {
-        Scanner scanner = new Scanner(System.in);
+        
         String inputs = "";
         Boolean valid = false;
         while (!valid) {
-            System.out.println(menuText);
-            inputs = scanner.nextLine();
-            inputs = inputs.trim();
-            if (inputs.length() < 1) {
-                System.out.println("try again");
-                continue;
+            try {
+                System.out.println(menuText);
+                inputs = this.keyboard.readLine();
+                inputs = inputs.trim();
+                if (inputs.length() < 1) {
+                    System.out.println("You must enter a value.");
+                    continue;
+                }
+                valid = true;
+            } catch (IOException ex) {
+                System.out.println("Error readin input: " + ex.getMessage());
             }
-            valid = true;
 
         }
         return inputs;
