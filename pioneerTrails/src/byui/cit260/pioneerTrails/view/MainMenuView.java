@@ -40,9 +40,11 @@ public class MainMenuView extends View {
             try {
                 gameMenuView();
             } catch (GameControlExceptions ex) {
-                System.out.println(ex.getMessage());
+//                System.out.println(ex.getMessage());
+                  ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the game.");
             } catch (MapControlExceptions ex) {
-                System.out.println(ex.getMessage());
+//                System.out.println(ex.getMessage());
+                  ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the map.");
             }
         }
                 break;
@@ -55,7 +57,7 @@ public class MainMenuView extends View {
             case "Q":
                 return true;
             default:
-                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
+                this.console.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
         }
         return false;
     }
@@ -73,7 +75,7 @@ public class MainMenuView extends View {
     private void gameMenuView() throws GameControlExceptions, MapControlExceptions {
 //        try {
             if (GameControl.createNewGame() == -1) {
-                System.out.println("Could not create game.");
+                this.console.println("Could not create game.");
                 return;
             }
 //        } catch (MapControlException mce) {

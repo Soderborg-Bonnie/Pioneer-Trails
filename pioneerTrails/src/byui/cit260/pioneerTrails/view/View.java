@@ -57,16 +57,18 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput(String menuText) {
-        
+        Scanner keyboard = new Scanner(this.keyboard);
         String inputs = "";
         Boolean valid = false;
         while (!valid) {
             try {
-                System.out.println(menuText);
+//                System.out.println(menuText);
+                  this.console.println(menuText);
                 inputs = this.keyboard.readLine();
                 inputs = inputs.trim();
                 if (inputs.length() < 1) {
-                    System.out.println("You must enter a value.");
+//                    System.out.println("You must enter a value.");
+                      this.console.println("You must enter a value.");
                     continue;
                 }
                 valid = true;

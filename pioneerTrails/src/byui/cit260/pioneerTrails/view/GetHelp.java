@@ -46,7 +46,7 @@ public class GetHelp extends View {
             case "Q":
                 return true;
             default:
-                System.out.println("You've come to the right place. You clearly need HELP. Select a valid option");
+                this.console.println("You've come to the right place. You clearly need HELP. Select a valid option");
         }
 
         return false;

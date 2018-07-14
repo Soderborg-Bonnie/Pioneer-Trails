@@ -15,6 +15,7 @@ import byui.cit260.pioneerTrails.model.Scene;
 import byui.cit260.pioneerTrails.model.Wagon;
 import byui.cit260.pioneerTrails.model.Illness;
 import byui.cit260.pioneerTrails.model.QuestionScene;
+import byui.cit260.pioneerTrails.view.ErrorView;
 import byui.cit260.pioneerTrails.view.GetHelp;
 import byui.cit260.pioneerTrails.view.MainMenuView;
 import byui.cit260.pioneerTrails.view.SceneMenu;
@@ -237,11 +238,20 @@ public static void IndividualTestTamlyn(){
     /**
      * @param args the command line arguments
      */
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        PioneerTrails.logFile = logFile;
+    }
     public static void main(String[] args) {
         try {
             PioneerTrails.inFile = new BufferedReader(new InputStreamReader(System.in));
             PioneerTrails.outFile = new PrintWriter(System.out, true);
-
+            PioneerTrails.logFile = new PrintWriter("logFile.txt");
             StartProgramView startProgramView = new StartProgramView();
             startProgramView.display();
 
@@ -251,7 +261,8 @@ public static void IndividualTestTamlyn(){
             SceneMenu sceneMenu = new SceneMenu();
             sceneMenu.display();
         } catch (Throwable e) {
-            System.out.println("Someting went wrong with the game. Hold on while we figure it out.");
+            System.out.println("Something went wrong with the game. Hold on while we figure it out.");
+//            ErrorView.display(this.getClass().getName(),"Something went wrong with the game. Hold on while we figure it out." );
             e.printStackTrace();
         } finally {
             try {
@@ -260,10 +271,14 @@ public static void IndividualTestTamlyn(){
                 
                 if (PioneerTrails.outFile != null)
                     PioneerTrails.outFile.close();
-
+                
+                if (logFile != null){
+                    logFile.close();
+                }
             } catch (IOException ex) {
 //                Logger.getLogger(PioneerTrails.class.getName()).log(Level.SEVERE, null, ex);
                 System.out.println("File didn't close properly.");
+//                  ErrorView.display(this.getClass().getName(),"File didn't close properly." );
                 return;
             }
 
@@ -272,6 +287,10 @@ public static void IndividualTestTamlyn(){
     //GetHelp getHelp = new GetHelp();
     //getHelp.displayGetHelp();
     // the above 2 lines are from page 9 of Lesson 7 Team
+
+    public static PrintWriter getOutput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 /*TeamTest();
         IndividualTestBonnie();

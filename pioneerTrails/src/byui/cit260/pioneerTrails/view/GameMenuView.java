@@ -71,7 +71,7 @@ public class GameMenuView extends View {
             case "Q":
                 return true;
             default:
-                System.out.println("Invalid selection.");
+                this.console.println("Invalid selection.");
         }
         return false;
 
@@ -91,7 +91,7 @@ public class GameMenuView extends View {
             System.out.print("  " + column + " |");
         }
         // Now build the map.  For each row, show the column information
-        System.out.println();
+        this.console.println();
         for( int row = 0; row < locations.length; row++){
             System.out.print(row + " "); // print row numbers to side of map
             for( int column = 0; column < locations[row].length; column++){
@@ -121,7 +121,7 @@ public class GameMenuView extends View {
                             //+ Scene.getSymbol()
                             + rightIndicator);
             }
-            System.out.println("|");
+            this.console.println("|");
         }
     
  }

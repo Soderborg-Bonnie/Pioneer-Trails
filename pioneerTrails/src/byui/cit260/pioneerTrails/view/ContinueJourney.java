@@ -35,7 +35,7 @@ public String getScenePrompt() {
 }
     @Override
     public boolean doAction(String inputs) {
-        System.out.println("You want to " + inputs);
+        this.console.println("You want to " + inputs);
         return true;
     }
 

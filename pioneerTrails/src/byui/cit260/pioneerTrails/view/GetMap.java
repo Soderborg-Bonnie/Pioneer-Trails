@@ -28,7 +28,7 @@ public class GetMap extends View {
         System.out.print("  " + column + " |"); 
        }
           // Now build the map.  For each row, show the column information
-    System.out.println();
+    this.console.println();
     for( int row = 0; row < locations.length; row++){
      System.out.print(row + " "); // print row numbers to side of map
       for( int column = 0; column < locations[row].length; column++){
@@ -58,7 +58,7 @@ public class GetMap extends View {
              //+ Scene.getSymbol()
              + rightIndicator);
       }
-     System.out.println("|");
+     this.console.println("|");
     }
 
     
@@ -66,7 +66,7 @@ public class GetMap extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        System.out.println("We suck at maps");
+        this.console.println("We suck at maps");
         return true;
     }
        

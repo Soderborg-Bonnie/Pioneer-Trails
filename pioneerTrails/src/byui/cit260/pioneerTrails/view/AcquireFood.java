@@ -82,20 +82,25 @@ public class AcquireFood extends View {
                 return false;
             case "D":
                 if (foodWeight <= 1500) {
-                    System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
+//                    System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
+                      this.console.println("Your food weight is : " + foodWeight + " pounds. Good job!");
+                     
                     Collections.sort(listOfItems);
-                    System.out.println(listOfItems);
+//                  System.out.println(listOfItems);
+                    this.console.println(listOfItems);
 
                     return true;
                 } else {
                     foodWeight = 0;
-                    System.out.println("Too greedy. Lost all your food. Try again.");
+//                   System.out.println("Too greedy. Lost all your food. Try again.");
+                   this.console.println("Too greedy. Lost all your food. Try again.");
                     return false;
                 }
             case "Q":
                 return true;
             default:
-                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
+//                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
+                this.console.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
         }
         return false;
     }
