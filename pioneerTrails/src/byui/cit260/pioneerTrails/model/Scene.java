@@ -8,7 +8,7 @@ package byui.cit260.pioneerTrails.model;
 import java.util.ArrayList;
 import java.util.Objects;
 import pioneertrails.PioneerTrails;
-
+import java.io.Serializable;
 /**
  *
  * @author tharman

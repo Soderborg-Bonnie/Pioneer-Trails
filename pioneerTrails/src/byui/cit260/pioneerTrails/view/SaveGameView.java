@@ -18,7 +18,7 @@ import pioneertrails.PioneerTrails;
 public class SaveGameView extends View {
 
     public SaveGameView() {
-        super("Save the hard work.");
+        super("Save the hard work. Where do you want to save your game? Press Q to exit.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -31,13 +31,13 @@ public class SaveGameView extends View {
 // return inputs
 //} 
 
-    private String[] getInputs(String menuText) {
-        String[] inputs = new String[1];
-        this.console.println("Where do you want to save the game?");
-        String input1 = getInput(promptMessage);
-        inputs[1] = input1;
-        return inputs;
-    }
+//    private String[] getInputs(String menuText) {
+//        String[] inputs = new String[1];
+//        this.console.println("Where do you want to save the game?");
+//        String input1 = getInput(promptMessage);
+//        inputs[1] = input1;
+//        return inputs;
+//    }
     
 //    private boolean doAction(String [] inputs) {
 // filePath = get first value in inputs array
@@ -52,12 +52,12 @@ public class SaveGameView extends View {
 // file was saved
 // return true to end the view
 //}
-    
-    public boolean doAction(String[] inputs) {
-        String filePath = inputs[1];
+  @Override  
+    public boolean doAction(String inputs) {
+        String filePath = inputs;
         Game game = PioneerTrails.getCurrentGame();
         try {
-        GameControl.saveGame(filePath);
+        GameControl.saveGame(game,filePath);
         } catch (Exception ex) {
             ErrorView.display(this.getClass().getName(), ex.getMessage());
             return false;
@@ -69,14 +69,8 @@ public class SaveGameView extends View {
         return true;
     }
     
-    @Override
-    public void display() {
-    }
 
-    @Override
-    public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
 

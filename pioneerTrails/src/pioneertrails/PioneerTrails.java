@@ -261,8 +261,8 @@ public static void IndividualTestTamlyn(){
             SceneMenu sceneMenu = new SceneMenu();
             sceneMenu.display();
         } catch (Throwable e) {
-            System.out.println("Something went wrong with the game. Hold on while we figure it out.");
-//            ErrorView.display(this.getClass().getName(),"Something went wrong with the game. Hold on while we figure it out." );
+//            System.out.println("Something went wrong with the game. Hold on while we figure it out.");
+          ErrorView.display("PioneerTrails","Something went wrong with the game. Hold on while we figure it out." );
             e.printStackTrace();
         } finally {
             try {
@@ -277,8 +277,8 @@ public static void IndividualTestTamlyn(){
                 }
             } catch (IOException ex) {
 //                Logger.getLogger(PioneerTrails.class.getName()).log(Level.SEVERE, null, ex);
-                System.out.println("File didn't close properly.");
-//                  ErrorView.display(this.getClass().getName(),"File didn't close properly." );
+//                System.out.println("File didn't close properly.");
+                  ErrorView.display("PioneerTrails","File didn't close properly." );
                 return;
             }
 

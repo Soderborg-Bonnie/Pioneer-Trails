@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
