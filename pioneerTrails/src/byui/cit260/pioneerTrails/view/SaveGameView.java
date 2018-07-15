@@ -8,6 +8,7 @@ package byui.cit260.pioneerTrails.view;
 import byui.cit260.pioneerTrails.control.GameControl;
 import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
 import byui.cit260.pioneerTrails.model.Game;
+import java.io.IOException;
 import pioneertrails.PioneerTrails;
 
 /**
@@ -38,22 +39,46 @@ public class SaveGameView extends View {
         return inputs;
     }
     
+//    private boolean doAction(String [] inputs) {
+// filePath = get first value in inputs array
+// game = get the currentGame in the main class
+// try
+// call the saveGame(game)control method
+// catch GameControlException
+// Print error passed with the exception
+// return false to repeat the view
+// endTry
+// Print a success message indicating where the
+// file was saved
+// return true to end the view
+//}
+    
     public boolean doAction(String[] inputs) {
         String filePath = inputs[1];
         Game game = PioneerTrails.getCurrentGame();
-        
-        game = GameControl.saveGame(filePath);  
+        try {
+        GameControl.saveGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display(this.getClass().getName(), ex.getMessage());
+            return false;
+        }
         this.console.println("\n======================================="
                 + "\nThe game was saved to the following file:"
                 + "\n" + filePath
                 + "\n=======================================");
         return true;
     }
+    
+    @Override
+    public void display() {
+    }
 
     @Override
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
 
     
 

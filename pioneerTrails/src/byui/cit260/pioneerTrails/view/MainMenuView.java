@@ -49,7 +49,7 @@ public class MainMenuView extends View {
         }
                 break;
             case "R":
-                restartGame();
+                this.restartGame();
                 break;
             case "H":
                 getHelp();
@@ -57,7 +57,8 @@ public class MainMenuView extends View {
             case "Q":
                 return true;
             default:
-                this.console.println("Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
+                ErrorView.display(this.getClass().getName(),
+                        "Hello?! McFly! Type in a correct menu item, or make like a tree and leaf.");
         }
         return false;
     }

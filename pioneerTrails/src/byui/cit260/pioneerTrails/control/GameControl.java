@@ -9,6 +9,8 @@ import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
 import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.*;
 import byui.cit260.pioneerTrails.view.AcquireFood;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import pioneertrails.PioneerTrails;
 
@@ -209,11 +211,27 @@ public class GameControl {
     }
     
     
-
-    private void saveGame(Game game, String filePath) {
-        System.out.println("saveGame() in GameControl class.");
-              return ;
+//public static void saveGame(Game game, String filePath) {
+// if invalid a game or filePath is passed to the method then
+// throw a new GameControlException
+// endIf
+// create a new FileOutputStream for the filePath
+// create a new ObjectOutputStream from the FileOutputStream
+// write the game object to the ObjectOutputStream
+//}
+    
+    private void saveGame(Game game, String filePath) throws GameControlExceptions {
+            String filepath = "";
+        try( FileOutputStream fops = new FileOutputStream(filepath)){
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            output.writeObject(game);
+        } catch (Exception e){
+            throw new GameControlExceptions(e.getMessage());
+        }
+    
+ 
     }
+
 
     public static Game saveGame(String filePath) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
