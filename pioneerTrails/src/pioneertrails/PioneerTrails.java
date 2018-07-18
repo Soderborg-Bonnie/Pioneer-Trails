@@ -258,8 +258,8 @@ public static void IndividualTestTamlyn(){
             MainMenuView mainMenuView = new MainMenuView();
             mainMenuView.display();
 
-            SceneMenu sceneMenu = new SceneMenu();
-            sceneMenu.display();
+//            SceneMenu sceneMenu = new SceneMenu();
+//            sceneMenu.display();
         } catch (Throwable e) {
 //            System.out.println("Something went wrong with the game. Hold on while we figure it out.");
           ErrorView.display("PioneerTrails","Something went wrong with the game. Hold on while we figure it out." );
