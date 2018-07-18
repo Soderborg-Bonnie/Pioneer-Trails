@@ -5,6 +5,8 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -88,6 +90,7 @@ public class AcquireFood extends View {
                     Collections.sort(listOfItems);
 //                  System.out.println(listOfItems);
                     this.console.println(listOfItems);
+                    
 
                     return true;
                 } else {
@@ -104,9 +107,10 @@ public class AcquireFood extends View {
         }
         return false;
     }
-
+    
+    }
 //    
 //    public void setAcquireFood() {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-}
+
