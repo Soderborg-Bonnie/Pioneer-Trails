@@ -69,8 +69,8 @@ public class SceneMenu extends View {
     }
 
     private void viewSymbols() {
-        ViewSymbols viewSymbols = new ViewSymbols();
-        viewSymbols.display();
+        ViewSymbolsReportView viewSymbolsReportView = new ViewSymbolsReportView();
+        viewSymbolsReportView.display();
     }
 
     private void printViewFoodItems() {
