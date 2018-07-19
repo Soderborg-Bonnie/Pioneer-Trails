@@ -16,18 +16,7 @@ public class GetHealth extends View {
 
     public GetHealth() {
 
-        super("You have the following health concerns: " + "What would you like to do?"
-                + //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                "================================================"
-                + "              Health Menu"
-                + "================================================"
-                + "\n**********************************************"
-                + "\n* Press 'D' to drink some water .            *"
-                + "\n* Press 'F' to eat some food.                *"
-                + "\n* Press 'R' to rest.                         *"
-                + "\n* Press 'H' to get health tips.              *"
-                + "\n* Press 'Q' to return to the previous menu   *"
-                + "\n**********************************************");
+        super();
 
     }
 
@@ -39,9 +28,9 @@ public class GetHealth extends View {
             case "D":
                 drinkWater();
                 break;
-            case "F":
-                eatFood();
-                break;
+//            case "F":
+//                eatFood();
+//                break;
             case "R":
                 getRest();
                 break;
@@ -61,10 +50,10 @@ public class GetHealth extends View {
         drinkWater.displayDrinkWater();
     }
 
-    private void eatFood() {
-        EatFood eatFood = new EatFood();
-        eatFood.displayEatFood();
-    }
+//    private void eatFood() {
+//        EatFood eatFood = new EatFood();
+//        eatFood.displayEatFood();
+//    }
 
     private void getRest() {
         GetRest getRest = new GetRest();
@@ -84,5 +73,21 @@ public class GetHealth extends View {
     private void HealthTips() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "You have the following health concerns: " + "What would you like to do?"
+                + //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                "================================================"
+                + "              Health Menu"
+                + "================================================"
+                + "\n**********************************************"
+                + "\n* Press 'D' to drink some water .            *"
+                + "\n* Press 'F' to eat some food.                *"
+                + "\n* Press 'R' to rest.                         *"
+                + "\n* Press 'H' to get health tips.              *"
+                + "\n* Press 'Q' to return to the previous menu   *"
+                + "\n**********************************************";
+     }
 
 }

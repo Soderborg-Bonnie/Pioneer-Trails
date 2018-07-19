@@ -25,15 +25,31 @@ public class Game implements Serializable {
     private Resource[] resources;
 //    private Resource[] resource;
     private int currentScene;
-    private ArrayList listOfItems;
+    
+    
+//     double foodWeight = 0;
+////    String[] listOfItems;
+//    ArrayList<String> listOfItems = new ArrayList<>();
+////    public static ArrayList listOfItems[];
+//
+//    public double getFoodWeight() {
+//        return foodWeight;
+//    }
+//
+//    public void setFoodWeight(double foodWeight) {
+//        this.foodWeight = foodWeight;
+//    }
+//
+//    public ArrayList<String> getListOfItems() {
+//        return listOfItems;
+//    }
+//
+//    public void setListOfItems(ArrayList<String> listOfItems) {
+//        this.listOfItems = listOfItems;
+//    }
 
-    public ArrayList getListOfItems() {
-        return listOfItems;
-    }
+    
 
-    public void setListOfItems(ArrayList listOfItems) {
-        this.listOfItems = listOfItems;
-    }
     
     
 

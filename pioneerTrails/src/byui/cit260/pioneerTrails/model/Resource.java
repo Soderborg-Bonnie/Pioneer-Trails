@@ -21,9 +21,9 @@ public class Resource implements Serializable {
 
     //private Boolean need;
     //private Boolean broken;
-    private Scene scene;
-    private Game game;
-    private Wagon wagon;
+//    private Scene scene;
+//    private Game game;
+//    private Wagon wagon;
 
     public Resource(String name, int quantity, int weight) {
         this.name = name;
@@ -31,29 +31,29 @@ public class Resource implements Serializable {
         this.weight = weight;
     }
 
-    public Wagon getWagon() {
-        return wagon;
-    }
-
-    public void setWagon(Wagon wagon) {
-        this.wagon = wagon;
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-
-    public Scene getScene() {
-        return scene;
-    }
-
-    public void setScene(Scene scene) {
-        this.scene = scene;
-    }
+//    public Wagon getWagon() {
+//        return wagon;
+//    }
+//
+//    public void setWagon(Wagon wagon) {
+//        this.wagon = wagon;
+//    }
+//
+//    public Game getGame() {
+//        return game;
+//    }
+//
+//    public void setGame(Game game) {
+//        this.game = game;
+//    }
+//
+//    public Scene getScene() {
+//        return scene;
+//    }
+//
+//    public void setScene(Scene scene) {
+//        this.scene = scene;
+//    }
 
     public Resource() {
     }

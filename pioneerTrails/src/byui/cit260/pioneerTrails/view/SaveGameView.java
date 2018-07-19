@@ -18,7 +18,7 @@ import pioneertrails.PioneerTrails;
 public class SaveGameView extends View {
 
     public SaveGameView() {
-        super("Save the hard work. Where do you want to save your game? Press Q to exit.");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -66,5 +66,10 @@ public class SaveGameView extends View {
                 + "\n=======================================");
         return true;
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "Save the hard work. Where do you want to save your game? Press Q to exit.";
+     }
 
 }

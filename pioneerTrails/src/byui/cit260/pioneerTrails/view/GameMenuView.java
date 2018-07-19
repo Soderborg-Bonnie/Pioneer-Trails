@@ -5,11 +5,13 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.control.GameControl;
 import byui.cit260.pioneerTrails.control.MapControl;
 import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.Game;
 import byui.cit260.pioneerTrails.model.Location;
 import byui.cit260.pioneerTrails.model.Map;
+import byui.cit260.pioneerTrails.model.Scene;
 import pioneertrails.PioneerTrails;
 
 /**
@@ -19,20 +21,7 @@ import pioneertrails.PioneerTrails;
 public class GameMenuView extends View {
 
     public GameMenuView() {
-        super("=========================================="
-                + "\nGame Menu"
-                + "\n========================================="
-                + "\n***************************************"
-                + "\n* Press 'M' to view map.              *"
-                + "\n* Press 'P' to view players.          *"
-                + "\n* Press 'F' to view current resources.*"
-                + "\n* Press 'I' to view health concerns.  *"
-                + "\n* Press 'L' to view location menu.    *"
-                + "\n* Press 'G' to go on a hunt.          *"
-                + "\n* Press 'H' to view help menu.        *"
-                + "\n* Press 'S' to save the game.         *"
-                + "\n* Press 'Q' to quit  game.            *"
-                + "\n***************************************");
+        super();
     }
 
 //    @Override
@@ -153,6 +142,27 @@ public class GameMenuView extends View {
     private void sceneMenu() {
         SceneMenu sceneMenu = new SceneMenu();
         sceneMenu.display();
+    }
+
+    @Override
+    protected String getPromptMessage() {
+        Scene scene = GameControl.getCurrentScene();
+        return "Welcome to " + scene.getName() + ", " + scene.getDescription()
+                + ". \n"
+                + "=========================================="
+                + "\nGame Menu"
+                + "\n========================================="
+                + "\n***************************************"
+                + "\n* Press 'M' to view map.              *"
+                + "\n* Press 'P' to view players.          *"
+                + "\n* Press 'F' to view current resources.*"
+                + "\n* Press 'I' to view health concerns.  *"
+                + "\n* Press 'L' to view location menu.    *"
+                + "\n* Press 'G' to go on a hunt.          *"
+                + "\n* Press 'H' to view help menu.        *"
+                + "\n* Press 'S' to save the game.         *"
+                + "\n* Press 'Q' to quit  game.            *"
+                + "\n***************************************";
     }
 
 }

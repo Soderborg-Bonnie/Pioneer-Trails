@@ -12,14 +12,11 @@ package byui.cit260.pioneerTrails.view;
 public class GetGameGoal extends View {
 
     public GetGameGoal() {
-        super("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public boolean doAction(String inputs) {
@@ -29,5 +26,10 @@ public class GetGameGoal extends View {
     void displayGetGameGoal() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLL";
+     }
 
 }

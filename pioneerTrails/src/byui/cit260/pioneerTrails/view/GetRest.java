@@ -13,14 +13,14 @@ public class GetRest extends View {
 
     public GetRest() {
 
-        super("You took some much needed rest. It has the following effect: ");   //stub since we don't have items created yet
+        super();   //stub since we don't have items created yet
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public String getInput(String menuText) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     @Override
     public boolean doAction(String inputs) {
@@ -30,5 +30,10 @@ public class GetRest extends View {
     void displayGetRest() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "You took some much needed rest. It has the following effect: ";
+     }
 
 }

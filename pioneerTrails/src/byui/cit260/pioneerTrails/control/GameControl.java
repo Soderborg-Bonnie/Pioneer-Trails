@@ -21,6 +21,8 @@ import pioneertrails.PioneerTrails;
  * @author tyler
  */
 public class GameControl {
+    
+    static WagonControl wagoncontrol;
 
     //private static Game scene;
     public static Player savePlayer(String playersName) throws GameControlExceptions {
@@ -31,6 +33,10 @@ public class GameControl {
         player.setName(playersName);
         PioneerTrails.setPlayer(player);
         return new Player();
+    }
+    
+    public static WagonControl getWagonControl() {
+        return GameControl.wagoncontrol;   
     }
 
     /*    public static int createNewGame(Player player) {
@@ -66,7 +72,9 @@ public class GameControl {
         Game game = new Game();
         PioneerTrails.setCurrentGame(game);
         //game.setCurrentLocation(0);
-
+        Wagon wagon = new Wagon();
+        game.setWagon(wagon);
+        GameControl.wagoncontrol = new WagonControl(wagon);
 //        Player player = new Player();
         game.setPlayer(PioneerTrails.getPlayer());
 
@@ -79,7 +87,10 @@ public class GameControl {
         Scene[] scenes = createScenes();
         assignScenesToLocations(scenes, map.getLocations());
         game.setMap(map);
+        
         return 0;
+        
+      
     }
 
     public static Actor[] createActors() {
@@ -180,6 +191,8 @@ public class GameControl {
         }
         return true;
     }
+    
+    
 
     private static void assignScenesToLocations(Scene[] scenes, Location[][] locations) {
         locations[0][0].setScene(scenes[0]);

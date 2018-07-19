@@ -14,7 +14,7 @@ import pioneertrails.PioneerTrails;
  */
 public class ErrorView {
 
-    private static PrintWriter console = PioneerTrails.getOutput();
+    private static PrintWriter console = PioneerTrails.getOutFile();
     private static PrintWriter log = PioneerTrails.getLogFile();
 
     public static void display(String className, String errorMessage) {

@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 package byui.cit260.pioneerTrails.model;
-
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.io.Serializable;
+import java.util.TreeMap;
 
 /**
  *
@@ -16,42 +17,45 @@ import java.io.Serializable;
 public class Wagon implements Serializable {
 
     //class instance variables
-    private Boolean driveable;
-    private Integer capacity;
-    private Game game;
-    private ArrayList<Resource> resources;
+    private boolean driveable;
+    private int capacity = 1500;
+    private int weight;
 
-    public ArrayList<Resource> getResources() {
+    public boolean isDriveable() {
+        return driveable;
+    }
+
+    public void setDriveable(boolean driveable) {
+        this.driveable = driveable;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+    private final Map<String,Resource> resources;
+
+    public Map<String,Resource> getResources() {
         return resources;
     }
 
     public Wagon() {
-        resources = new ArrayList<Resource>();
+        resources = new TreeMap<>();
     }
 
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-
-    public Boolean getDriveable() {
-        return driveable;
-    }
-
-    public void setDriveable(Boolean driveable) {
-        this.driveable = driveable;
-    }
-
-    public Integer getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(Integer capacity) {
-        this.capacity = capacity;
-    }
+    
+    
 
     @Override
     public int hashCode() {
@@ -86,5 +90,9 @@ public class Wagon implements Serializable {
         }
         return true;
     }
+
+    
+
+    
 
 }

@@ -13,14 +13,14 @@ public class GetPlayers extends View {
 
     public GetPlayers() {
 
-        super("Marco! Polo!");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public String getInput(String menuText) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     @Override
     public boolean doAction(String inputs) {
@@ -30,5 +30,10 @@ public class GetPlayers extends View {
     void displayGetPlayers() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "Marco! Polo!";
+     }
 
 }

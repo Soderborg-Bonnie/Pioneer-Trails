@@ -12,12 +12,12 @@ package byui.cit260.pioneerTrails.view;
 public class DrinkWater extends View {
 
     public DrinkWater() {
-        super("You drank water. It has the following effect: ");   //stub since we don't have items created yet
+        super();   //stub since we don't have items created yet
 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public String getInput(String menuText) {
+    public String getInput() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -29,5 +29,10 @@ public class DrinkWater extends View {
     void displayDrinkWater() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+      return  "You drank water. It has the following effect: ";
+     }
 
 }

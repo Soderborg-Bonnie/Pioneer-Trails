@@ -17,16 +17,7 @@ public class SceneMenu extends View {
 
     public SceneMenu() {
 
-        super("\n======================================="
-                + "\n             Location Menu             "
-                + "\n======================================="
-                + "\n***************************************"
-                + "\n* Press 'A' to acquire food.          *"
-                + "\n* Press 'P' to view food items list.  *"
-                + "\n* Press 'V' to view location symbols. *"
-                + "\n* Press 'C' to continue your journey  *"
-                + "\n* Press 'Q' to quit  game.            *"
-                + "\n***************************************");
+        super();
     }
 
     @Override
@@ -58,7 +49,7 @@ public class SceneMenu extends View {
     }
 
     private void acquireFood() {
-        AcquireFood acquireFood = new AcquireFood();
+        AcquireFood acquireFood = new AcquireFood(GameControl.getWagonControl());
         acquireFood.display();
     }
 
@@ -78,4 +69,18 @@ public class SceneMenu extends View {
         viewFoodItems.display();
 
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "\n======================================="
+                + "\n             Location Menu             "
+                + "\n======================================="
+                + "\n***************************************"
+                + "\n* Press 'A' to acquire food.          *"
+                + "\n* Press 'P' to view food items list.  *"
+                + "\n* Press 'V' to view location symbols. *"
+                + "\n* Press 'C' to continue your journey  *"
+                + "\n* Press 'Q' to quit  game.            *"
+                + "\n***************************************";
+     }
 }

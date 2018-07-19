@@ -6,12 +6,19 @@
 package byui.cit260.pioneerTrails.control;
 
 import byui.cit260.pioneerTrails.exceptions.WagonControlExceptions;
+import byui.cit260.pioneerTrails.model.*;
 
 /**
  *
  * @author tyler
  */
 public class WagonControl {
+
+    private final Wagon wagon;
+
+    public WagonControl(Wagon wagon) {
+        this.wagon = wagon;
+      }
 
     /**
      * calcWagonWheelDegradation(wagonWheelDurability, normalDegradation,
@@ -25,7 +32,7 @@ public class WagonControl {
      * calcWagonWheelDegradation >1 && <100 calcWagonWheelDegradation =
      * wagonWheelDurability RETURN wagonWheelDurability END *
      */
-    public static double calcWagonWheelDegradation(double wagonWheelDurability,
+    public double calcWagonWheelDegradation(double wagonWheelDurability,
             double normalDegradation, String terrainDifficulty) throws WagonControlExceptions {
         double terrainValue = 0;
 
@@ -62,6 +69,21 @@ public class WagonControl {
             return calcWagonWheelDegradation;
         }
     }
+    
+    public boolean acquireResource(String name, int quantity, int weight) {
+        Resource resource = this.wagon.getResources().get(name);
+        if (resource == null) {
+            this.wagon.getResources().put(name, resource = new Resource(name, 0, 0));
+        }
+        if (this.wagon.getWeight()+weight < this.wagon.getCapacity()) {
+            resource.setWeight(resource.getWeight()+ weight);
+            resource.setQuantity(resource.getQuantity()+ quantity);
+            wagon.setWeight(wagon.getWeight()+ weight);
+            return true;
+        
+    }
+        return false; //todo: verify weight and add to wagon
+    }
 
     /**
      * calcFoodWeight(resourceItem, resourceItemWeight, quantityResourceItem,
@@ -74,7 +96,7 @@ public class WagonControl {
      * (totalWeight > 1500) RETURN -4 //update totalWeight & continue game
      * RETURN double totalWeight END*
      */
-    public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled)
+    public double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled)
             throws WagonControlExceptions {
 
         if (resourceItemWeight < 0 || resourceItemWeight > 450) {

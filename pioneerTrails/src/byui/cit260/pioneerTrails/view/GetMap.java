@@ -20,17 +20,29 @@ import pioneertrails.PioneerTrails;
 public class GetMap extends View {
 
     public GetMap() {
+
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        this.console.println("We suck at maps");
+        return true;
+    }
+
+    @Override
+    protected String getPromptMessage() {
+        StringBuilder builder = new StringBuilder();
         Game game = PioneerTrails.getCurrentGame();
         Map map = game.getMap();
         Location[][] locations = MapControl.createLocations();
-        System.out.print(" |");
+        builder.append(" |");
         for (int column = 0; column < locations[0].length; column++) {
-            System.out.print("  " + column + " |");
+            builder.append("  " + column + " |");
         }
         // Now build the map.  For each row, show the column information
         this.console.println();
         for (int row = 0; row < locations.length; row++) {
-            System.out.print(row + " "); // print row numbers to side of map
+            builder.append(row + " "); // print row numbers to side of map
             for (int column = 0; column < locations[row].length; column++) {
                 // set default indicators as blanks
                 String leftIndicator = " ";
@@ -45,27 +57,22 @@ public class GetMap extends View {
                     rightIndicator = "<"; // same as above
                 }
 
-                System.out.print("|"); // start map with a |
+                builder.append("|"); // start map with a |
                 if (locations[row][column].getScene() == null) {
 
                     // No scene assigned here so use ?? for the symbol
-                    System.out.print(leftIndicator + "??" + rightIndicator);
+                    builder.append(leftIndicator + "??" + rightIndicator);
                 } else {
-                    System.out.print(leftIndicator
+                    builder.append(leftIndicator
                             + locations[row][column].getScene()
                             //+ Scene.getSymbol()
                             + rightIndicator);
                 }
             }
-            this.console.println("|");
+            //this.console.println("|");
+            builder.append("| \n");
         }
-
-    }
-
-    @Override
-    public boolean doAction(String inputs) {
-        this.console.println("We suck at maps");
-        return true;
+        return builder.toString();
     }
 
 }

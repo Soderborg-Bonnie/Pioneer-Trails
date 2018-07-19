@@ -13,16 +13,7 @@ package byui.cit260.pioneerTrails.view;
 public class GetHelp extends View {
 
     public GetHelp() {
-        super("\n==============================="
-                + "\n          Help Menu"
-                + "\n==============================="
-                + "\n*************************************"
-                + "\n* G - What is the goal of the game? *"
-                + "\n* C - How to move                   *"
-                + "\n* E - Estimate resources            *"
-                + "\n* A - Harvest resources             *"
-                + "\n* Q - Quit                          *"
-                + "\n*************************************");
+        super();
     }
 
     @Override
@@ -80,4 +71,18 @@ public class GetHelp extends View {
 //    void displayGetHelp() {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
+
+    @Override
+    protected String getPromptMessage() {
+        return "\n==============================="
+                + "\n          Help Menu"
+                + "\n==============================="
+                + "\n*************************************"
+                + "\n* G - What is the goal of the game? *"
+                + "\n* C - How to move                   *"
+                + "\n* E - Estimate resources            *"
+                + "\n* A - Harvest resources             *"
+                + "\n* Q - Quit                          *"
+                + "\n*************************************";
+     }
 }

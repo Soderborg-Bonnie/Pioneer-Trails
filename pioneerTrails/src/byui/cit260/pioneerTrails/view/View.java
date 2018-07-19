@@ -19,7 +19,7 @@ import pioneertrails.PioneerTrails;
  */
 public abstract class View implements ViewInterface {
 
-    protected String promptMessage;
+//    protected String promptMessage;
 
     protected final BufferedReader keyboard = PioneerTrails.getInFile();
     protected final PrintWriter console = PioneerTrails.getOutFile();
@@ -27,9 +27,9 @@ public abstract class View implements ViewInterface {
     public View() {
     }
 
-    public View(String message) {
-        this.promptMessage = message;
-    }
+//    public View(String message) {
+//        this.promptMessage = message;
+//    }
 
     @Override
     public void display() {
@@ -39,7 +39,7 @@ public abstract class View implements ViewInterface {
         do {
 
             //System.out.println(menuText);
-            String inputs = this.getInputs();
+            String inputs = this.getInput();
 
             if (inputs.isEmpty() || inputs.equalsIgnoreCase("Q")) {
                 return;
@@ -50,20 +50,23 @@ public abstract class View implements ViewInterface {
 
     }
 
-    @Override
-    public String getInputs() {
-        return getInput(this.promptMessage);
+    protected void displayMessage() {
+         this.console.println(this.getPromptMessage());
     }
+//    @Override
+//    public String getInputs() {
+//        return getInput(this.promptMessage);
+//    }
 
     @Override
-    public String getInput(String menuText) {
+    public String getInput() {
         Scanner keyboard = new Scanner(this.keyboard);
         String inputs = "";
         Boolean valid = false;
         while (!valid) {
             try {
 //                System.out.println(menuText);
-                this.console.println(menuText);
+               displayMessage();
                 inputs = this.keyboard.readLine();
                 inputs = inputs.trim();
                 if (inputs.length() < 1) {
@@ -80,4 +83,9 @@ public abstract class View implements ViewInterface {
         return inputs;
     }
 
+    protected abstract String getPromptMessage();
+    
 }
+        
+
+

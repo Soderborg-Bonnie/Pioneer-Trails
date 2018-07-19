@@ -13,14 +13,14 @@ public class HarvestResources extends View {
 
     public HarvestResources() {
 
-        super("The field is white, and all that.");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public String getInput(String menuText) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     @Override
     public boolean doAction(String inputs) {
@@ -30,5 +30,10 @@ public class HarvestResources extends View {
     void displayHarvestResources() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "The field is white, and all that.";
+      }
 
 }

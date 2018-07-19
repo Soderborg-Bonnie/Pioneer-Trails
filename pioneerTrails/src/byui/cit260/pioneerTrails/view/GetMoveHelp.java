@@ -12,14 +12,11 @@ package byui.cit260.pioneerTrails.view;
 public class GetMoveHelp extends View {
 
     public GetMoveHelp() {
-        super("Who do you think I am, the Elder's Quorum?");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public String getInput(String menuText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public boolean doAction(String inputs) {
@@ -29,5 +26,10 @@ public class GetMoveHelp extends View {
     void displayGetMoveHelp() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "Who do you think I am, the Elder's Quorum?";
+     }
 
 }

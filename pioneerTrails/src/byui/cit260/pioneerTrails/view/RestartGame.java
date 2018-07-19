@@ -20,7 +20,7 @@ public class RestartGame extends View {
 
     public RestartGame() {
 
-        super("Yay for old games! Enter game file name. Press Q to quit.");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -77,5 +77,10 @@ public class RestartGame extends View {
     public void displayRestartGame() {
         display();//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "Yay for old games! Enter game file name. Press Q to quit.";
+     }
 
 }

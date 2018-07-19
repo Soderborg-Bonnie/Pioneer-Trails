@@ -12,12 +12,12 @@ package byui.cit260.pioneerTrails.view;
 public class EstimateResources extends View {
 
     public EstimateResources() {
-        super("You got estimates? We got resources!");
+        super();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public String getInput(String menuText) {
+    public String getInput() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -29,5 +29,10 @@ public class EstimateResources extends View {
     void displayEstimateResources() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "You got estimates? We got resources!";
+       }
 
 }

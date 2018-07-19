@@ -290,10 +290,10 @@ public static void IndividualTestTamlyn(){
     //GetHelp getHelp = new GetHelp();
     //getHelp.displayGetHelp();
     // the above 2 lines are from page 9 of Lesson 7 Team
-
-    public static PrintWriter getOutput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//
+//    public static PrintWriter getOutput() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
 /*TeamTest();
         IndividualTestBonnie();

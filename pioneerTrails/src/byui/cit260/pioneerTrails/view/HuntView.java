@@ -57,7 +57,7 @@ public class HuntView extends View {
                 try {
                     input = this.keyboard.readLine();
                 } catch (IOException ex) {
-                    Logger.getLogger(HuntView.class.getName()).log(Level.SEVERE, null, ex);
+                    ErrorView.display(this.getClass().getName(), ex.getMessage());
                 }
                 switch (input) {
                     case "1":
@@ -114,7 +114,7 @@ public class HuntView extends View {
             try {
                 input = this.keyboard.readLine();
             } catch (IOException ex) {
-                Logger.getLogger(HuntView.class.getName()).log(Level.SEVERE, null, ex);
+                ErrorView.display(this.getClass().getName(), ex.getMessage());
             }
 
             while (!input.equals("1") && !input.equals("2")) {
@@ -122,7 +122,7 @@ public class HuntView extends View {
                 try {
                     input = this.keyboard.readLine();
                 } catch (IOException ex) {
-                    Logger.getLogger(HuntView.class.getName()).log(Level.SEVERE, null, ex);
+                    ErrorView.display(this.getClass().getName(), ex.getMessage());
                 }
             }
 
@@ -138,4 +138,11 @@ public class HuntView extends View {
         this.console.println("########################");
         return false;
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "";
+     }
+
+    
 }

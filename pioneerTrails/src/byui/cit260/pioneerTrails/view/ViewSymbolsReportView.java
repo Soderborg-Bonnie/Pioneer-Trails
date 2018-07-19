@@ -23,7 +23,7 @@ import pioneertrails.PioneerTrails;
 public class ViewSymbolsReportView extends View {
 
     public ViewSymbolsReportView() {
-        super("Do you want to View (V) or Save (S) the Location Symbols Report?");
+        super();
     }
 
     @Override
@@ -64,7 +64,7 @@ public class ViewSymbolsReportView extends View {
 
     private void saveSymbolReport() {
         this.console.println("\nEnter a location to save the report");
-        String filePath = this.getInputs();
+        String filePath = this.getInput();
 
         try (PrintWriter out = new PrintWriter(filePath)) {
             out.printf("===========================================================\r\n");
@@ -96,4 +96,14 @@ public class ViewSymbolsReportView extends View {
             ErrorView.display(this.getClass().getName(), "I/O Error: " + ex.getMessage());
         }
     }
+
+//    @Override
+//    public String getInputs() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+
+    @Override
+    protected String getPromptMessage() {
+        return "Do you want to View (V) or Save (S) the Location Symbols Report?";
+     }
 }

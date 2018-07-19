@@ -12,18 +12,7 @@ package byui.cit260.pioneerTrails.view;
 public class HealthTips extends View {
 
     public HealthTips() {
-        super("Enter your choice for tips on how to handle your malady"
-                + "================================================"
-                + "              Health Menu"
-                + "================================================"
-                + "\n**********************************************"
-                + "\n* Press 'B' for broken bones.                *"
-                + "\n* Press 'F' for fevers.                      *"
-                + "\n* Press 'I' for infections.                  *"
-                + "\n* Press 'S' for snake bites.                 *"
-                + "\n* Press 'H' for delirium.                    *"
-                + "\n* Press 'Q' to return to the previous menu   *"
-                + "\n**********************************************");
+        super();
     }
 
     @Override
@@ -73,5 +62,21 @@ public class HealthTips extends View {
     private void getHelp() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    protected String getPromptMessage() {
+        return "Enter your choice for tips on how to handle your malady"
+                + "================================================"
+                + "              Health Menu"
+                + "================================================"
+                + "\n**********************************************"
+                + "\n* Press 'B' for broken bones.                *"
+                + "\n* Press 'F' for fevers.                      *"
+                + "\n* Press 'I' for infections.                  *"
+                + "\n* Press 'S' for snake bites.                 *"
+                + "\n* Press 'H' for delirium.                    *"
+                + "\n* Press 'Q' to return to the previous menu   *"
+                + "\n**********************************************";
+       }
 
 }

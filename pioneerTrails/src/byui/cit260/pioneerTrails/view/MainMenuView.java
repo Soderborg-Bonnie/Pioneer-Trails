@@ -9,6 +9,7 @@ import byui.cit260.pioneerTrails.control.GameControl;
 import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
 import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.Player;
+import byui.cit260.pioneerTrails.model.Scene;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,15 +20,7 @@ import java.util.logging.Logger;
 public class MainMenuView extends View {
 
     public MainMenuView() {
-        super("\n======================================="
-                + "\n              Main Menu"
-                + "\n======================================="
-                + "\n*************************************"
-                + "\n* Press 'N' to start a new  game.   *"
-                + "\n* Press 'R' to reload a saved game. *"
-                + "\n* Press 'H' to get help about game. *"
-                + "\n* Press 'Q' to quit  game.          *"
-                + "\n*************************************");
+        super();
     }
 
     @Override
@@ -85,6 +78,20 @@ public class MainMenuView extends View {
         gameMenuView.display();
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
+    }
+
+    @Override
+    protected String getPromptMessage() {
+        
+                return "\n======================================="
+                + "\n              Main Menu"
+                + "\n======================================="
+                + "\n*************************************"
+                + "\n* Press 'N' to start a new  game.   *"
+                + "\n* Press 'R' to reload a saved game. *"
+                + "\n* Press 'H' to get help about game. *"
+                + "\n* Press 'Q' to quit  game.          *"
+                + "\n*************************************";
     }
 
 }
