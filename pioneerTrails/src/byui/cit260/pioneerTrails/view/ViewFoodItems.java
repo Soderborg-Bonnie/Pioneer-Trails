@@ -13,22 +13,29 @@ import java.util.ArrayList;
  *
  * @author Bonnie
  */
-public class ViewFoodItems extends View{
-public void printViewFoodItems(ArrayList<AcquireFood> listOfItems, String foodItemList){
-        try (PrintWriter out = new PrintWriter(foodItemList)){
+public class ViewFoodItems extends View {
+    
+    public ViewFoodItems() {
+        
+    }
+
+    public void printViewFoodItems(ArrayList<AcquireFood> listOfItems, String foodItemList) {
+        try (PrintWriter out = new PrintWriter(foodItemList)) {
             out.println("\n\n             List of Food Items on Hand            ");
-                    out.printf("%n-20s%10s%10s, Type & Quantity");
-                    out.printf("%n-20s%10s%10s", "---------------");
-                    
-        }
-        catch (IOException ex){
+            out.printf("%-30s\r\n", "Type & Quantity");
+            out.printf("%-30s", "---------------");
+            for (AcquireFood foodItem: listOfItems) {
+                //printf(foodItem.listOfItems);    need to store a list in a model layer, like game
+            }
+
+        } catch (IOException ex) {
             System.out.println("I/O Error: " + ex.getMessage());
         }
-        }
+    }
 
     @Override
     public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
 // @Override  
@@ -56,6 +63,4 @@ public void printViewFoodItems(ArrayList<AcquireFood> listOfItems, String foodIt
 //                + "\n=======================================");
 //        return true;
 //    }  
-    
-    
 }

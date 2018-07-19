@@ -9,18 +9,16 @@ import java.util.ArrayList;
 import java.util.Objects;
 import pioneertrails.PioneerTrails;
 import java.io.Serializable;
+
 /**
  *
  * @author tharman
  */
 public class Scene implements Serializable {
 
-
-
 //    public static Location getCurrentScene() {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
     private String name;
     private String description;
     public String symbol;
@@ -31,9 +29,10 @@ public class Scene implements Serializable {
     public Resource getResource() {
         return resource;
     }
+
     public Scene() {
-    
-}
+
+    }
 
     public Scene(String name, String description, String symbol,
             String difficulty, Boolean hindrance, Resource resource) {
@@ -70,8 +69,6 @@ public class Scene implements Serializable {
         this.resource = resource;
     }
 
-    
-
     public String getName() {
         return name;
     }
@@ -91,10 +88,6 @@ public class Scene implements Serializable {
     public Boolean getHindrance() {
         return hindrance;
     }
-
-    
-
-   
 
     @Override
     public boolean equals(Object obj) {
@@ -123,7 +116,7 @@ public class Scene implements Serializable {
         if (!Objects.equals(this.hindrance, other.hindrance)) {
             return false;
         }
-        
+
         return true;
     }
 

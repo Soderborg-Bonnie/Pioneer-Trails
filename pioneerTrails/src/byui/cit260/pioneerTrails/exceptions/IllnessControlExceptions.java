@@ -18,5 +18,5 @@ public class IllnessControlExceptions extends Exception {
     public IllnessControlExceptions(String your_choice_has_to_be_1_or_2) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

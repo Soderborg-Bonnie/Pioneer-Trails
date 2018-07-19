@@ -35,19 +35,18 @@ public class MainMenuView extends View {
 
         String menuItem = inputs.toUpperCase();
         switch (menuItem) {
-            case "N":
-        {
-            try {
-                gameMenuView();
-            } catch (GameControlExceptions ex) {
+            case "N": {
+                try {
+                    gameMenuView();
+                } catch (GameControlExceptions ex) {
 //                System.out.println(ex.getMessage());
-                  ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the game.");
-            } catch (MapControlExceptions ex) {
+                    ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the game.");
+                } catch (MapControlExceptions ex) {
 //                System.out.println(ex.getMessage());
-                  ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the map.");
+                    ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the map.");
+                }
             }
-        }
-                break;
+            break;
             case "R":
                 this.restartGame();
                 break;
@@ -75,10 +74,10 @@ public class MainMenuView extends View {
 
     private void gameMenuView() throws GameControlExceptions, MapControlExceptions {
 //        try {
-            if (GameControl.createNewGame() == -1) {
-                this.console.println("Could not create game.");
-                return;
-            }
+        if (GameControl.createNewGame() == -1) {
+            this.console.println("Could not create game.");
+            return;
+        }
 //        } catch (MapControlException mce) {
 //            System.out.println(mce.getMessage());
 //        }

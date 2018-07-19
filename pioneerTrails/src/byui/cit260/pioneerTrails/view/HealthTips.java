@@ -49,7 +49,7 @@ public class HealthTips extends View {
             case "Q":
                 return true;
             default:
-               this.console.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
+                this.console.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
         }
         return false;
     }

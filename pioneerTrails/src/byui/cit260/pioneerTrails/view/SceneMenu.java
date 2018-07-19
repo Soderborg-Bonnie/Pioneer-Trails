@@ -76,7 +76,6 @@ public class SceneMenu extends View {
     private void printViewFoodItems() {
         ViewFoodItems viewFoodItems = new ViewFoodItems();
         viewFoodItems.display();
-        
-    }
-    }
 
+    }
+}

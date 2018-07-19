@@ -1,0 +1,29 @@
+===========================================================LOCATION SYMBOLS REPORTLocation Name       Location Symbol
+===========================================================Nauvoo              NV   
+Sugar Creek         SC   
+Richardson's Point  RP   
+Chariton River CrossingCC   
+Locust Creek        LC   
+Garden Grove        GG   
+Nishnabotna River   NR   
+Grand Encampment    GE   
+Council Bluffs      CB   
+Winter Quarters     WQ   
+Elkhorn River CrossingER   
+Platte River        PR   
+Fort Kearny         FK   
+Confluence Point    CP   
+Ash Hollow          AH   
+Chimney Rock        CR   
+Scottsbluff         SB   
+Fort Laramie        FL   
+Sweetwater River    SR   
+Independence Rock   IR   
+Fort Bridger        FB   
+Echo Canyon         EC   
+Golden Pass Road    GP   
+Emigration Canyon   EM   
+Zion                ZZ   
+
+
+ 

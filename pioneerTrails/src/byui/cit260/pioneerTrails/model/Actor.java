@@ -32,12 +32,10 @@ public class Actor implements Serializable {
         this.name = name;
         this.aliveState = aliveState;
     }
-    
 
     public Actor() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-        
 
 //    public Game getGame() {
 //        return game;
@@ -54,7 +52,6 @@ public class Actor implements Serializable {
 //    public void setPlayer(Player player) {
 //        this.player = player;
 //    }
-
     public String getName() {
         return name;
     }

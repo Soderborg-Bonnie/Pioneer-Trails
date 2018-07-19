@@ -30,7 +30,6 @@ public class SaveGameView extends View {
 // save a reference to input1 in the inputs array
 // return inputs
 //} 
-
 //    private String[] getInputs(String menuText) {
 //        String[] inputs = new String[1];
 //        this.console.println("Where do you want to save the game?");
@@ -38,7 +37,6 @@ public class SaveGameView extends View {
 //        inputs[1] = input1;
 //        return inputs;
 //    }
-    
 //    private boolean doAction(String [] inputs) {
 // filePath = get first value in inputs array
 // game = get the currentGame in the main class
@@ -52,12 +50,12 @@ public class SaveGameView extends View {
 // file was saved
 // return true to end the view
 //}
-  @Override  
+    @Override
     public boolean doAction(String inputs) {
         String filePath = inputs;
         Game game = PioneerTrails.getCurrentGame();
         try {
-        GameControl.saveGame(game,filePath);
+            GameControl.saveGame(game, filePath);
         } catch (Exception ex) {
             ErrorView.display(this.getClass().getName(), ex.getMessage());
             return false;
@@ -68,14 +66,5 @@ public class SaveGameView extends View {
                 + "\n=======================================");
         return true;
     }
-    
-
-    
-
-    
-
-    
-
-    
 
 }

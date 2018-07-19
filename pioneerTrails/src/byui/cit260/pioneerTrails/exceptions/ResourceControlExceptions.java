@@ -9,7 +9,7 @@ package byui.cit260.pioneerTrails.exceptions;
  *
  * @author Bonnie
  */
-public class ResourceControlExceptions extends Exception{
+public class ResourceControlExceptions extends Exception {
 
     public ResourceControlExceptions(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
@@ -18,5 +18,5 @@ public class ResourceControlExceptions extends Exception{
     public ResourceControlExceptions(String the_available_water_needs_to_be_between_0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

@@ -8,6 +8,7 @@ package byui.cit260.pioneerTrails.control;
 import byui.cit260.pioneerTrails.exceptions.ResourceControlExceptions;
 import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.util.ArrayList;
+
 /**
  *
  * @author tyler
@@ -24,24 +25,24 @@ public class ResourceControl {
      * waterResource
      */
     public static double calcWaterConsumption(double availableWater,
-            double numPeople, double time, double waterRation) throws ResourceControlExceptions{
-        if (availableWater < 0 || availableWater > 100){
-            throw new ResourceControlExceptions ("The available water needs to be between 0-100%. Not more, not less.");
+            double numPeople, double time, double waterRation) throws ResourceControlExceptions {
+        if (availableWater < 0 || availableWater > 100) {
+            throw new ResourceControlExceptions("The available water needs to be between 0-100%. Not more, not less.");
         }
         if (waterRation < 1 || waterRation > 1) {
-            throw new ResourceControlExceptions ("Your water ration is limited to 1.");
+            throw new ResourceControlExceptions("Your water ration is limited to 1.");
         }
         if (time < 1 || time > 20) {
-            throw new ResourceControlExceptions ("Your days between water refills can't be negative. Neither can it be longer than 20 days.");
+            throw new ResourceControlExceptions("Your days between water refills can't be negative. Neither can it be longer than 20 days.");
         }
         if (numPeople < 0 || numPeople > 5) {
-            throw new ResourceControlExceptions ("If you have zero people in your group, water's the least of your worries. If you have more than five people in your group, you'll deplete your supplies too quickly. The number of people must be between 1-5.");
-                    }
+            throw new ResourceControlExceptions("If you have zero people in your group, water's the least of your worries. If you have more than five people in your group, you'll deplete your supplies too quickly. The number of people must be between 1-5.");
+        }
 
         double waterResource = availableWater - (numPeople * time * waterRation);
         {
             if (waterResource <= 0) {
-                throw new ResourceControlExceptions ("You've run out of water.");
+                throw new ResourceControlExceptions("You've run out of water.");
             } else {
                 return waterResource;
             }
@@ -55,7 +56,6 @@ public class ResourceControl {
 //    return listOfItems;
 //    }
 //}
-
 //    public String createSortedListOfItems() {
 //
 ////        ListOfItems listOfItems = new ListOfItems();
@@ -90,5 +90,4 @@ public class ResourceControl {
 //        }
 //    }
 //}
-
 }

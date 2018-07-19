@@ -54,12 +54,12 @@ public class StartProgramView extends View {
             player = GameControl.savePlayer(playersName);
         } catch (GameControlExceptions ex) {
 //            System.out.println(ex.getMessage());
-              ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the game.");
+            ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the game.");
         }
         if (player == null) {
 //            System.out.println("Could not create the player."
 //                    + "Enter a different name.");
-              ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the player.");
+            ErrorView.display(this.getClass().getName(), "Sorry. There's a problem with the player.");
             return false;
         }
 
@@ -67,13 +67,12 @@ public class StartProgramView extends View {
                 + "\nWelcome to the game, " + playersName + "!"
                 + "\nWe hope you have lots of fun!"
                 + "\n=======================================");
-        
+
 //        Scene scene = GameControl.getCurrentScene();
 //            String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
 //                    + "." + "What would you like to do now?";
 //            //System.out.println(msg);
 //            return msg;
-
         return true;
 
     }

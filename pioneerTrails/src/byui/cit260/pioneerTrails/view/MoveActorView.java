@@ -9,7 +9,7 @@ package byui.cit260.pioneerTrails.view;
  *
  * @author Bonnie
  */
-public class MoveActorView extends View{
+public class MoveActorView extends View {
 // private String[] getInputs() {
 // inputs = new String array two elements long
 //
@@ -19,10 +19,7 @@ public class MoveActorView extends View{
 // input2 = getInput()
 // save a reference to input2 in the inputs array
 // return inputs 
-    
- 
-    
-    
+
 //    private boolean doAction(String [] inputs) {
 // row = get first value in inputs array
 // column = get second value in inputs array
@@ -49,5 +46,5 @@ public class MoveActorView extends View{
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

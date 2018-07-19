@@ -33,7 +33,7 @@ public class WagonControl {
             throw new WagonControlExceptions("Your wagon wheel's durability needs to be between 1-100%.");
         }
         if (normalDegradation != 10) {
-             throw new WagonControlExceptions("The wagon wheels automatically degrade by 10 every time the location changes.");
+            throw new WagonControlExceptions("The wagon wheels automatically degrade by 10 every time the location changes.");
         }
         switch (terrainDifficulty) {
             case "Normal":
@@ -49,14 +49,14 @@ public class WagonControl {
 
         if (terrainDifficulty != "Normal" && terrainDifficulty != "Medium"
                 && terrainDifficulty != "Difficult") {
-             throw new WagonControlExceptions("Terrain difficulty must be 'Normal,' 'Medium,' or 'Difficult'.");
+            throw new WagonControlExceptions("Terrain difficulty must be 'Normal,' 'Medium,' or 'Difficult'.");
         }
 
         double calcWagonWheelDegradation = wagonWheelDurability
                 - (normalDegradation + terrainValue);
         {
             if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
-                 throw new WagonControlExceptions("Your wagon wheel needs repair before you can continue.");
+                throw new WagonControlExceptions("Your wagon wheel needs repair before you can continue.");
             }
 
             return calcWagonWheelDegradation;
@@ -74,9 +74,9 @@ public class WagonControl {
      * (totalWeight > 1500) RETURN -4 //update totalWeight & continue game
      * RETURN double totalWeight END*
      */
-    public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled) 
-        throws WagonControlExceptions {
-        
+    public static double calcFoodWeight(double resourceItemWeight, double quantityResourceItem, double percentSpoiled)
+            throws WagonControlExceptions {
+
         if (resourceItemWeight < 0 || resourceItemWeight > 450) {
 //            
             throw new WagonControlExceptions("The weight needs to be between 0-450 pounds. Not more, not less.");
@@ -95,6 +95,6 @@ public class WagonControl {
             //update totalWeight & continue game
             return totalWeight;
         }
-        
+
     }
 }

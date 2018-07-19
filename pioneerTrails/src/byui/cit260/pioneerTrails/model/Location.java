@@ -8,6 +8,7 @@ package byui.cit260.pioneerTrails.model;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.io.Serializable;
+
 /**
  *
  * @author tharman
@@ -15,18 +16,17 @@ import java.io.Serializable;
 public class Location implements Serializable {
 
     //class instance variables
-    
     private Boolean visited;
     private int stopsRemaining;
     private Map map;
     private Scene scene;   //update scene below to remove array
 
     public Location(Boolean visited, int stopsRemaining) {
-        
-        this.visited=visited;
-        this.stopsRemaining=stopsRemaining;
+
+        this.visited = visited;
+        this.stopsRemaining = stopsRemaining;
     }
-    
+
     public Scene getScene() {
         return scene;
     }
@@ -43,11 +43,10 @@ public class Location implements Serializable {
         this.map = map;
     }
 
-    
     public boolean isVisited() {
         return visited;
     }
-  
+
     public void setVisited(Boolean visited) {
         this.visited = visited;
     }
@@ -60,12 +59,10 @@ public class Location implements Serializable {
         this.stopsRemaining = stopsRemaining;
     }
 
-    
-
     @Override
     public int hashCode() {
         int hash = 7;
-        
+
         hash = 71 * hash + Objects.hashCode(this.visited);
         hash = 71 * hash + Objects.hashCode(this.stopsRemaining);
         hash = 71 * hash + Objects.hashCode(this.map);
@@ -84,8 +81,7 @@ public class Location implements Serializable {
             return false;
         }
         final Location other = (Location) obj;
-        
-        
+
         if (!Objects.equals(this.visited, other.visited)) {
             return false;
         }
@@ -97,8 +93,5 @@ public class Location implements Serializable {
         }
         return true;
     }
-
-    
-
 
 }

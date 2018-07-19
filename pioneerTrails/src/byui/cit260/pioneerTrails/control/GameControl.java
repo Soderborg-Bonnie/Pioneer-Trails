@@ -16,7 +16,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import pioneertrails.PioneerTrails;
 
-
 /**
  *
  * @author tyler
@@ -24,7 +23,7 @@ import pioneertrails.PioneerTrails;
 public class GameControl {
 
     //private static Game scene;
-    public static Player savePlayer(String playersName) throws GameControlExceptions{
+    public static Player savePlayer(String playersName) throws GameControlExceptions {
         if (playersName.length() < 1) {
             throw new GameControlExceptions("Your name has to have at least a character. Hitting 'enter' without anything else is not ok.");
         }
@@ -58,7 +57,7 @@ public class GameControl {
     RETURN 1 // indicates success
     
 }*/
-    public static int createNewGame() throws GameControlExceptions, MapControlExceptions{
+    public static int createNewGame() throws GameControlExceptions, MapControlExceptions {
         if (PioneerTrails.getPlayer() == null) {
             throw new GameControlExceptions("Your name has to have at least a charcter. Hitting 'enter' wothout anything else is not ok.");
         }
@@ -98,7 +97,6 @@ public class GameControl {
 //        acquireFood.setAcquireFood();
 //        return new AcquireFood();
 //    }
-
     public static Scene getCurrentScene() {
         return PioneerTrails.getCurrentGame().getMap().getCurrentScene();
     }
@@ -137,8 +135,8 @@ public class GameControl {
     public static Scene[] createScenes() { //take out location from Scene
         Scene[] scenes = new Scene[25];
         Resource[] resources = PioneerTrails.getCurrentGame().getResources();
-        scenes[0] = new Scene("Nauvoo", "The City of Joseph", "NV", "Normal", false, resources[0]);
-        scenes[1] = new Scene("Sugar Creek", "The Little Switzerland of Ohio", "SC", "Norml", false, resources[1]);
+        scenes[0] = new Scene("Nauvoo", "the City of Joseph", "NV", "Normal", false, resources[0]);
+        scenes[1] = new Scene("Sugar Creek", "the Little Switzerland of Ohio", "SC", "Normal", false, resources[1]);
         scenes[2] = new Scene("Richardson's Point", "Camp of Israel", "RP", "Normal", false, resources[2]);
         scenes[3] = new Scene("Chariton River Crossing", "called Missouri's Grand Divide", "CC", "Medium", false, resources[3]);
         scenes[4] = new Scene("Locust Creek", "where 'Come, Come Ye Saints' was written", "LC", "Difficult", false, resources[4]);
@@ -162,7 +160,7 @@ public class GameControl {
         scenes[22] = new Scene("Golden Pass Road", "known as Parley's Canyon", "GP", "Normal", false, resources[22]);
         scenes[23] = new Scene("Emigration Canyon", "Brigham Young - 'This is the right place. Drive on.'", "EM", "Normal", false, resources[23]);
         scenes[24] = new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, resources[24]);
-        
+
         return scenes;
     }
 
@@ -210,10 +208,8 @@ public class GameControl {
         locations[4][3].setScene(scenes[23]);
         locations[4][4].setScene(scenes[24]);
 
-    } 
+    }
 
-    
-    
 //public static void saveGame(Game game, String filePath) {
 // if invalid a game or filePath is passed to the method then
 // throw a new GameControlException
@@ -222,30 +218,28 @@ public class GameControl {
 // create a new ObjectOutputStream from the FileOutputStream
 // write the game object to the ObjectOutputStream
 //}
-    
     public static void saveGame(Game game, String filePath) throws GameControlExceptions {
-          
-        try( FileOutputStream fops = new FileOutputStream(filePath)){
+
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
             output.writeObject(game);
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new GameControlExceptions(e.getMessage());
         }
-    
- 
-    }
-    public static void getGame(String filePath) throws GameControlExceptions{
 
-        
+    }
+
+    public static void getGame(String filePath) throws GameControlExceptions {
+
 //          if (filePath == null){
 //            throw new GameControlExceptions(e.getMessage());
-            Game game = null;
-            try(FileInputStream fips = new FileInputStream(filePath)){
+        Game game = null;
+        try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
             game = (Game) input.readObject();
-            }catch (Exception e){
-                    throw new GameControlExceptions(e.getMessage());
-                    }
-            PioneerTrails.setCurrentGame(game);
+        } catch (Exception e) {
+            throw new GameControlExceptions(e.getMessage());
+        }
+        PioneerTrails.setCurrentGame(game);
     }
 }

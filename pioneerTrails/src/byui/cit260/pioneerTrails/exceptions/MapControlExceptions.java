@@ -9,7 +9,7 @@ package byui.cit260.pioneerTrails.exceptions;
  *
  * @author Bonnie
  */
-public class MapControlExceptions extends Exception{
+public class MapControlExceptions extends Exception {
 
     public MapControlExceptions(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
@@ -18,5 +18,5 @@ public class MapControlExceptions extends Exception{
     public MapControlExceptions(String you_cant_be_in_negative_territory_in_your) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

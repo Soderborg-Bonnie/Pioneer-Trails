@@ -8,6 +8,7 @@ package byui.cit260.pioneerTrails.model;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.io.Serializable;
+
 /**
  *
  * @author tharman
@@ -21,16 +22,12 @@ public class Map implements Serializable {
     private int totalRows;
     private int totalColumns;
     private Location[][] locations;
-   
-
-    
-   
 
     public Map() {
     }
-    
+
     public Scene getCurrentScene() {
-       return  locations[currentRow][currentCol].getScene();
+        return locations[currentRow][currentCol].getScene();
     }
 
     public Location[][] getLocations() {
@@ -40,7 +37,6 @@ public class Map implements Serializable {
     public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
-
 
     public String getDescription() {
         return description;
@@ -127,6 +123,5 @@ public class Map implements Serializable {
         }
         return true;
     }
-
 
 }

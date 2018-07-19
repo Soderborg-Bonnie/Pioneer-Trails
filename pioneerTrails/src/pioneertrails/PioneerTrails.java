@@ -247,6 +247,7 @@ public static void IndividualTestTamlyn(){
     public static void setLogFile(PrintWriter logFile) {
         PioneerTrails.logFile = logFile;
     }
+
     public static void main(String[] args) {
         try {
             PioneerTrails.inFile = new BufferedReader(new InputStreamReader(System.in));
@@ -262,23 +263,25 @@ public static void IndividualTestTamlyn(){
 //            sceneMenu.display();
         } catch (Throwable e) {
 //            System.out.println("Something went wrong with the game. Hold on while we figure it out.");
-          ErrorView.display("PioneerTrails","Something went wrong with the game. Hold on while we figure it out." );
+            ErrorView.display("PioneerTrails", "Something went wrong with the game. Hold on while we figure it out.");
             e.printStackTrace();
         } finally {
             try {
-                if (PioneerTrails.inFile != null) 
+                if (PioneerTrails.inFile != null) {
                     PioneerTrails.inFile.close();
-                
-                if (PioneerTrails.outFile != null)
+                }
+
+                if (PioneerTrails.outFile != null) {
                     PioneerTrails.outFile.close();
-                
-                if (logFile != null){
+                }
+
+                if (logFile != null) {
                     logFile.close();
                 }
             } catch (IOException ex) {
 //                Logger.getLogger(PioneerTrails.class.getName()).log(Level.SEVERE, null, ex);
 //                System.out.println("File didn't close properly.");
-                  ErrorView.display("PioneerTrails","File didn't close properly." );
+                ErrorView.display("PioneerTrails", "File didn't close properly.");
                 return;
             }
 

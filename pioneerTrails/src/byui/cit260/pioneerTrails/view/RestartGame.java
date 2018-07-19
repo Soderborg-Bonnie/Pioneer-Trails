@@ -31,24 +31,18 @@ public class RestartGame extends View {
 //        inputs[1] = input1;
 //        return inputs;
 //    }
-
-
-
-
-@Override
+    @Override
     public boolean doAction(String inputs) {
-            String filePath = inputs;
+        String filePath = inputs;
         try {
             GameControl.getGame(filePath);
         } catch (GameControlExceptions ex) {
             ErrorView.display(RestartGame.class.getName(), ex.getMessage());
         }
-            GameMenuView gameMenuView = new GameMenuView();
-            gameMenuView.display();
-            return true;
-        }    
-
-    
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.display();
+        return true;
+    }
 
 //private boolean doAction(String [] inputs) {
 // filePath = get first value in inputs array
@@ -62,7 +56,6 @@ public class RestartGame extends View {
 // display the gameMenuView
 // return true to end the view
 //}
-
 //        String menuItem = inputs.toUpperCase();
 //        switch (menuItem) {
 //            case "N":
@@ -81,7 +74,6 @@ public class RestartGame extends View {
 //        }
 //        return false;
 //    }
-
     public void displayRestartGame() {
         display();//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

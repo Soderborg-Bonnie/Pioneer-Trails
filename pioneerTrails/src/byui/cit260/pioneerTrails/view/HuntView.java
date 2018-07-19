@@ -78,10 +78,11 @@ public class HuntView extends View {
                             numDryBread--;
                             this.console.println("\t> You ate some dry bread, rejuvinating yourself by " + dryBreadHealAmount + "%."
                                     + "\n\t> You now have " + energy + " % energy."
-                                            + "\n\t> You have " + numDryBread + " dry bread left.\n");
+                                    + "\n\t> You have " + numDryBread + " dry bread left.\n");
                         } else {
                             this.console.println("\t> You have no Dry Bread left! Shoot well so you can get some meat!\n");
-                        }   break;
+                        }
+                        break;
                     case "3":
                         this.console.println("\tYou run away from the " + animal + "!");
                         continue GAME;
@@ -104,10 +105,10 @@ public class HuntView extends View {
                 this.console.println(" # You could return to camp. # ");
 
             }
-           this.console.println("----------------------------------------------");
+            this.console.println("----------------------------------------------");
             this.console.println("What would you like to do now?");
             this.console.println("1. Continue hunting");
-           this.console.println("2. Leave the hunt");
+            this.console.println("2. Leave the hunt");
 
             String input = null;
             try {

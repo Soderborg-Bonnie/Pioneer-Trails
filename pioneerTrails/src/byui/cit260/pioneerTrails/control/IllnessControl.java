@@ -13,7 +13,7 @@ import byui.cit260.pioneerTrails.exceptions.IllnessControlExceptions;
  */
 public class IllnessControl {
 
-    public static int calcIllnessOutcome(int choice, int mortalityRate, int chance) throws IllnessControlExceptions{
+    public static int calcIllnessOutcome(int choice, int mortalityRate, int chance) throws IllnessControlExceptions {
         if (choice < 1 || choice > 2) {
             throw new IllnessControlExceptions("Your choice must be '1' or '2'.");
         }

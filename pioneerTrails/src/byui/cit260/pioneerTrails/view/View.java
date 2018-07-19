@@ -20,9 +20,9 @@ import pioneertrails.PioneerTrails;
 public abstract class View implements ViewInterface {
 
     protected String promptMessage;
-    
+
     protected final BufferedReader keyboard = PioneerTrails.getInFile();
-     protected final PrintWriter console = PioneerTrails.getOutFile();
+    protected final PrintWriter console = PioneerTrails.getOutFile();
 
     public View() {
     }
@@ -63,17 +63,17 @@ public abstract class View implements ViewInterface {
         while (!valid) {
             try {
 //                System.out.println(menuText);
-                  this.console.println(menuText);
+                this.console.println(menuText);
                 inputs = this.keyboard.readLine();
                 inputs = inputs.trim();
                 if (inputs.length() < 1) {
 //                    System.out.println("You must enter a value.");
-                      this.console.println("You must enter a value.");
+                    this.console.println("You must enter a value.");
                     continue;
                 }
                 valid = true;
             } catch (IOException ex) {
-                System.out.println("Error readin input: " + ex.getMessage());
+                System.out.println("Error reading input: " + ex.getMessage());
             }
 
         }

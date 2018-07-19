@@ -9,7 +9,7 @@ package byui.cit260.pioneerTrails.exceptions;
  *
  * @author Bonnie
  */
-public class WagonControlExceptions extends Exception{
+public class WagonControlExceptions extends Exception {
 
     public WagonControlExceptions(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
@@ -18,5 +18,5 @@ public class WagonControlExceptions extends Exception{
     public WagonControlExceptions(String the_weight_needs_to_be_between_0450_pound) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

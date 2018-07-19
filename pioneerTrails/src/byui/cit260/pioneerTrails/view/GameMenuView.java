@@ -87,44 +87,43 @@ public class GameMenuView extends View {
         Map map = game.getMap();
         Location[][] locations = map.getLocations(); //MapControl.createLocations();
         System.out.print(" |");
-        for(int column = 0; column<locations[0].length;column++){
+        for (int column = 0; column < locations[0].length; column++) {
             System.out.print("  " + column + " |");
         }
         // Now build the map.  For each row, show the column information
         this.console.println();
-        for( int row = 0; row < locations.length; row++){
+        for (int row = 0; row < locations.length; row++) {
             System.out.print(row + " "); // print row numbers to side of map
-            for( int column = 0; column < locations[row].length; column++){
+            for (int column = 0; column < locations[row].length; column++) {
                 // set default indicators as blanks
                 String leftIndicator = " ";
                 String rightIndicator = " ";
-                if(locations[row][column].getScene() == map.getCurrentScene()){
+                if (locations[row][column].getScene() == map.getCurrentScene()) {
                     // Set star indicators to show this is the current location.
                     leftIndicator = "*";
                     rightIndicator = "*";
-                }
-                else if(locations[row][column].isVisited()){
+                } else if (locations[row][column].isVisited()) {
                     // Set < > indicators to show this location has been visited.
                     leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                     rightIndicator = "<"; // same as above
                 }
-                
+
                 System.out.print("|"); // start map with a |
-                if(locations[row][column].getScene() == null) {
-                    
+                if (locations[row][column].getScene() == null) {
+
                     // No scene assigned here so use ?? for the symbol
                     System.out.print(leftIndicator + "??" + rightIndicator);
-                }
-                else
+                } else {
                     System.out.print(leftIndicator
                             + locations[row][column].getScene().getSymbol()
                             //+ Scene.getSymbol()
                             + rightIndicator);
+                }
             }
             this.console.println("|");
         }
-    
- }
+
+    }
 
     private void getPlayers() {
         GetPlayers getPlayers = new GetPlayers();
@@ -155,9 +154,5 @@ public class GameMenuView extends View {
         SceneMenu sceneMenu = new SceneMenu();
         sceneMenu.display();
     }
-
-   
-
-    
 
 }

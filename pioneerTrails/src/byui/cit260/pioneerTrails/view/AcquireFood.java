@@ -20,7 +20,6 @@ public class AcquireFood extends View {
 //    public static AcquireFood getListOfItems() {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
     public int length;
 
     public AcquireFood() {
@@ -85,18 +84,17 @@ public class AcquireFood extends View {
             case "D":
                 if (foodWeight <= 1500) {
 //                    System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
-                      this.console.println("Your food weight is : " + foodWeight + " pounds. Good job!");
-                     
+                    this.console.println("Your food weight is : " + foodWeight + " pounds. Good job!");
+
                     Collections.sort(listOfItems);
 //                  System.out.println(listOfItems);
                     this.console.println(listOfItems);
-                    
 
                     return true;
                 } else {
                     foodWeight = 0;
 //                   System.out.println("Too greedy. Lost all your food. Try again.");
-                   this.console.println("Too greedy. Lost all your food. Try again.");
+                    this.console.println("Too greedy. Lost all your food. Try again.");
                     return false;
                 }
             case "Q":
@@ -107,8 +105,8 @@ public class AcquireFood extends View {
         }
         return false;
     }
-    
-    }
+
+}
 //    
 //    public void setAcquireFood() {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

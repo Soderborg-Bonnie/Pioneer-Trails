@@ -10,5 +10,5 @@ package byui.cit260.pioneerTrails.exceptions;
  * @author Bonnie
  */
 public class PionnerTrailsExceptions {
-    
+
 }

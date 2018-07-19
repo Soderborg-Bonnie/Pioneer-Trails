@@ -7,6 +7,7 @@ package byui.cit260.pioneerTrails.model;
 
 import java.util.Objects;
 import java.io.Serializable;
+
 /**
  *
  * @author Bonnie
@@ -17,21 +18,18 @@ public class Resource implements Serializable {
     private String name;
     private int quantity;
     private int weight;
-    
 
     //private Boolean need;
     //private Boolean broken;
     private Scene scene;
     private Game game;
     private Wagon wagon;
-    
+
     public Resource(String name, int quantity, int weight) {
         this.name = name;
         this.quantity = quantity;
         this.weight = weight;
     }
-    
-    
 
     public Wagon getWagon() {
         return wagon;
@@ -99,7 +97,6 @@ public class Resource implements Serializable {
 //    public void setBroken(Boolean broken) {
 //        this.broken = broken;
 //    }
-
     @Override
     public String toString() {
         return "Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + '}';
@@ -111,7 +108,7 @@ public class Resource implements Serializable {
         hash = 53 * hash + Objects.hashCode(this.name);
         hash = 53 * hash + Objects.hashCode(this.quantity);
         hash = 53 * hash + Objects.hashCode(this.weight);
-     // hash = 53 * hash + Objects.hashCode(this.broken);
+        // hash = 53 * hash + Objects.hashCode(this.broken);
         return hash;
     }
 
