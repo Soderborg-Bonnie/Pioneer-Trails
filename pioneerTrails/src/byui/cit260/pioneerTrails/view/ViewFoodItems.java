@@ -35,7 +35,7 @@ public class ViewFoodItems extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        
+     return false;   
     }
 
 // @Override  

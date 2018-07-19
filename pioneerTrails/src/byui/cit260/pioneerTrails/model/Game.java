@@ -25,6 +25,17 @@ public class Game implements Serializable {
     private Resource[] resources;
 //    private Resource[] resource;
     private int currentScene;
+    private ArrayList listOfItems;
+
+    public ArrayList getListOfItems() {
+        return listOfItems;
+    }
+
+    public void setListOfItems(ArrayList listOfItems) {
+        this.listOfItems = listOfItems;
+    }
+    
+    
 
     public int getCurrentScene() {
         return currentScene;
