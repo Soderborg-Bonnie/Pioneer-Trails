@@ -7,6 +7,7 @@ package byui.cit260.pioneerTrails.control;
 
 import byui.cit260.pioneerTrails.exceptions.WagonControlExceptions;
 import byui.cit260.pioneerTrails.model.*;
+import pioneertrails.PioneerTrails;
 
 /**
  *
@@ -14,11 +15,10 @@ import byui.cit260.pioneerTrails.model.*;
  */
 public class WagonControl {
 
-    private final Wagon wagon;
+//    private final Wagon wagon;
 
-    public WagonControl(Wagon wagon) {
-        this.wagon = wagon;
-      }
+//    public WagonControl() {
+//      }
 
     /**
      * calcWagonWheelDegradation(wagonWheelDurability, normalDegradation,
@@ -32,7 +32,7 @@ public class WagonControl {
      * calcWagonWheelDegradation >1 && <100 calcWagonWheelDegradation =
      * wagonWheelDurability RETURN wagonWheelDurability END *
      */
-    public double calcWagonWheelDegradation(double wagonWheelDurability,
+    public static double calcWagonWheelDegradation(double wagonWheelDurability,
             double normalDegradation, String terrainDifficulty) throws WagonControlExceptions {
         double terrainValue = 0;
 
@@ -70,12 +70,13 @@ public class WagonControl {
         }
     }
     
-    public boolean acquireResource(String name, int quantity, int weight) {
-        Resource resource = this.wagon.getResources().get(name);
+    public static boolean acquireResource(String name, int quantity, int weight) {
+        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+        Resource resource = wagon.getResources().get(name);
         if (resource == null) {
-            this.wagon.getResources().put(name, resource = new Resource(name, 0, 0));
+            wagon.getResources().put(name, resource = new Resource(name, 0, 0));
         }
-        if (this.wagon.getWeight()+weight < this.wagon.getCapacity()) {
+        if (wagon.getWeight()+weight < wagon.getCapacity()) {
             resource.setWeight(resource.getWeight()+ weight);
             resource.setQuantity(resource.getQuantity()+ quantity);
             wagon.setWeight(wagon.getWeight()+ weight);

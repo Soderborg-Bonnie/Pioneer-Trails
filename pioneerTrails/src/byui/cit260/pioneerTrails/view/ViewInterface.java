@@ -13,9 +13,9 @@ public interface ViewInterface {
 
     public void display();
 
-    //public String getInputs();
+    public String getInputs();
 
-    public String getInput();
+    public String getInput(String menuText);
 
     public boolean doAction(String inputs);
 

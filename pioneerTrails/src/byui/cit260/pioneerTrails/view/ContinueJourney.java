@@ -16,18 +16,19 @@ public class ContinueJourney extends View {
     boolean journeyComplete;
 
     public ContinueJourney() {
+        super();
 //        this.promptMessage = getScenePrompt();
     }
     
-    @Override
-    public void display() {
-        if(!journeyComplete) {
-            super.displayMessage();
-        }
-        else {
-            super.display();
-        }
-    }
+    
+//    public void display() {
+//        if(!journeyComplete) {
+//            super.displayMessage();
+//        }
+//        else {
+//            super.display();
+//        }
+//    }
     
 @Override
     public String getPromptMessage() {
@@ -36,10 +37,10 @@ public class ContinueJourney extends View {
             Scene scene = GameControl.getCurrentScene();
             String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
                     + ". " + "Press 'Q' to return to the location menu and choose an option.";
+                    
             //System.out.println(msg);
             return msg;
             //System.out.println(endMsg);
-            
         } // todo: if we die, display we died   return true
         else {
             Scene scene = GameControl.getCurrentScene();

@@ -139,7 +139,7 @@ public class GameMenuView extends View {
         newHunt.display();
     }
 
-    private void sceneMenu() {
+    void sceneMenu() {
         SceneMenu sceneMenu = new SceneMenu();
         sceneMenu.display();
     }

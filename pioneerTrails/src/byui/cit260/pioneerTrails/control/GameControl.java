@@ -22,7 +22,7 @@ import pioneertrails.PioneerTrails;
  */
 public class GameControl {
     
-    static WagonControl wagoncontrol;
+//    static WagonControl wagoncontrol;
 
     //private static Game scene;
     public static Player savePlayer(String playersName) throws GameControlExceptions {
@@ -35,9 +35,9 @@ public class GameControl {
         return new Player();
     }
     
-    public static WagonControl getWagonControl() {
-        return GameControl.wagoncontrol;   
-    }
+//    public static WagonControl getWagonControl() {
+//        return GameControl.wagoncontrol;   
+//    }
 
     /*    public static int createNewGame(Player player) {
     if (player == null)
@@ -74,7 +74,7 @@ public class GameControl {
         //game.setCurrentLocation(0);
         Wagon wagon = new Wagon();
         game.setWagon(wagon);
-        GameControl.wagoncontrol = new WagonControl(wagon);
+//        GameControl.wagoncontrol = new WagonControl(wagon);
 //        Player player = new Player();
         game.setPlayer(PioneerTrails.getPlayer());
 

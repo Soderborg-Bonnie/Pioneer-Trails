@@ -19,17 +19,18 @@ import pioneertrails.PioneerTrails;
  */
 public abstract class View implements ViewInterface {
 
-//    protected String promptMessage;
+    protected String promptMessage;
 
     protected final BufferedReader keyboard = PioneerTrails.getInFile();
     protected final PrintWriter console = PioneerTrails.getOutFile();
 
     public View() {
+        displayMessage();
     }
 
-//    public View(String message) {
-//        this.promptMessage = message;
-//    }
+    public View(String message) {
+        this.promptMessage = message;
+    }
 
     @Override
     public void display() {
@@ -39,7 +40,7 @@ public abstract class View implements ViewInterface {
         do {
 
             //System.out.println(menuText);
-            String inputs = this.getInput();
+            String inputs = this.getInputs();
 
             if (inputs.isEmpty() || inputs.equalsIgnoreCase("Q")) {
                 return;
@@ -51,22 +52,23 @@ public abstract class View implements ViewInterface {
     }
 
     protected void displayMessage() {
-         this.console.println(this.getPromptMessage());
+        this.promptMessage = this.getPromptMessage();
+//         this.console.println(this.getPromptMessage());
     }
-//    @Override
-//    public String getInputs() {
-//        return getInput(this.promptMessage);
-//    }
+    @Override
+    public String getInputs() {
+        return getInput(this.promptMessage);
+    }
 
     @Override
-    public String getInput() {
+    public String getInput(String menuText) {
         Scanner keyboard = new Scanner(this.keyboard);
         String inputs = "";
         Boolean valid = false;
         while (!valid) {
             try {
-//                System.out.println(menuText);
-               displayMessage();
+               System.out.println(menuText);
+//               displayMessage();
                 inputs = this.keyboard.readLine();
                 inputs = inputs.trim();
                 if (inputs.length() < 1) {

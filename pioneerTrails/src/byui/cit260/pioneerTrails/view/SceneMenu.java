@@ -49,7 +49,7 @@ public class SceneMenu extends View {
     }
 
     private void acquireFood() {
-        AcquireFood acquireFood = new AcquireFood(GameControl.getWagonControl());
+        AcquireFood acquireFood = new AcquireFood();
         acquireFood.display();
     }
 

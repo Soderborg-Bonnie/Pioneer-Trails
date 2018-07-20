@@ -17,7 +17,7 @@ public class Game implements Serializable {
 
     //class instance variables
     private int time;
-    private int numPeeps;
+//    private int numPeeps;
     private Player player;
     private Wagon wagon;
     private Actor[] actors;
@@ -113,25 +113,25 @@ public class Game implements Serializable {
         this.time = time;
     }
 
-    public int getNumPeeps() {
-        return numPeeps;
-    }
-
-    public void setNumPeeps(int numPeeps) {
-        this.numPeeps = numPeeps;
-    }
+//    public int getNumPeeps() {
+//        return numPeeps;
+//    }
+//
+//    public void setNumPeeps(int numPeeps) {
+//        this.numPeeps = numPeeps;
+//    }
 
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 43 * hash + Objects.hashCode(this.time);
-        hash = 43 * hash + Objects.hashCode(this.numPeeps);
+//        hash = 43 * hash + Objects.hashCode(this.numPeeps);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "time=" + time + ", numPeeps=" + numPeeps + '}';
+        return "Game{" + "time=" + time + '}';
     }
 
     @Override
@@ -149,9 +149,9 @@ public class Game implements Serializable {
         if (!Objects.equals(this.time, other.time)) {
             return false;
         }
-        if (!Objects.equals(this.numPeeps, other.numPeeps)) {
-            return false;
-        }
+//        if (!Objects.equals(this.numPeeps, other.numPeeps)) {
+//            return false;
+//        }
         return true;
     }
 

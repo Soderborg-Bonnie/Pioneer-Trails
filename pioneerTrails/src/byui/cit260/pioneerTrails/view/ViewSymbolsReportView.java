@@ -63,8 +63,8 @@ public class ViewSymbolsReportView extends View {
     }
 
     private void saveSymbolReport() {
-        this.console.println("\nEnter a location to save the report");
-        String filePath = this.getInput();
+//        this.console.println();
+        String filePath = this.getInput("\nEnter a location to save the report");
 
         try (PrintWriter out = new PrintWriter(filePath)) {
             out.printf("===========================================================\r\n");

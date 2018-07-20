@@ -20,6 +20,15 @@ public class Wagon implements Serializable {
     private boolean driveable;
     private int capacity = 1500;
     private int weight;
+    private int wheel = 100;
+
+    public int getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(int wheel) {
+        this.wheel = wheel;
+    }
 
     public boolean isDriveable() {
         return driveable;

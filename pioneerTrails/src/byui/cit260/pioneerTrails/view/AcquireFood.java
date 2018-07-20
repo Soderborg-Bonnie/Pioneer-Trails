@@ -21,11 +21,11 @@ public class AcquireFood extends View {
 //    public static AcquireFood getListOfItems() {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-    public WagonControl wagoncontrol;
+ 
 
-    public AcquireFood(WagonControl wagoncontrol) {
-        super();
-        this.wagoncontrol = wagoncontrol;
+    public AcquireFood() {
+        promptMessage = getPromptMessage();
+        
 
     }
 
@@ -42,10 +42,10 @@ public class AcquireFood extends View {
         
         switch (menuItem) {
             case "1":
-                result = wagoncontrol.acquireResource("water", 50, 450);
+                result = WagonControl.acquireResource("water", 50, 450);
                 break;
             case "2":
-                result = wagoncontrol.acquireResource("flour", 30, 240);
+                result = WagonControl.acquireResource("flour", 30, 240);
                 break;
 //            case "3":
 //                foodWeight += 350;
