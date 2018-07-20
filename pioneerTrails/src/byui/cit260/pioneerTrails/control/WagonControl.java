@@ -73,13 +73,17 @@ public class WagonControl {
     public static boolean acquireResource(String name, int quantity, int weight) {
         Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
         Resource resource = wagon.getResources().get(name);
+        System.out.println("resource in wagonControl acquireResource function: " +resource);
         if (resource == null) {
             wagon.getResources().put(name, resource = new Resource(name, 0, 0));
+            System.out.println("resource in wagonControl acquireResource function after put: " +resource);
         }
         if (wagon.getWeight()+weight < wagon.getCapacity()) {
             resource.setWeight(resource.getWeight()+ weight);
             resource.setQuantity(resource.getQuantity()+ quantity);
             wagon.setWeight(wagon.getWeight()+ weight);
+            System.out.println("resource in wagonControl acquireResource function after set: " +resource);
+            
             return true;
         
     }

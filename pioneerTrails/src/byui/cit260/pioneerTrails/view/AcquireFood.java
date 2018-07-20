@@ -43,30 +43,46 @@ public class AcquireFood extends View {
         switch (menuItem) {
             case "1":
                 result = WagonControl.acquireResource("water", 50, 450);
+                System.out.println("acquireFood choice 1 result: " +result);
+//                System.out.println("what's in array at end of choices: " + Wagon.resources);
                 break;
             case "2":
                 result = WagonControl.acquireResource("flour", 30, 240);
+                System.out.println("acquireFood choice 2 result: " +result);
                 break;
-//            case "3":
-//                foodWeight += 350;
-//                listOfItems.add("flour, 50 gallon barrel");
-//                return false;
-//            case "4":
-//                foodWeight += 270;
-//                listOfItems.add("sugar 30 gallon barrel");
-//                return false;
-//            case "5":
-//                foodWeight += 450;
-//                listOfItems.add("sugar, 50 gallon barrel");
-//                return false;
-//            case "6":
-//                foodWeight += 50;
-//                listOfItems.add("oil, 5 gallon barrel");
-//                return false;
-//            case "7":
-//                foodWeight += 70;
-//                listOfItems.add("salt, 5 gallon barrel");
-//                return false; todo: fix all this crap
+            case "3":
+                result = WagonControl.acquireResource("flour", 50, 350);
+                System.out.println("acquireFood choice 3 result: " +result);
+                break;
+            case "4":
+                result = WagonControl.acquireResource("sugar", 30, 270);
+                System.out.println("acquireFood choice 4 result: " +result);
+                break;
+            case "5":
+                result = WagonControl.acquireResource("sugar", 50, 450);
+                System.out.println("acquireFood choice 5 result: " +result);
+                break;
+            case "6":
+                result = WagonControl.acquireResource("oil", 5, 50);
+                break;
+            case "7":
+                result = WagonControl.acquireResource("salt", 5, 70);
+                break;
+            case "8":
+                result = WagonControl.acquireResource("wheel", 1, 100);
+                break;
+            case "9":
+                result = WagonControl.acquireResource("hammer", 1, 10);
+                break;
+            case "10":
+                result = WagonControl.acquireResource("bullets", 50, 500);
+                break;
+            case "11":
+                result = WagonControl.acquireResource("axe", 1, 15);
+                break;
+            case "12":
+                result = WagonControl.acquireResource("wood", 10, 50);
+                break;
 //            case "D":
 //                if (foodWeight <= 1500) {
 ////                    System.out.println("Your food weight is : " + foodWeight + " pounds. Good job!");
@@ -111,7 +127,12 @@ public class AcquireFood extends View {
                 + "\n* Press '5' for a 50 gallon barrel of sugar---450#     *"
                 + "\n* Press '6' for a 5 gallon barrel of oil-------50#     *"
                 + "\n* Press '7' for a 5 gallon barrel of salt------70#     *"
-//                + "\n* Press 'D' to add up your choices.                    *"
+                + "\n* Press '8' for a wheel-----------------------100#     *"
+                + "\n* Press '9' for a hammer-----------------------10#     *"
+                + "\n* Press '10' for 50 bullets--------------------50#     *"
+                + "\n* Press '11' for an axe------------------------15#     *"
+                + "\n* Press '12' for 10 pieces of wood-------------50#     *"
+                //                + "\n* Press 'D' to add up your choices.                    *"
                 + "\n* Press 'Q' to quit game          .                    *"
                 + "\n********************************************************";
     }
