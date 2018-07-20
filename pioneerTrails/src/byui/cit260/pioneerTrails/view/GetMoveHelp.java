@@ -29,7 +29,10 @@ public class GetMoveHelp extends View {
 
     @Override
     protected String getPromptMessage() {
-        return "Who do you think I am, the Elder's Quorum?";
+        return "To move to another location, select the location menu from the game menu."
+                + "There, you will choose (C) to continue your journey to the next location."
+                + "Once in a new location, choose options from the location menu "
+                + "such as hunting for food or resources before continuing.";
      }
 
 }
