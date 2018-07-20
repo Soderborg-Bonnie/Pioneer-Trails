@@ -1,0 +1,32 @@
+===========================================================
+               Site Description Report                 
+Site Name                     Description                                       
+===========================================================
+Nauvoo                             the City of Joseph
+Sugar Creek                        the Little Switzerland of Ohio
+Richardson's Point                 Camp of Israel
+Chariton River Crossing            called Missouri's Grand Divide
+Locust Creek                       where 'Come, Come Ye Saints' was written
+Garden Grove                       there are wild onions as far as the eye can see
+Nishnabotna River                  Be on the lookout for the Pottawattamie Indians
+Grand Encampment                   This broad, open area looks like a great stopping place as you approach the Missouri River.
+Council Bluffs                     Here, Colonel Allen of the US Army conscripted 500 tired pioneers to fight in the war against Mexico
+Winter Quarters                    temporary headquarters of the Church for less than a year
+Elkhorn River Crossing             one of the major river crossings faced by westbound immigrants
+Platte River                       was given its name by the Otoe people, meaning flat water
+Fort Kearny                        a safe haven in this new and hostile land
+Confluence Point                   birthplace of the roadometer
+Ash Hollow                         It's a steep drop down from here with a 25 degree angle for 300 feet
+Chimney Rock                       a prominent geological rock formation that serves as landmark along the trail
+Scottsbluff                        which gets it's namesake from a bluff overlooking the North Platt River
+Fort Laramie                       was named Fort William, then Fort John, before Fort Laramie
+Sweetwater River                   the easiest pass across the Atlantic and Pacific drainages
+Independence Rock                  known as the Register of the Desert
+Fort Bridger                       named after Jim Bridger, the Daniel Boone of the Rockies
+Echo Canyon                        the oldest trail out of Zion Canyon
+Golden Pass Road                   known as Parley's Canyon
+Emigration Canyon                  Brigham Young - 'This is the right place. Drive on.'
+Zion                                You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.
+
+
+ 

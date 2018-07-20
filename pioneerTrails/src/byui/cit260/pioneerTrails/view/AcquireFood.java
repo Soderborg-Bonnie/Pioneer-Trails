@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.WagonControl;
+import byui.cit260.pioneerTrails.model.Resource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -100,6 +101,7 @@ public class AcquireFood extends View {
 //                    return false;
 //                }
             case "Q":
+                
                 return true;
             default:
 //                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
@@ -108,7 +110,9 @@ public class AcquireFood extends View {
         if (!result) {
             this.console.println("That doesn't fit, blah blah...");
         }
+        
         return false;
+        
     }
 
     @Override

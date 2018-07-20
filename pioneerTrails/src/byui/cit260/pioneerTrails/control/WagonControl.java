@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.control;
 
+import static byui.cit260.pioneerTrails.control.GameControl.createResources;
 import byui.cit260.pioneerTrails.exceptions.WagonControlExceptions;
 import byui.cit260.pioneerTrails.model.*;
 import pioneertrails.PioneerTrails;
@@ -15,6 +16,8 @@ import pioneertrails.PioneerTrails;
  */
 public class WagonControl {
 
+    
+ 
 //    private final Wagon wagon;
 
 //    public WagonControl() {
@@ -88,6 +91,7 @@ public class WagonControl {
         
     }
         return false; //todo: verify weight and add to wagon
+        
     }
 
     /**

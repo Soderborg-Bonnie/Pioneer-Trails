@@ -31,8 +31,8 @@ public class SceneMenu extends View {
             case "A":
                 acquireFood();
                 break;
-            case "P":
-                printViewFoodItems();
+            case "D":
+                printSiteDescriptions();
                 break;
             case "V":
                 viewSymbols();
@@ -51,6 +51,10 @@ public class SceneMenu extends View {
     private void acquireFood() {
         AcquireFood acquireFood = new AcquireFood();
         acquireFood.display();
+    }
+    private void printSiteDescriptions() {
+        ViewDescriptionsOfSites viewDescriptionsOfSites = new ViewDescriptionsOfSites();
+        viewDescriptionsOfSites.display();
     }
 
     private void continueJourney() {
@@ -77,10 +81,12 @@ public class SceneMenu extends View {
                 + "\n======================================="
                 + "\n***************************************"
                 + "\n* Press 'A' to acquire food.          *"
-                + "\n* Press 'P' to view food items list.  *"
+                + "\n* Press 'D' to view site descriptions.*"
                 + "\n* Press 'V' to view location symbols. *"
                 + "\n* Press 'C' to continue your journey  *"
                 + "\n* Press 'Q' to quit  game.            *"
                 + "\n***************************************";
      }
+
+    
 }

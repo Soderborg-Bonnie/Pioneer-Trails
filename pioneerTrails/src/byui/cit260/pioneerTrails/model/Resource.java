@@ -15,9 +15,9 @@ import java.io.Serializable;
 public class Resource implements Serializable {
 
     //class instance variables
-    private String name;
-    private int quantity;
-    private int weight;
+    public String name;
+    public int quantity;
+    public int weight;
 
     //private Boolean need;
     //private Boolean broken;

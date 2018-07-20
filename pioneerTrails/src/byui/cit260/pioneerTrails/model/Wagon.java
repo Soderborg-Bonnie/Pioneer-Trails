@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.pioneerTrails.model;
+import static byui.cit260.pioneerTrails.control.GameControl.createResources;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -22,6 +23,8 @@ public class Wagon implements Serializable {
     private int weight;
     private int wheel = 100;
 
+    
+   
     public int getWheel() {
         return wheel;
     }

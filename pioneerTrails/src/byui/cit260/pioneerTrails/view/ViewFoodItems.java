@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.model.Resource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -18,20 +19,23 @@ public class ViewFoodItems extends View {
     public ViewFoodItems() {
         
     }
-
-    public void printViewFoodItems(ArrayList<AcquireFood> listOfItems, String foodItemList) {
-        try (PrintWriter out = new PrintWriter(foodItemList)) {
-            out.println("\n\n             List of Food Items on Hand            ");
-            out.printf("%-30s\r\n", "Type & Quantity");
-            out.printf("%-30s", "---------------");
-            for (AcquireFood foodItem: listOfItems) {
-                //printf(foodItem.listOfItems);    need to store a list in a model layer, like game
-            }
-
-        } catch (IOException ex) {
-            System.out.println("I/O Error: " + ex.getMessage());
-        }
+    public void printViewResources(){
+        
     }
+
+//    public void printViewFoodItems(ArrayList<AcquireFood> listOfItems, String foodItemList) {
+//        try (PrintWriter out = new PrintWriter(foodItemList)) {
+//            out.println("\n\n             List of Food Items on Hand            ");
+//            out.printf("%-30s\r\n", "Type & Quantity");
+//            out.printf("%-30s", "---------------");
+//            for (AcquireFood foodItem: listOfItems) {
+//                //printf(foodItem.listOfItems);    need to store a list in a model layer, like game
+//            }
+//
+//        } catch (IOException ex) {
+//            System.out.println("I/O Error: " + ex.getMessage());
+//        }
+//    }
 
     @Override
     public boolean doAction(String inputs) {
