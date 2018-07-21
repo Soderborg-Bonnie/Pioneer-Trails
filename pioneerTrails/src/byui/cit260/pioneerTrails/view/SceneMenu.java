@@ -87,7 +87,7 @@ private void ViewCurrentResources() {
                 + "\n             Location Menu             "
                 + "\n======================================="
                 + "\n***************************************"
-                + "\n* Press 'A' to acquire food.          *"
+                + "\n* Press 'A' to acquire resources.     *"
                 + "\n* Press 'D' to view site descriptions.*"
                 + "\n* Press 'R' to view current resources.*"
                 + "\n* Press 'V' to view location symbols. *"

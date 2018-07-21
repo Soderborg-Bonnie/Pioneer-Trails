@@ -43,6 +43,8 @@ public class ViewDescriptionsOfSites extends View{
     private void viewDescriptionsReport() {
         this.console.println("===========================================================");
         this.console.println("               Site Descriptions Report                 ");
+        this.console.println("===========================================================");
+        this.console.println("                                                           ");
         this.console.println(String.format("%-30s%-50s", "Site Name", "Description"));
         this.console.println("===========================================================");
 
@@ -65,6 +67,7 @@ public class ViewDescriptionsOfSites extends View{
         try (PrintWriter out = new PrintWriter(filePath)) {
             out.printf("===========================================================\r\n");
             out.printf("               Site Description Report                 \r\n");
+            out.printf("===========================================================\r\n\n");
             out.printf(String.format("%-30s%-50s\r\n", "Site Name", "Description"));
             out.printf("===========================================================\r\n");
 

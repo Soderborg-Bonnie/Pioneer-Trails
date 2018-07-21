@@ -61,12 +61,14 @@ public class Wagon implements Serializable {
     public final Map<String,Resource> resources;
 
     public Map<String,Resource> getResources() {
-        
+        System.out.println("getResources function" + resources);
         return resources;
     }
 
     public Wagon() {
+        
         resources = new TreeMap<>();
+        System.out.println("wagon function" + resources);
     }
 
     

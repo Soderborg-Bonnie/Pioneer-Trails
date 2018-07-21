@@ -170,7 +170,7 @@ public class GameControl {
         scenes[21] = new Scene("Echo Canyon", "the oldest trail out of Zion Canyon", "EC", "Medium", false, resources[21]);
         scenes[22] = new Scene("Golden Pass Road", "known as Parley's Canyon", "GP", "Normal", false, resources[22]);
         scenes[23] = new Scene("Emigration Canyon", "Brigham Young - 'This is the right place. Drive on.'", "EM", "Normal", false, resources[23]);
-        scenes[24] = new Scene("Zion", " You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, resources[24]);
+        scenes[24] = new Scene("Zion", "You make it through the canyon. This, you hear, is the place. You can finally rest from your journey.", "ZZ", "Normal", false, resources[24]);
 
         return scenes;
     }

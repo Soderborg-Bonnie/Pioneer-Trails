@@ -16,15 +16,29 @@ import pioneertrails.PioneerTrails;
  */
 public class ViewCurrentResources extends View{
 
+
     public ViewCurrentResources() {
         super();
     }
 
     
 
-    @Override
-    public boolean doAction(String inputs) {
+    public boolean doAction() {
+        System.out.println("VCR doaction before calls: " );
+        viewCurrentResourcesReport();
+        
+        
+        
+        
         Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+//        Resource resource = wagon.getResources().get(resources);
+        
+//        System.out.println("VCR doaction: " + resource);
+//        Resource name = wagon.getResources().get(name);
+//        Resource quantity = wagon.getResources().get(quantity);
+//        Resource weight = wagon.getResources().get(weight);
+//        System.out.println("resource in wagonControl acquireResource function: " + name + quantity + weight);
+//        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
         
 //        Resource resourcesList = Wagon.resources.getKey();
        
@@ -35,8 +49,29 @@ public class ViewCurrentResources extends View{
 
     @Override
     protected String getPromptMessage() {
-        return "";
+        return "what to do\n\n" + "\n========================================================="
+                            + "\n             Current Resources Report                    "
+                            + "\n========================================================="
+                            + "\nResource              Quantity                     Weight"                                                        
+                            + "\n=========================================================";
     }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void viewCurrentResourcesReport() {
+       
+        this.console.println("===========================================================");
+        this.console.println("               Current Resources Report                    ");
+        this.console.println("===========================================================");
+        this.console.println("                                                           ");
+        this.console.println(String.format("%-30s%-30s%-30s", "Resource", "Quantity", "Weight"));
+        this.console.println("===========================================================");
+    }
+
+    
 
     
     
