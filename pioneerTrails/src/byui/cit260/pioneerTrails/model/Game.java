@@ -147,4 +147,8 @@ public class Game implements Serializable {
         return true;
     }
 
+    public boolean isGameOver() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

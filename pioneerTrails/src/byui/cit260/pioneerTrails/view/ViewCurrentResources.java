@@ -30,7 +30,6 @@ public class ViewCurrentResources extends View {
 //        viewCurrentResourcesReport();
 
         Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
-//        Resource resource = wagon.getResources().get(resources);
 //        System.out.println("VCR doaction: " + resource);
 //        Resource name = wagon.getResources().get(name);
 //        Resource quantity = wagon.getResources().get(quantity);

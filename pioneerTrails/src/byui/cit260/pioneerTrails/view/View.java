@@ -23,6 +23,9 @@ public abstract class View implements ViewInterface {
 
     protected final BufferedReader keyboard = PioneerTrails.getInFile();
     protected final PrintWriter console = PioneerTrails.getOutFile();
+    
+    
+    
 
     public View() {
         displayMessage();
@@ -48,9 +51,36 @@ public abstract class View implements ViewInterface {
                 endOfView = doAction(inputs);
             }
         } while (endOfView != true);
-
     }
 
+//    public boolean display(String menu){
+//
+//        boolean  endOfView = false;
+//
+//        do {
+//
+//            String inputs = getInputs(menu);
+//
+//            if (inputs.length() < 1 || inputs.toUpperCase().equals("Q")) {
+//
+//                endOfView = true;
+//
+//                continue;
+//
+//            }
+//
+//            doAction(inputs);
+//
+//           if (PioneerTrails.getCurrentGame().isGameOver())
+//
+//             return true;          
+//
+//           
+//
+//        } while (endOfView != true);
+//        return false;
+//    }
+    
     protected void displayMessage() {
         this.promptMessage = this.getPromptMessage();
 //         this.console.println(this.getPromptMessage());

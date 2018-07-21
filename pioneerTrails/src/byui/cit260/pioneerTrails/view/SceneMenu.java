@@ -83,6 +83,13 @@ public class SceneMenu extends View {
 
     }
 
+    
+//End the game code, must check if out of resources
+//    Println(“You won or lost the game (whatever the appropriate message is”);
+//
+//    PioneerTrail.getGame().setGameOver(true);
+    
+    
     @Override
     protected String getPromptMessage() {
         return "\n======================================="

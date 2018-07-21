@@ -21,6 +21,22 @@ import pioneertrails.PioneerTrails;
  * @author tyler
  */
 public class GameControl {
+    
+    private boolean gameOver; 
+    public GameControl() {
+    gameOver = false;
+    }
+     // Initialize it to false in Game constructor.
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
+
+   // Add Getters and setters for gameOver in the Game class
 
 //    static WagonControl wagoncontrol;
     //private static Game scene;
