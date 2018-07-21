@@ -5,14 +5,39 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.model.Resource;
+import byui.cit260.pioneerTrails.model.Wagon;
+import java.util.Map;
+import pioneertrails.PioneerTrails;
+
 /**
  *
  * @author Bonnie
  */
-public class ViewCurrentResources {
+public class ViewCurrentResources extends View{
 
-    void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ViewCurrentResources() {
+        super();
     }
 
+    
+
+    @Override
+    public boolean doAction(String inputs) {
+        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+        
+//        Resource resourcesList = Wagon.resources.getKey();
+       
+//        wagon.getResources().get(name);
+//        System.out.println(resourcesList);
+        return false;
+    }
+
+    @Override
+    protected String getPromptMessage() {
+        return "";
+    }
+
+    
+    
 }

@@ -17,9 +17,11 @@ import java.util.TreeMap;
  */
 public class Wagon implements Serializable {
 
+//    public static String[] getResources;
+
     //class instance variables
     private boolean driveable;
-    private int capacity = 1500;
+    private int capacity = 2000;
     private int weight;
     private int wheel = 100;
 
@@ -56,9 +58,10 @@ public class Wagon implements Serializable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    private final Map<String,Resource> resources;
+    public final Map<String,Resource> resources;
 
     public Map<String,Resource> getResources() {
+        
         return resources;
     }
 

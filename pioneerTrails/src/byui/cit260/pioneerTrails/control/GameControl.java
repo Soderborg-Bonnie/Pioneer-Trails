@@ -65,7 +65,7 @@ public class GameControl {
 }*/
     public static int createNewGame() throws GameControlExceptions, MapControlExceptions {
         if (PioneerTrails.getPlayer() == null) {
-            throw new GameControlExceptions("Your name has to have at least a charcter. Hitting 'enter' wothout anything else is not ok.");
+            throw new GameControlExceptions("Your name has to have at least a character. Hitting 'enter' without anything else is not ok.");
         }
 
 //    public static void createNewGame(Player player) {

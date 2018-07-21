@@ -25,9 +25,9 @@ public class GetHealth extends View {
 
         String menuItem = inputs.toUpperCase();
         switch (menuItem) {
-            case "D":
-                drinkWater();
-                break;
+//            case "D":
+//                drinkWater();
+//                break;
 //            case "F":
 //                eatFood();
 //                break;
@@ -45,10 +45,10 @@ public class GetHealth extends View {
         return false;
     }
 
-    private void drinkWater() {
-        DrinkWater drinkWater = new DrinkWater();
-        drinkWater.displayDrinkWater();
-    }
+//    private void drinkWater() {
+//        DrinkWater drinkWater = new DrinkWater();
+//        drinkWater.displayDrinkWater();
+//    }
 
 //    private void eatFood() {
 //        EatFood eatFood = new EatFood();
@@ -57,12 +57,13 @@ public class GetHealth extends View {
 
     private void getRest() {
         GetRest getRest = new GetRest();
-        getRest.displayGetRest();
+        getRest.display();
     }
 
-    private void getHelp() {
-        GetHelp getHelp = new GetHelp();
-        getHelp.display();
+  
+    private void HealthTips() {
+        HealthTips healthTips = new HealthTips();
+        healthTips.display();
     }
 
     private void gameMenuView() {
@@ -70,20 +71,18 @@ public class GetHealth extends View {
         gameMenuView.display();
     }
 
-    private void HealthTips() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     @Override
     protected String getPromptMessage() {
-        return "You have the following health concerns: " + "What would you like to do?"
+        return "You have the following health concerns: " + "\nWhat would you like to do?"
                 + //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                "================================================"
-                + "              Health Menu"
-                + "================================================"
+                "\n================================================"
+                + "\n              Health Menu                     "
+                + "\n================================================"
                 + "\n**********************************************"
-                + "\n* Press 'D' to drink some water .            *"
-                + "\n* Press 'F' to eat some food.                *"
+//                + "\n* Press 'D' to drink some water .            *"
+//                + "\n* Press 'F' to eat some food.                *"
                 + "\n* Press 'R' to rest.                         *"
                 + "\n* Press 'H' to get health tips.              *"
                 + "\n* Press 'Q' to return to the previous menu   *"

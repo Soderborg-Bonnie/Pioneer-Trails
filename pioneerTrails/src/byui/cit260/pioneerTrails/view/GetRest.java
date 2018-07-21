@@ -33,7 +33,8 @@ public class GetRest extends View {
 
     @Override
     protected String getPromptMessage() {
-        return "You took some much needed rest. It has the following effect: ";
+        return "You took some much needed rest. You are strengthened! ";
      }
 
 }
+ 

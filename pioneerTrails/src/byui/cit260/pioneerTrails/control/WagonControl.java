@@ -16,13 +16,9 @@ import pioneertrails.PioneerTrails;
  */
 public class WagonControl {
 
-    
- 
 //    private final Wagon wagon;
-
 //    public WagonControl() {
 //      }
-
     /**
      * calcWagonWheelDegradation(wagonWheelDurability, normalDegradation,
      * terrainDifficulty): double newWagonWheelDurability BEGIN IF
@@ -72,26 +68,28 @@ public class WagonControl {
             return calcWagonWheelDegradation;
         }
     }
-    
+
     public static boolean acquireResource(String name, int quantity, int weight) {
         Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
         Resource resource = wagon.getResources().get(name);
-        System.out.println("resource in wagonControl acquireResource function: " +resource);
+        System.out.println("resource in wagonControl acquireResource function: " + resource);
         if (resource == null) {
             wagon.getResources().put(name, resource = new Resource(name, 0, 0));
-            System.out.println("resource in wagonControl acquireResource function after put: " +resource);
+            System.out.println("resource in wagonControl acquireResource function after put: " + resource);
         }
-        if (wagon.getWeight()+weight < wagon.getCapacity()) {
-            resource.setWeight(resource.getWeight()+ weight);
-            resource.setQuantity(resource.getQuantity()+ quantity);
-            wagon.setWeight(wagon.getWeight()+ weight);
-            System.out.println("resource in wagonControl acquireResource function after set: " +resource);
-            
+        if (wagon.getWeight() + weight < wagon.getCapacity()) {
+            resource.setWeight(resource.getWeight() + weight);
+            resource.setQuantity(resource.getQuantity() + quantity);
+            wagon.setWeight(wagon.getWeight() + weight);
+//            wagon.getResources().put(name, resource = new Resource(name, quantity, weight));
+            System.out.println("resource in wagonControl acquireResource function after set: " + resource);
+
             return true;
-        
-    }
+//            wagon.getResources().put(name, resource = new Resource(name, quantity, weight));
+        }
         return false; //todo: verify weight and add to wagon
-        
+//            resources.put
+//              wagon.getResources().put(name,quantity,weight);
     }
 
     /**

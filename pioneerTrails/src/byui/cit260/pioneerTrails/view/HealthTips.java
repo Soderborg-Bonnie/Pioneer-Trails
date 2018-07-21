@@ -44,39 +44,44 @@ public class HealthTips extends View {
     }
 
     private void handleBones() {
+        System.out.println("\nFor broken bones: Set bone. Wrap well. Keep weight off. Don't use limb with broken bone for 2 months.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void handleFever() {
+        System.out.println("\nFor fever: Rest is best. Stay out of sun until fever is broken.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void handleInfections() {
+        System.out.println("\nFor infections: If wound is infected, clean often and keep covered.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void handleSnakeBites() {
+        System.out.println("\nFor snake bites: Clean bite. Suck venom from bite. Keep bite raised above heart level.");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void getHelp() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        GetHelp getHelp = new GetHelp();
+        getHelp.display();
     }
 
     @Override
     protected String getPromptMessage() {
-        return "Enter your choice for tips on how to handle your malady"
-                + "================================================"
-                + "              Health Menu"
-                + "================================================"
+        return "\nEnter your choice for tips on how to handle your malady"
+                + "\n================================================"
+                + "\n              Health Menu"
+                + "\n================================================"
                 + "\n**********************************************"
                 + "\n* Press 'B' for broken bones.                *"
                 + "\n* Press 'F' for fevers.                      *"
                 + "\n* Press 'I' for infections.                  *"
                 + "\n* Press 'S' for snake bites.                 *"
-                + "\n* Press 'H' for delirium.                    *"
+                + "\n* Press 'H' for Help Menu.                   *"
                 + "\n* Press 'Q' to return to the previous menu   *"
                 + "\n**********************************************";
-       }
+    }
 
 }

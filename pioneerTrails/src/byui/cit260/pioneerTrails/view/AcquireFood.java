@@ -121,7 +121,7 @@ public class AcquireFood extends View {
                 + "\n                     Food Options"
                 + "\n=========================================================="
                 + "\n********************************************************"
-                + "\n* You are allowed a total of 1500 pounds               *"
+                + "\n* You are allowed a total of 2000 pounds               *"
                 + "\n* of food and water on this trip.                      *"
                 + "\n* Choose wisely.                                       *"
                 + "\n* Press '1' for a 50 gallon barrel of water---450#     *"
@@ -137,7 +137,7 @@ public class AcquireFood extends View {
                 + "\n* Press '11' for an axe------------------------15#     *"
                 + "\n* Press '12' for 10 pieces of wood-------------50#     *"
                 //                + "\n* Press 'D' to add up your choices.                    *"
-                + "\n* Press 'Q' to quit game          .                    *"
+                + "\n* Press 'Q' to finish and return to Location Menu------*"
                 + "\n********************************************************";
     }
 
