@@ -29,7 +29,7 @@ public class SceneMenu extends View {
 //                    gameMenuView();
 //                    break; 
             case "A":
-                acquireFood();
+                acquireResources();
                 break;
             case "D":
                 printSiteDescriptions();
@@ -51,6 +51,12 @@ public class SceneMenu extends View {
         return false;
     }
 
+    private void acquireResources(){
+        AcquireResources acquireResources = new AcquireResources();
+        acquireResources.display();
+    }
+    
+    
     private void acquireFood() {
         AcquireFood acquireFood = new AcquireFood();
         acquireFood.display();
