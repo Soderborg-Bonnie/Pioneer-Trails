@@ -29,7 +29,8 @@ public class SceneMenu extends View {
 //                    gameMenuView();
 //                    break; 
             case "A":
-                acquireResources();
+                acquireFood();
+                //acquireResources();
                 break;
             case "D":
                 printSiteDescriptions();
@@ -83,11 +84,7 @@ public class SceneMenu extends View {
         viewSymbolsReportView.display();
     }
 
-    private void printViewFoodItems() {
-        ViewFoodItems viewFoodItems = new ViewFoodItems();
-        viewFoodItems.display();
-
-    }
+    
 
     
 //End the game code, must check if out of resources

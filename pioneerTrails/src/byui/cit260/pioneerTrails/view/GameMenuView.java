@@ -36,9 +36,7 @@ public class GameMenuView extends View {
             case "M":
                 displayMap();
                 break;
-            case "P":
-                getPlayers();
-                break;
+            
             case "F":
                 getCurrentResources();
                 break;
@@ -114,10 +112,7 @@ public class GameMenuView extends View {
 
     }
 
-    private void getPlayers() {
-        GetPlayers getPlayers = new GetPlayers();
-        getPlayers.display();
-    }
+   
 
     private void getCurrentResources() {
         ViewCurrentResources viewCurrentResources = new ViewCurrentResources();

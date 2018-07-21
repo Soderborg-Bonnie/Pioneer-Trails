@@ -28,9 +28,7 @@ public class GetHelp extends View {
             case "C":
                 getMoveHelp();
                 break;
-            case "E":
-                estimateResources();
-                break;
+            
             case "A":
                 harvestResources();
                 break;
@@ -54,10 +52,7 @@ public class GetHelp extends View {
         getMoveHelp.display();
     }
 
-    private void estimateResources() {
-        EstimateResources estimateResources = new EstimateResources();
-        estimateResources.display();
-    }
+    
 
     private void harvestResources() {
         HarvestResources harvestResources = new HarvestResources();
