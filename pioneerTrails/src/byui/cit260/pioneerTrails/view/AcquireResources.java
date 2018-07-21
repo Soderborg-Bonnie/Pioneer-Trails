@@ -32,8 +32,13 @@ public class AcquireResources extends View {
                 + "\n* Press '5' for a 50 gallon barrel of sugar---450#     *"
                 + "\n* Press '6' for a 5 gallon barrel of oil-------50#     *"
                 + "\n* Press '7' for a 5 gallon barrel of salt------70#     *"
-                + "\n* Press 'D' to add up your choices.                    *"
-                + "\n* Press 'Q' to quit game          .                    *"
+                + "\n* Press '8' for a wheel-----------------------100#     *"
+                + "\n* Press '9' for a hammer-----------------------10#     *"
+                + "\n* Press '10' for 50 bullets--------------------50#     *"
+                + "\n* Press '11' for an axe------------------------15#     *"
+                + "\n* Press '12' for 10 pieces of wood-------------50#     *"
+                //                + "\n* Press 'D' to add up your choices.                    *"
+                + "\n* Press 'Q' to finish and return to Location Menu------*"
                 + "\n********************************************************");
 
     }
