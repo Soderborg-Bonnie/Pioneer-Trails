@@ -21,14 +21,15 @@ public class ViewCurrentResources extends View {
     }
 
     @Override
-    public boolean doAction(String Inputs) {
-//        System.out.println("VCR doaction before calls: " );
+    public  boolean doAction(String Inputs) {
+        
+        System.out.println("VCR doaction before calls: " );
 //    public static void resourceList(resource){
 //        System.out.println(resource);
 //    }
 //        viewCurrentResourcesReport();
 
-//        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
 //        Resource resource = wagon.getResources().get(resources);
 //        System.out.println("VCR doaction: " + resource);
 //        Resource name = wagon.getResources().get(name);
@@ -49,6 +50,7 @@ public class ViewCurrentResources extends View {
                 + "\n========================================================="
                 + "\nResource              Quantity                     Weight"
                 + "\n=========================================================";
+              
     }
 
     private void viewCurrentResourcesReport() {

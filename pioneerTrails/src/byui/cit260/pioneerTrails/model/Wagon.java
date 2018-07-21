@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package byui.cit260.pioneerTrails.model;
-
 import static byui.cit260.pioneerTrails.control.GameControl.createResources;
 import java.util.Map;
 import java.util.ArrayList;
@@ -19,12 +18,15 @@ import java.util.TreeMap;
 public class Wagon implements Serializable {
 
 //    public static String[] getResources;
+
     //class instance variables
     private boolean driveable;
     private int capacity = 2000;
     private int weight;
     private int wheel = 100;
 
+    
+   
     public int getWheel() {
         return wheel;
     }
@@ -56,18 +58,21 @@ public class Wagon implements Serializable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    public final Map<String, Resource> resources;
+    public final Map<String,Resource> resources;
 
-    public Map<String, Resource> getResources() {
-        System.out.println("getResources function" + resources);
+    public Map<String,Resource> getResources() {
+        //System.out.println("getResources function" + resources);
         return resources;
     }
 
     public Wagon() {
-
+        
         resources = new TreeMap<>();
-        System.out.println("wagon function" + resources);
+        //System.out.println("wagon function" + resources);
     }
+
+    
+    
 
     @Override
     public int hashCode() {
@@ -102,5 +107,9 @@ public class Wagon implements Serializable {
         }
         return true;
     }
+
+    
+
+    
 
 }

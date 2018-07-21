@@ -14,6 +14,9 @@ import java.io.Serializable;
  */
 public class Resource implements Serializable {
 
+    public Resource() {
+    }
+
     //class instance variables
     public String name;
     public int quantity;
@@ -28,32 +31,6 @@ public class Resource implements Serializable {
         this.name = name;
         this.quantity = quantity;
         this.weight = weight;
-    }
-
-//    public Wagon getWagon() {
-//        return wagon;
-//    }
-//
-//    public void setWagon(Wagon wagon) {
-//        this.wagon = wagon;
-//    }
-//
-//    public Game getGame() {
-//        return game;
-//    }
-//
-//    public void setGame(Game game) {
-//        this.game = game;
-//    }
-//
-//    public Scene getScene() {
-//        return scene;
-//    }
-//
-//    public void setScene(Scene scene) {
-//        this.scene = scene;
-//    }
-    public Resource() {
     }
 
     public String getName() {
@@ -79,6 +56,29 @@ public class Resource implements Serializable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+//    public Wagon getWagon() {
+//        return wagon;
+//    }
+//
+//    public void setWagon(Wagon wagon) {
+//        this.wagon = wagon;
+//    }
+//
+//    public Game getGame() {
+//        return game;
+//    }
+//
+//    public void setGame(Game game) {
+//        this.game = game;
+//    }
+//
+//    public Scene getScene() {
+//        return scene;
+//    }
+//
+//    public void setScene(Scene scene) {
+//        this.scene = scene;
+//    }
 
 //    public Boolean getNeed() {
 //        return need;
@@ -97,7 +97,9 @@ public class Resource implements Serializable {
 //    }
     @Override
     public String toString() {
-        return "Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + '}';
+        String resourceList;
+        //System.out.println("Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + '}');
+        return resourceList = "Resource{" + "name=" + name + ", quantity=" + quantity + ", weight=" + weight + '}';
     }
 
     @Override
