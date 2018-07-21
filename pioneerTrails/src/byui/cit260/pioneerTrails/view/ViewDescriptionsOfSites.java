@@ -11,6 +11,7 @@ import byui.cit260.pioneerTrails.model.Scene;
 import java.io.IOException;
 import java.io.PrintWriter;
 import pioneertrails.PioneerTrails;
+import java.util.*;
 
 /**
  *
@@ -50,11 +51,35 @@ public class ViewDescriptionsOfSites extends View{
 
         Map map = PioneerTrails.getCurrentGame().getMap();
         Location[][] location = map.getLocations();
-        //String msg = "";
+//        String nextScene = "";
+//        String temp = "";
+//        int compare;
+        Site[] sites = new Site[25];
+        
         for (int row = 0; row < map.getTotalRows(); row++) {
-            for (int column = 0; column < map.getTotalColumns(); column++) {
+            for (int column = 0; column < map.getTotalColumns(); column++) {    
                 Scene scene = map.getLocations()[row][column].getScene();
+                
+                
+//                for (int i = 0; i <25; i++);{
+//                    
+//                sites[i] = scene.getName();
+//                }
+
+//                Arrays.sort(scene.getName();
+
+//                for (int i = 0; i <25; i++);{
+//                compare = scene.getName().compareTo(nextScene);
+//                if (compare < 0){
+//                }
+//                else {
+//                temp = scene.getName();
+//                scene.getName() = nextScene;
+//                nextScene = scene;
+//                }
+//                }
                 this.console.println(String.format("%-30s%-50s", scene.getName(), scene.getDescription()));
+//                nextScene = scene;
             }
         }
         this.console.println("\n\n ");
@@ -73,10 +98,10 @@ public class ViewDescriptionsOfSites extends View{
 
             Map map = PioneerTrails.getCurrentGame().getMap();
             Location[][] location = map.getLocations();
-            //String msg = "";
-            for (int row = 0; row < map.getTotalRows(); row++) {
+                for (int row = 0; row < map.getTotalRows(); row++) {
                 for (int column = 0; column < map.getTotalColumns(); column++) {
                     Scene scene = map.getLocations()[row][column].getScene();
+                    
                     out.printf(String.format("%-35s%-5s\r\n", scene.getName(), scene.getDescription()));
                 }
             }
@@ -90,21 +115,22 @@ public class ViewDescriptionsOfSites extends View{
                 ErrorView.display(this.getClass().getName(), "Error closing file.");
                 return;
             }
-            this.console.println("\nThe report has been saved.");
+            this.console.println("\nYour report has been saved.");
         } catch (IOException ex) {
             ErrorView.display(this.getClass().getName(), "I/O Error: " + ex.getMessage());
         }
     }
 
-//    @Override
-//    public String getInputs() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-
     @Override
     protected String getPromptMessage() {
-        return "Do you want to View (V) or Save (S) the Site Description Report?";
+        return "Would you like to View (V) or Save (S) the Site Description Report?";
      }
+
+    private static class Site {
+
+        public Site() {
+        }
+    }
 
    
     

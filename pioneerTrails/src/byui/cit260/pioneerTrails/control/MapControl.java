@@ -39,7 +39,7 @@ public class MapControl {
 //return map
 //}
     public static Map createMap(int totalRows, int totalColumns) throws MapControlExceptions {
-        //System.out.println("createMap() called ***");
+       
         if (totalRows < 0 || totalColumns < 0) {
             throw new MapControlExceptions("You can't be in negative territory in your rows or columns.");
         }
@@ -52,8 +52,7 @@ public class MapControl {
         return map;
     }
 
-//private static Location[] createLocations() {
-//        Location[][] locations = new Location[5][5];
+
     public static Location[][] createLocations() {
         Location[][] locations = new Location[5][5];
         locations[0][0] = new Location(false, 24);
@@ -84,20 +83,7 @@ public class MapControl {
         return locations;
     }
 
-//    public static Location[][] getLocations() {
-//        return locations[][];
-//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//    public Scene getCurrentScene() {
-//       return  locations[currentRow][currentCol].getScene();
-//    }
-//    public static Location[][] getCurrentLocation() {
-//         Map map = PioneerTrails.getCurrentGame().getMap();
-//        Location locations = new Location[5][5];
-//        return map(map.getCurrentRow(),map.getCurrentCol());
-//        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//        
+       
     private void setTotalRows() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
