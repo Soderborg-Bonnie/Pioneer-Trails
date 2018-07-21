@@ -42,19 +42,19 @@ public class ViewDescriptionsOfSites extends View {
     }
 
     private void viewDescriptionsReport() {
-        this.console.println("===========================================================");
-        this.console.println("               Site Descriptions Report                 ");
-        this.console.println("===========================================================");
-        this.console.println("                                                           ");
+        this.console.println("=========================================================================================================================================");
+        this.console.println("                                                   Site Descriptions Report                                                              ");
+        this.console.println("=========================================================================================================================================");
+        this.console.println("                                                                                                                                         ");
         this.console.println(String.format("%-30s%-50s", "Site Name", "Description"));
-        this.console.println("===========================================================");
+        this.console.println("=========================================================================================================================================");
 
         Map map = PioneerTrails.getCurrentGame().getMap();
         Location[][] location = map.getLocations();
 //        String nextScene = "";
 //        String temp = "";
 //        int compare;
-        Site[] sites = new Site[25];
+        //Site[] sites = new Site[25];
 
         for (int row = 0; row < map.getTotalRows(); row++) {
             for (int column = 0; column < map.getTotalColumns(); column++) {
@@ -120,7 +120,7 @@ public class ViewDescriptionsOfSites extends View {
 
     @Override
     protected String getPromptMessage() {
-        return "Would you like to View (V) or Save (S) the Site Description Report?";
+        return "Would you like to View (V) or Save (S) the Site Description Report? Press Q to return to Location Menu.";
     }
 
     private static class Site {

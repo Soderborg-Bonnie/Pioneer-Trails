@@ -38,8 +38,7 @@ public class GameControl {
 
    // Add Getters and setters for gameOver in the Game class
 
-//    static WagonControl wagoncontrol;
-    //private static Game scene;
+
     public static Player savePlayer(String playersName) throws GameControlExceptions {
         if (playersName.length() < 1) {
             throw new GameControlExceptions("Your name has to have at least a character. Hitting 'enter' without anything else is not ok.");
@@ -157,7 +156,7 @@ public class GameControl {
         return resources;
     }
 
-    public static Scene[] createScenes() { //take out location from Scene
+    public static Scene[] createScenes() { 
         Scene[] scenes = new Scene[25];
         Resource[] resources = PioneerTrails.getCurrentGame().getResources();
         scenes[0] = new Scene("Nauvoo", "the City of Joseph", "NV", "Normal", false, resources[0]);

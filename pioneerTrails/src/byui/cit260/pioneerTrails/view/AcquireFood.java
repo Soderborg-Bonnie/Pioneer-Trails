@@ -108,7 +108,7 @@ public class AcquireFood extends View {
                 this.console.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
         }
         if (!result) {
-            this.console.println("That doesn't fit, blah blah...");
+            this.console.println("That doesn't fit and can't be added.");
         }
         
         return false;

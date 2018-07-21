@@ -7,7 +7,7 @@ package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.model.Resource;
 import byui.cit260.pioneerTrails.model.Wagon;
-import java.util.Map;
+import java.util.*;
 import pioneertrails.PioneerTrails;
 
 /**
@@ -30,6 +30,7 @@ public class ViewCurrentResources extends View {
 //        viewCurrentResourcesReport();
 
         Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+        //Map m1 = new Map() {};
 //        System.out.println("VCR doaction: " + resource);
 //        Resource name = wagon.getResources().get(name);
 //        Resource quantity = wagon.getResources().get(quantity);

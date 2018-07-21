@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.io.Serializable;
 import java.util.TreeMap;
-
 /**
  *
  * @author Bonnie
@@ -24,6 +23,7 @@ public class Wagon implements Serializable {
     private int capacity = 2000;
     private int weight;
     private int wheel = 100;
+  
 
     
    
