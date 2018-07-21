@@ -9,6 +9,7 @@ import static byui.cit260.pioneerTrails.control.GameControl.createResources;
 import byui.cit260.pioneerTrails.exceptions.WagonControlExceptions;
 import byui.cit260.pioneerTrails.model.*;
 import pioneertrails.PioneerTrails;
+import java.util.*;
 
 /**
  *
@@ -91,6 +92,11 @@ public class WagonControl {
 //            resources.put
 //              wagon.getResources().put(name,quantity,weight);
     }
+//    public static void resourceList(){
+//        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+//        java.util.Map<String, Resource> resource = wagon.getResources();
+//        
+//    }
 
     /**
      * calcFoodWeight(resourceItem, resourceItemWeight, quantityResourceItem,

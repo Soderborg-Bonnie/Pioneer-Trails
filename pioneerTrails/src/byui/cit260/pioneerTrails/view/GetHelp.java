@@ -71,7 +71,6 @@ public class GetHelp extends View {
 //    void displayGetHelp() {
 //        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
     @Override
     protected String getPromptMessage() {
         return "\n==============================="
@@ -84,5 +83,5 @@ public class GetHelp extends View {
                 + "\n* A - Harvest resources             *"
                 + "\n* Q - Quit                          *"
                 + "\n*************************************";
-     }
+    }
 }

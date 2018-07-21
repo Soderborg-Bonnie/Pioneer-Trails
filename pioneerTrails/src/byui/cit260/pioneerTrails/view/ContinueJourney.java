@@ -13,14 +13,14 @@ import byui.cit260.pioneerTrails.model.Scene;
  * @author tyler
  */
 public class ContinueJourney extends View {
+
     boolean journeyComplete;
 
     public ContinueJourney() {
         super();
 //        this.promptMessage = getScenePrompt();
     }
-    
-    
+
 //    public void display() {
 //        if(!journeyComplete) {
 //            super.displayMessage();
@@ -29,15 +29,14 @@ public class ContinueJourney extends View {
 //            super.display();
 //        }
 //    }
-    
-@Override
+    @Override
     public String getPromptMessage() {
         if (GameControl.advanceLocation()) {
             journeyComplete = false;
             Scene scene = GameControl.getCurrentScene();
             String msg = "Welcome to " + scene.getName() + ", " + scene.getDescription()
                     + ". " + "Press 'Q' to return to the location menu and choose an option.";
-                    
+
             //System.out.println(msg);
             return msg;
             //System.out.println(endMsg);
@@ -53,9 +52,7 @@ public class ContinueJourney extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        return false; 
+        return false;
     }
-
-    
 
 }

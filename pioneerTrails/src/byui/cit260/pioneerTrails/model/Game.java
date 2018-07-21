@@ -25,8 +25,7 @@ public class Game implements Serializable {
     private Resource[] resources;
 //    private Resource[] resource;
     private int currentScene;
-    
-    
+
 //     double foodWeight = 0;
 ////    String[] listOfItems;
 //    ArrayList<String> listOfItems = new ArrayList<>();
@@ -47,12 +46,6 @@ public class Game implements Serializable {
 //    public void setListOfItems(ArrayList<String> listOfItems) {
 //        this.listOfItems = listOfItems;
 //    }
-
-    
-
-    
-    
-
     public int getCurrentScene() {
         return currentScene;
     }
@@ -120,7 +113,6 @@ public class Game implements Serializable {
 //    public void setNumPeeps(int numPeeps) {
 //        this.numPeeps = numPeeps;
 //    }
-
     @Override
     public int hashCode() {
         int hash = 7;

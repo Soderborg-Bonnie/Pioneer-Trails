@@ -60,10 +60,12 @@ public class SceneMenu extends View {
         ViewDescriptionsOfSites viewDescriptionsOfSites = new ViewDescriptionsOfSites();
         viewDescriptionsOfSites.display();
     }
-private void ViewCurrentResources() {
+
+    private void ViewCurrentResources() {
         ViewCurrentResources viewCurrentResources = new ViewCurrentResources();
         viewCurrentResources.display();
     }
+
     private void continueJourney() {
         //System.out.println("Work in progress.");
         ContinueJourney continueJourney = new ContinueJourney();
@@ -95,7 +97,5 @@ private void ViewCurrentResources() {
                 + "\n* Press 'Q' to quit  game.            *"
                 + "\n***************************************";
     }
-
-    
 
 }

@@ -15,12 +15,13 @@ import java.util.ArrayList;
  * @author Bonnie
  */
 public class ViewFoodItems extends View {
-    
+
     public ViewFoodItems() {
-        
+
     }
-    public void printViewResources(){
-        
+
+    public void printViewResources() {
+
     }
 
 //    public void printViewFoodItems(ArrayList<AcquireFood> listOfItems, String foodItemList) {
@@ -36,10 +37,9 @@ public class ViewFoodItems extends View {
 //            System.out.println("I/O Error: " + ex.getMessage());
 //        }
 //    }
-
     @Override
     public boolean doAction(String inputs) {
-     return false;   
+        return false;
     }
 
 // @Override  
@@ -67,7 +67,6 @@ public class ViewFoodItems extends View {
 //                + "\n=======================================");
 //        return true;
 //    }  
-
     @Override
     protected String getPromptMessage() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

@@ -21,7 +21,6 @@ public class GetRest extends View {
 //    public String getInput(String menuText) {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
     @Override
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -34,7 +33,6 @@ public class GetRest extends View {
     @Override
     protected String getPromptMessage() {
         return "You took some much needed rest. You are strengthened! ";
-     }
+    }
 
 }
- 

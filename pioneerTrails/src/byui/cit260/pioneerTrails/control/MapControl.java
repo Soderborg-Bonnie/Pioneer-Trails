@@ -39,7 +39,7 @@ public class MapControl {
 //return map
 //}
     public static Map createMap(int totalRows, int totalColumns) throws MapControlExceptions {
-       
+
         if (totalRows < 0 || totalColumns < 0) {
             throw new MapControlExceptions("You can't be in negative territory in your rows or columns.");
         }
@@ -51,7 +51,6 @@ public class MapControl {
 
         return map;
     }
-
 
     public static Location[][] createLocations() {
         Location[][] locations = new Location[5][5];
@@ -83,7 +82,6 @@ public class MapControl {
         return locations;
     }
 
-       
     private void setTotalRows() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

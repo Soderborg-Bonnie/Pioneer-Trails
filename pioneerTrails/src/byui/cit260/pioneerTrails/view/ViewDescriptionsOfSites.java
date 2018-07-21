@@ -17,8 +17,8 @@ import java.util.*;
  *
  * @author Bonnie
  */
-public class ViewDescriptionsOfSites extends View{
-    
+public class ViewDescriptionsOfSites extends View {
+
     public ViewDescriptionsOfSites() {
         super();
     }
@@ -55,19 +55,16 @@ public class ViewDescriptionsOfSites extends View{
 //        String temp = "";
 //        int compare;
         Site[] sites = new Site[25];
-        
+
         for (int row = 0; row < map.getTotalRows(); row++) {
-            for (int column = 0; column < map.getTotalColumns(); column++) {    
+            for (int column = 0; column < map.getTotalColumns(); column++) {
                 Scene scene = map.getLocations()[row][column].getScene();
-                
-                
+
 //                for (int i = 0; i <25; i++);{
 //                    
 //                sites[i] = scene.getName();
 //                }
-
 //                Arrays.sort(scene.getName();
-
 //                for (int i = 0; i <25; i++);{
 //                compare = scene.getName().compareTo(nextScene);
 //                if (compare < 0){
@@ -98,10 +95,10 @@ public class ViewDescriptionsOfSites extends View{
 
             Map map = PioneerTrails.getCurrentGame().getMap();
             Location[][] location = map.getLocations();
-                for (int row = 0; row < map.getTotalRows(); row++) {
+            for (int row = 0; row < map.getTotalRows(); row++) {
                 for (int column = 0; column < map.getTotalColumns(); column++) {
                     Scene scene = map.getLocations()[row][column].getScene();
-                    
+
                     out.printf(String.format("%-35s%-5s\r\n", scene.getName(), scene.getDescription()));
                 }
             }
@@ -124,7 +121,7 @@ public class ViewDescriptionsOfSites extends View{
     @Override
     protected String getPromptMessage() {
         return "Would you like to View (V) or Save (S) the Site Description Report?";
-     }
+    }
 
     private static class Site {
 
@@ -132,6 +129,4 @@ public class ViewDescriptionsOfSites extends View{
         }
     }
 
-   
-    
 }

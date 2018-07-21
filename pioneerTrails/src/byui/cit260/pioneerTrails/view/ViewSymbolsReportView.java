@@ -101,9 +101,8 @@ public class ViewSymbolsReportView extends View {
 //    public String getInputs() {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
-
     @Override
     protected String getPromptMessage() {
         return "Do you want to View (V) or Save (S) the Location Symbols Report?";
-     }
+    }
 }

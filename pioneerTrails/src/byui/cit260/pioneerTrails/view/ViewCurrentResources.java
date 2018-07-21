@@ -14,34 +14,29 @@ import pioneertrails.PioneerTrails;
  *
  * @author Bonnie
  */
-public class ViewCurrentResources extends View{
-
+public class ViewCurrentResources extends View {
 
     public ViewCurrentResources() {
         super();
     }
 
-    
     @Override
     public boolean doAction(String Inputs) {
 //        System.out.println("VCR doaction before calls: " );
-        viewCurrentResourcesReport();
-        
-        
-        
-        
+//    public static void resourceList(resource){
+//        System.out.println(resource);
+//    }
+//        viewCurrentResourcesReport();
+
 //        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
 //        Resource resource = wagon.getResources().get(resources);
-        
 //        System.out.println("VCR doaction: " + resource);
 //        Resource name = wagon.getResources().get(name);
 //        Resource quantity = wagon.getResources().get(quantity);
 //        Resource weight = wagon.getResources().get(weight);
 //        System.out.println("resource in wagonControl acquireResource function: " + name + quantity + weight);
 //        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
-        
 //        Resource resourcesList = Wagon.resources.getKey();
-       
 //        wagon.getResources().get(name);
 //        System.out.println(resourcesList);
         return false;
@@ -50,16 +45,14 @@ public class ViewCurrentResources extends View{
     @Override
     protected String getPromptMessage() {
         return "what to do\n\n" + "\n========================================================="
-                            + "\n             Current Resources Report                    "
-                            + "\n========================================================="
-                            + "\nResource              Quantity                     Weight"                                                        
-                            + "\n=========================================================";
+                + "\n             Current Resources Report                    "
+                + "\n========================================================="
+                + "\nResource              Quantity                     Weight"
+                + "\n=========================================================";
     }
 
-    
-
     private void viewCurrentResourcesReport() {
-       
+
         this.console.println("===========================================================");
         this.console.println("               Current Resources Report                    ");
         this.console.println("===========================================================");
@@ -67,5 +60,5 @@ public class ViewCurrentResources extends View{
         this.console.println(String.format("%-30s%-30s%-30s", "Resource", "Quantity", "Weight"));
         this.console.println("===========================================================");
     }
-  
+
 }

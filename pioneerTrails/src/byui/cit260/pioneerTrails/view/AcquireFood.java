@@ -22,11 +22,8 @@ public class AcquireFood extends View {
 //    public static AcquireFood getListOfItems() {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
- 
-
     public AcquireFood() {
         promptMessage = getPromptMessage();
-        
 
     }
 
@@ -34,34 +31,33 @@ public class AcquireFood extends View {
 ////    String[] listOfItems;
 //    ArrayList<String> listOfItems = new ArrayList<String>();
 ////    public static ArrayList listOfItems[];
-
     @Override
     public boolean doAction(String inputs) {
 
         String menuItem = inputs.toUpperCase();
         boolean result = false;
-        
+
         switch (menuItem) {
             case "1":
                 result = WagonControl.acquireResource("water", 50, 450);
-                System.out.println("acquireFood choice 1 result: " +result);
+                System.out.println("acquireFood choice 1 result: " + result);
 //                System.out.println("what's in array at end of choices: " + Wagon.resources);
                 break;
             case "2":
                 result = WagonControl.acquireResource("flour", 30, 240);
-                System.out.println("acquireFood choice 2 result: " +result);
+                System.out.println("acquireFood choice 2 result: " + result);
                 break;
             case "3":
                 result = WagonControl.acquireResource("flour", 50, 350);
-                System.out.println("acquireFood choice 3 result: " +result);
+                System.out.println("acquireFood choice 3 result: " + result);
                 break;
             case "4":
                 result = WagonControl.acquireResource("sugar", 30, 270);
-                System.out.println("acquireFood choice 4 result: " +result);
+                System.out.println("acquireFood choice 4 result: " + result);
                 break;
             case "5":
                 result = WagonControl.acquireResource("sugar", 50, 450);
-                System.out.println("acquireFood choice 5 result: " +result);
+                System.out.println("acquireFood choice 5 result: " + result);
                 break;
             case "6":
                 result = WagonControl.acquireResource("oil", 5, 50);
@@ -101,7 +97,7 @@ public class AcquireFood extends View {
 //                    return false;
 //                }
             case "Q":
-                
+
                 return true;
             default:
 //                System.out.println("Hello?! McFly! Type in a correct menu item, or make like a tree and get outta here!");
@@ -110,14 +106,14 @@ public class AcquireFood extends View {
         if (!result) {
             this.console.println("That doesn't fit, blah blah...");
         }
-        
+
         return false;
-        
+
     }
 
     @Override
     protected String getPromptMessage() {
-       return "\n=========================================================="
+        return "\n=========================================================="
                 + "\n                     Food Options"
                 + "\n=========================================================="
                 + "\n********************************************************"
@@ -140,8 +136,6 @@ public class AcquireFood extends View {
                 + "\n* Press 'Q' to finish and return to Location Menu------*"
                 + "\n********************************************************";
     }
-
-    
 
 }
 //    

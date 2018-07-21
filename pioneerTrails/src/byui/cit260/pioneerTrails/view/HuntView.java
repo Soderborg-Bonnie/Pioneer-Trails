@@ -142,7 +142,6 @@ public class HuntView extends View {
     @Override
     protected String getPromptMessage() {
         return "";
-     }
+    }
 
-    
 }

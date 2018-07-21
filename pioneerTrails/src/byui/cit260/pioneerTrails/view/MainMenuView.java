@@ -82,8 +82,8 @@ public class MainMenuView extends View {
 
     @Override
     protected String getPromptMessage() {
-        
-                return "\n======================================="
+
+        return "\n======================================="
                 + "\n              Main Menu"
                 + "\n======================================="
                 + "\n*************************************"

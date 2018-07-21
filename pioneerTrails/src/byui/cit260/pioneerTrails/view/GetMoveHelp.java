@@ -16,8 +16,6 @@ public class GetMoveHelp extends View {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-
     @Override
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -33,6 +31,6 @@ public class GetMoveHelp extends View {
                 + "There, you will choose (C) to continue your journey to the next location."
                 + "Once in a new location, choose options from the location menu "
                 + "such as hunting for food or resources before continuing.";
-     }
+    }
 
 }

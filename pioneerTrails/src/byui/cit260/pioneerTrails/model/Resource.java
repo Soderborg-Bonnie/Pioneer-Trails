@@ -24,7 +24,6 @@ public class Resource implements Serializable {
 //    private Scene scene;
 //    private Game game;
 //    private Wagon wagon;
-
     public Resource(String name, int quantity, int weight) {
         this.name = name;
         this.quantity = quantity;
@@ -54,7 +53,6 @@ public class Resource implements Serializable {
 //    public void setScene(Scene scene) {
 //        this.scene = scene;
 //    }
-
     public Resource() {
     }
 

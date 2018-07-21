@@ -16,8 +16,6 @@ public class GetGameGoal extends View {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-
     @Override
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -36,6 +34,6 @@ public class GetGameGoal extends View {
                 + "You can hunt for resources such as food, water, or items in each location"
                 + " to help along the way, but you may also run into troubles which will need to be resolved."
                 + "Best of luck as you travel along the Pioneer Trails!";
-     }
+    }
 
 }

@@ -55,6 +55,7 @@ public abstract class View implements ViewInterface {
         this.promptMessage = this.getPromptMessage();
 //         this.console.println(this.getPromptMessage());
     }
+
     @Override
     public String getInputs() {
         return getInput(this.promptMessage);
@@ -67,7 +68,7 @@ public abstract class View implements ViewInterface {
         Boolean valid = false;
         while (!valid) {
             try {
-               System.out.println(menuText);
+                System.out.println(menuText);
 //               displayMessage();
                 inputs = this.keyboard.readLine();
                 inputs = inputs.trim();
@@ -86,8 +87,5 @@ public abstract class View implements ViewInterface {
     }
 
     protected abstract String getPromptMessage();
-    
+
 }
-        
-
-

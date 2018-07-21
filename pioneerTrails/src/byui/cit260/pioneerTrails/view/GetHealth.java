@@ -49,18 +49,15 @@ public class GetHealth extends View {
 //        DrinkWater drinkWater = new DrinkWater();
 //        drinkWater.displayDrinkWater();
 //    }
-
 //    private void eatFood() {
 //        EatFood eatFood = new EatFood();
 //        eatFood.displayEatFood();
 //    }
-
     private void getRest() {
         GetRest getRest = new GetRest();
         getRest.display();
     }
 
-  
     private void HealthTips() {
         HealthTips healthTips = new HealthTips();
         healthTips.display();
@@ -71,8 +68,6 @@ public class GetHealth extends View {
         gameMenuView.display();
     }
 
-   
-
     @Override
     protected String getPromptMessage() {
         return "You have the following health concerns: " + "\nWhat would you like to do?"
@@ -81,12 +76,12 @@ public class GetHealth extends View {
                 + "\n              Health Menu                     "
                 + "\n================================================"
                 + "\n**********************************************"
-//                + "\n* Press 'D' to drink some water .            *"
-//                + "\n* Press 'F' to eat some food.                *"
+                //                + "\n* Press 'D' to drink some water .            *"
+                //                + "\n* Press 'F' to eat some food.                *"
                 + "\n* Press 'R' to rest.                         *"
                 + "\n* Press 'H' to get health tips.              *"
                 + "\n* Press 'Q' to return to the previous menu   *"
                 + "\n**********************************************";
-     }
+    }
 
 }

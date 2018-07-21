@@ -70,6 +70,6 @@ public class SaveGameView extends View {
     @Override
     protected String getPromptMessage() {
         return "Save the hard work. Where do you want to save your game? Press Q to exit.";
-     }
+    }
 
 }

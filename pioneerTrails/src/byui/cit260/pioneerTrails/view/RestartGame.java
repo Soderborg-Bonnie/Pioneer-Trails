@@ -81,6 +81,6 @@ public class RestartGame extends View {
     @Override
     protected String getPromptMessage() {
         return "Yay for old games! Enter game file name. Press Q to quit.";
-     }
+    }
 
 }
