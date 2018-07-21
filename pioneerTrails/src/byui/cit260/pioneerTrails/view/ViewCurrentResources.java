@@ -22,8 +22,8 @@ public class ViewCurrentResources extends View{
     }
 
     
-
-    public boolean doAction() {
+    @Override
+    public boolean doAction(String Inputs) {
         System.out.println("VCR doaction before calls: " );
         viewCurrentResourcesReport();
         
@@ -56,10 +56,7 @@ public class ViewCurrentResources extends View{
                             + "\n=========================================================";
     }
 
-    @Override
-    public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     private void viewCurrentResourcesReport() {
        
