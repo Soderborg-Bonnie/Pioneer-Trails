@@ -6,7 +6,7 @@
 package byui.cit260.pioneerTrails.control;
 
 import byui.cit260.pioneerTrails.exceptions.ResourceControlExceptions;
-import byui.cit260.pioneerTrails.view.AcquireFood;
+//import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.util.ArrayList;
 
 /**

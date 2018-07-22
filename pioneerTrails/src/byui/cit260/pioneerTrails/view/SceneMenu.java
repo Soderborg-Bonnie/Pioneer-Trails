@@ -6,6 +6,7 @@
 package byui.cit260.pioneerTrails.view;
 
 import byui.cit260.pioneerTrails.control.GameControl;
+import byui.cit260.pioneerTrails.control.WagonControl;
 import byui.cit260.pioneerTrails.model.Scene;
 import java.util.Scanner;
 
@@ -28,9 +29,12 @@ public class SceneMenu extends View {
 //            case "G":
 //                    gameMenuView();
 //                    break; 
-            case "A":
-                acquireFood();
-                //acquireResources();
+//            case "A":
+//                acquireFood();
+//                //acquireResources();
+//                break;
+            case "W":
+                WagonControl.calcWagonWheelDegradation(0, 0, inputs)
                 break;
             case "D":
                 printSiteDescriptions();
@@ -52,17 +56,15 @@ public class SceneMenu extends View {
         return false;
     }
 
-    private void acquireResources(){
+    private void acquireResources() {
         AcquireResources acquireResources = new AcquireResources();
         acquireResources.display();
     }
-    
-    
-    private void acquireFood() {
-        AcquireFood acquireFood = new AcquireFood();
-        acquireFood.display();
-    }
 
+//    private void acquireFood() {
+//        AcquireFood acquireFood = new AcquireFood();
+//        acquireFood.display();
+//    }
     private void printSiteDescriptions() {
         ViewDescriptionsOfSites viewDescriptionsOfSites = new ViewDescriptionsOfSites();
         viewDescriptionsOfSites.display();
@@ -84,15 +86,10 @@ public class SceneMenu extends View {
         viewSymbolsReportView.display();
     }
 
-    
-
-    
 //End the game code, must check if out of resources
 //    Println(“You won or lost the game (whatever the appropriate message is”);
 //
 //    PioneerTrail.getGame().setGameOver(true);
-    
-    
     @Override
     protected String getPromptMessage() {
         return "\n======================================="

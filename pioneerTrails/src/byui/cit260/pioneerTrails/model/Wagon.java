@@ -4,35 +4,45 @@
  * and open the template in the editor.
  */
 package byui.cit260.pioneerTrails.model;
+
 import static byui.cit260.pioneerTrails.control.GameControl.createResources;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.io.Serializable;
-import java.util.TreeMap;
+//import java.util.TreeMap;
+
 /**
  *
  * @author Bonnie
  */
 public class Wagon implements Serializable {
 
-//    public static String[] getResources;
+    public Wagon() {
+        
 
+    }
+
+//    public static String[] getResources;
     //class instance variables
     private boolean driveable;
     private int capacity = 2000;
     private int weight;
-    private int wheel = 100;
-  
-
+    public int wheelDurability = 100;
+    public ArrayList<Resource> resources;
     
-   
-    public int getWheel() {
-        return wheel;
+    
+    
+    
+    
+    
+
+    public int getWheelDurability() {
+        return wheelDurability;
     }
 
-    public void setWheel(int wheel) {
-        this.wheel = wheel;
+    public void setWheelDurability(int wheelDurability) {
+        this.wheelDurability = wheelDurability;
     }
 
     public boolean isDriveable() {
@@ -58,34 +68,45 @@ public class Wagon implements Serializable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    public final Map<String,Resource> resources;
 
-    public Map<String,Resource> getResources() {
-        //System.out.println("getResources function" + resources);
+    public ArrayList<Resource> getResources() {
         return resources;
     }
 
-    public Wagon() {
-        
-        resources = new TreeMap<>();
-        //System.out.println("wagon function" + resources);
+    public void setResources(ArrayList<Resource> resources) {
+        this.resources = resources;
     }
+    
+    
+//    public final Map<String,Resource> resources;
+//
+//    public Map<String,Resource> getResources() {
+//        //System.out.println("getResources function" + resources);
+//        return resources;
+//    }
+//
+//    public Wagon() {
+//        
+//        resources = new TreeMap<>();
+//        //System.out.println("wagon function" + resources);
+//    }
 
-    
-    
+    @Override
+    public String toString() {
+        return "Wagon{" + "driveable=" + driveable + ", capacity=" + capacity + ", weight=" + weight + ", wheelDurability=" + wheelDurability + '}';
+    }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.driveable);
-        hash = 37 * hash + Objects.hashCode(this.capacity);
+        hash = 29 * hash + (this.driveable ? 1 : 0);
+        hash = 29 * hash + this.capacity;
+        hash = 29 * hash + this.weight;
+        hash = 29 * hash + this.wheelDurability;
         return hash;
     }
-
-    @Override
-    public String toString() {
-        return "Wagon{" + "driveable=" + driveable + ", capacity=" + capacity + '}';
-    }
+    
+    
 
     @Override
     public boolean equals(Object obj) {
@@ -109,7 +130,4 @@ public class Wagon implements Serializable {
     }
 
     
-
-    
-
 }

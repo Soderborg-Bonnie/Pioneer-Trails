@@ -16,7 +16,7 @@ import java.util.*;
  * @author tyler
  */
 public class WagonControl {
-
+    
 //    private final Wagon wagon;
 //    public WagonControl() {
 //      }
@@ -35,8 +35,9 @@ public class WagonControl {
     public static double calcWagonWheelDegradation(double wagonWheelDurability,
             double normalDegradation, String terrainDifficulty) throws WagonControlExceptions {
         double terrainValue = 0;
+        Wagon wagon = new Wagon();
 
-        if (wagonWheelDurability < 1 || wagonWheelDurability > 100) {
+        if (wagon.wheelDurability < 1 || wagon.wheelDurability > 100) {
             throw new WagonControlExceptions("Your wagon wheel's durability needs to be between 1-100%.");
         }
         if (normalDegradation != 10) {
@@ -59,7 +60,7 @@ public class WagonControl {
             throw new WagonControlExceptions("Terrain difficulty must be 'Normal,' 'Medium,' or 'Difficult'.");
         }
 
-        double calcWagonWheelDegradation = wagonWheelDurability
+        double calcWagonWheelDegradation = wagon.wheelDurability
                 - (normalDegradation + terrainValue);
         {
             if (calcWagonWheelDegradation < 1 || calcWagonWheelDegradation > 100) {
@@ -70,28 +71,28 @@ public class WagonControl {
         }
     }
 
-    public static boolean acquireResource(String name, int quantity, int weight) {
-        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
-        Resource resource = wagon.getResources().get(name);
-        //System.out.println("resource in wagonControl acquireResource function: " + resource);
-        if (resource == null) {
-            wagon.getResources().put(name, resource = new Resource(name, 0, 0));
-            //System.out.println(resource);
-        }
-        if (wagon.getWeight() + weight < wagon.getCapacity()) {
-            resource.setWeight(resource.getWeight() + weight);
-            resource.setQuantity(resource.getQuantity() + quantity);
-            wagon.setWeight(wagon.getWeight() + weight);
-//            wagon.getResources().put(name, resource = new Resource(name, quantity, weight));
-            System.out.println(resource);
-
-            return true;
-//            wagon.getResources().put(name, resource = new Resource(name, quantity, weight));
-        }
-        return false; //todo: verify weight and add to wagon
-//            resources.put
-//              wagon.getResources().put(name,quantity,weight);
-    }
+//    public static boolean acquireResource(String name, int quantity, int weight) {
+//        Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
+//        ArrayList<Resource> resources = wagon.getResources();
+//        //System.out.println("resource in wagonControl acquireResource function: " + resource);
+//        if (resources == null) {
+//            wagon.getResources();
+//            //System.out.println(resource);
+//        }
+//        if (wagon.getWeight() + weight < wagon.getCapacity()) {
+//            resources.setWeight(resources.getWeight() + weight);
+//            resources.setQuantity(resources.getQuantity() + quantity);
+//            wagon.setWeight(wagon.getWeight() + weight);
+////            wagon.getResources().put(name, resource = new Resource(name, quantity, weight));
+//            System.out.println(resources);
+//
+//            return true;
+////            wagon.getResources().put(name, resource = new Resource(name, quantity, weight));
+//        }
+//        return false; //todo: verify weight and add to wagon
+////            resources.put
+////              wagon.getResources().put(name,quantity,weight);
+//    }
 
 //    public static resourceList() {
 ////        Resource resource = new Resource.toString();

@@ -8,7 +8,7 @@ package byui.cit260.pioneerTrails.control;
 import byui.cit260.pioneerTrails.exceptions.GameControlExceptions;
 import byui.cit260.pioneerTrails.exceptions.MapControlExceptions;
 import byui.cit260.pioneerTrails.model.*;
-import byui.cit260.pioneerTrails.view.AcquireFood;
+//import byui.cit260.pioneerTrails.view.AcquireFood;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
