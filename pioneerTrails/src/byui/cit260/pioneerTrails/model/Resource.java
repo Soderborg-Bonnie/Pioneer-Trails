@@ -148,8 +148,4 @@ public class Resource implements Serializable {
         return true;
     }
 
-    
-
-    
-
 }

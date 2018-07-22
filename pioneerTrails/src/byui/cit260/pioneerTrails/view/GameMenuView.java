@@ -36,7 +36,7 @@ public class GameMenuView extends View {
             case "M":
                 displayMap();
                 break;
-            
+
             case "F":
                 getCurrentResources();
                 break;
@@ -111,8 +111,6 @@ public class GameMenuView extends View {
         }
 
     }
-
-   
 
     private void getCurrentResources() {
         ViewCurrentResources viewCurrentResources = new ViewCurrentResources();

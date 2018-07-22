@@ -46,12 +46,12 @@ public class AcquireResources extends View {
     public static double foodWeight = 0;
     //    String[] listOfItems;
     ArrayList<String> listOfItems = new ArrayList<>();
-   //resourceList = new String [12][3];
+    //resourceList = new String [12][3];
     //    public static ArrayList listOfItems[];
 
     @Override
     public boolean doAction(String inputs) {
-       // ArrayList<> listOfItems = new ArrayList<>();
+        // ArrayList<> listOfItems = new ArrayList<>();
         String menuItem = inputs.toUpperCase();
         switch (menuItem) {
             case "1":
@@ -83,33 +83,32 @@ public class AcquireResources extends View {
                 foodWeight += 70;
                 listOfItems.add("salt---5 gallon barrel");
                 return false;
-                
+
             case "8":
                 foodWeight += 100;
                 listOfItems.add("wheel---1");
                 return false;
-             
+
             case "9":
                 foodWeight += 10;
                 listOfItems.add("hammer---1");
                 return false;
-                
+
             case "10":
                 foodWeight += 50;
                 listOfItems.add("bullets---50");
                 return false;
-                
+
             case "11":
                 foodWeight += 15;
                 listOfItems.add("axe---1");
                 return false;
-                
+
             case "12":
                 foodWeight += 50;
                 listOfItems.add("wood---10");
                 return false;
-                
-                
+
             case "D":
                 if (foodWeight <= 1500) {
                     this.console.println("Your food weight is : " + foodWeight + " pounds. Good job!");
@@ -131,7 +130,7 @@ public class AcquireResources extends View {
 //                    this.console.println(listOfItems.get(5));}
 //                    if (listOfItems.get(6) != ""){
 //                    this.console.println(listOfItems.get(6));}
-                    
+
                     return true;
                 } else {
                     foodWeight = 0;

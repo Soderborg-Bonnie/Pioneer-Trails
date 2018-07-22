@@ -23,9 +23,6 @@ public abstract class View implements ViewInterface {
 
     protected final BufferedReader keyboard = PioneerTrails.getInFile();
     protected final PrintWriter console = PioneerTrails.getOutFile();
-    
-    
-    
 
     public View() {
         displayMessage();
@@ -53,9 +50,9 @@ public abstract class View implements ViewInterface {
         } while (endOfView != true);
     }
 
-    public boolean display(String menu){
+    public boolean display(String menu) {
 
-        boolean  endOfView = false;
+        boolean endOfView = false;
 
         do {
 
@@ -71,16 +68,14 @@ public abstract class View implements ViewInterface {
 
             doAction(inputs);
 
-           if (PioneerTrails.getCurrentGame().isGameOver())
-
-             return true;          
-
-           
+            if (PioneerTrails.getCurrentGame().isGameOver()) {
+                return true;
+            }
 
         } while (endOfView != true);
         return false;
     }
-    
+
     protected void displayMessage() {
         this.promptMessage = this.getPromptMessage();
 //         this.console.println(this.getPromptMessage());

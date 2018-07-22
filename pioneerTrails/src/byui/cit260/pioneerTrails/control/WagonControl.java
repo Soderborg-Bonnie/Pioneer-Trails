@@ -16,7 +16,7 @@ import java.util.*;
  * @author tyler
  */
 public class WagonControl {
-    
+
 //    private final Wagon wagon;
 //    public WagonControl() {
 //      }
@@ -93,7 +93,6 @@ public class WagonControl {
 ////            resources.put
 ////              wagon.getResources().put(name,quantity,weight);
 //    }
-
 //    public static resourceList() {
 ////        Resource resource = new Resource.toString();
 ////        Resource.toString();
@@ -104,7 +103,6 @@ public class WagonControl {
 //////        wagon.getResources().get(name, resource = new Resource(name, quantity, weight));
 ////
 //    }
-
     /**
      * calcFoodWeight(resourceItem, resourceItemWeight, quantityResourceItem,
      * percentSpoiled): double BEGIN settotalWeight = 0; IF (resourceItemWeight < 0 or resourceWeight

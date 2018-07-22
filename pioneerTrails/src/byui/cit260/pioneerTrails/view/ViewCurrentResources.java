@@ -20,20 +20,19 @@ public class ViewCurrentResources extends View {
     public ViewCurrentResources() {
         super();
     }
-@Override
-    public  boolean doAction(String Inputs) {
-        boolean report = true;
-        
-    
 
-        System.out.println("VCR doaction before calls: " );
+    @Override
+    public boolean doAction(String Inputs) {
+        boolean report = true;
+
+        System.out.println("VCR doaction before calls: ");
 //    public static void resourceList(resource){
 //        System.out.println(resource);
 //    }
 //        viewCurrentResourcesReport();
 
         Wagon wagon = PioneerTrails.getCurrentGame().getWagon();
-         
+
         //Map m1 = new Map() {};
 //        System.out.println("VCR doaction: " + resource);
 //        Resource name = wagon.getResources().get(name);
@@ -46,15 +45,13 @@ public class ViewCurrentResources extends View {
 //        System.out.println(resourcesList);
         return false;
     }
-public ViewCurrentResources(String Inputs) {
+
+    public ViewCurrentResources(String Inputs) {
         boolean report = true;
-        
-    //WagonControl.listOfResources();
-    
-    
-    
-    
-}
+
+        //WagonControl.listOfResources();
+    }
+
     @Override
     protected String getPromptMessage() {
         return "what to do\n\n" + "\n========================================================="
@@ -62,7 +59,7 @@ public ViewCurrentResources(String Inputs) {
                 + "\n========================================================="
                 + "\nResource              Quantity                     Weight"
                 + "\n=========================================================";
-              
+
     }
 
     private void viewCurrentResourcesReport() {

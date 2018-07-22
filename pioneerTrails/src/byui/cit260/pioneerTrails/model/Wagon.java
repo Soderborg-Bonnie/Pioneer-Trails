@@ -19,7 +19,6 @@ import java.io.Serializable;
 public class Wagon implements Serializable {
 
     public Wagon() {
-        
 
     }
 
@@ -30,12 +29,6 @@ public class Wagon implements Serializable {
     private int weight;
     public int wheelDurability = 100;
     public ArrayList<Resource> resources;
-    
-    
-    
-    
-    
-    
 
     public int getWheelDurability() {
         return wheelDurability;
@@ -76,8 +69,7 @@ public class Wagon implements Serializable {
     public void setResources(ArrayList<Resource> resources) {
         this.resources = resources;
     }
-    
-    
+
 //    public final Map<String,Resource> resources;
 //
 //    public Map<String,Resource> getResources() {
@@ -90,7 +82,6 @@ public class Wagon implements Serializable {
 //        resources = new TreeMap<>();
 //        //System.out.println("wagon function" + resources);
 //    }
-
     @Override
     public String toString() {
         return "Wagon{" + "driveable=" + driveable + ", capacity=" + capacity + ", weight=" + weight + ", wheelDurability=" + wheelDurability + '}';
@@ -105,8 +96,6 @@ public class Wagon implements Serializable {
         hash = 29 * hash + this.wheelDurability;
         return hash;
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -129,5 +118,4 @@ public class Wagon implements Serializable {
         return true;
     }
 
-    
 }

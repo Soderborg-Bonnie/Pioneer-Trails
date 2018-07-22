@@ -18,14 +18,12 @@ public class Game implements Serializable {
     public static Object getGame() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-private boolean gameOver; 
-
-
+    private boolean gameOver;
 
     public Game() {
-    gameOver = false;
+        gameOver = false;
     }
-     // Initialize it to false in Game constructor.
+    // Initialize it to false in Game constructor.
 
     public boolean isGameOver() {
         return gameOver;
@@ -81,8 +79,6 @@ private boolean gameOver;
     public void setResources(Resource[] resources) {
         this.resources = resources;
     }
-
-   
 
     public Map getMap() {
         return map;
@@ -165,7 +161,5 @@ private boolean gameOver;
 //        }
         return true;
     }
-
-    
 
 }

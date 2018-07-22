@@ -28,7 +28,7 @@ public class GetHelp extends View {
             case "C":
                 getMoveHelp();
                 break;
-            
+
             case "A":
                 harvestResources();
                 break;
@@ -51,8 +51,6 @@ public class GetHelp extends View {
         GetMoveHelp getMoveHelp = new GetMoveHelp();
         getMoveHelp.display();
     }
-
-    
 
     private void harvestResources() {
         HarvestResources harvestResources = new HarvestResources();
