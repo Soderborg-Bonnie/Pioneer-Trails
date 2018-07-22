@@ -5,6 +5,7 @@
  */
 package byui.cit260.pioneerTrails.view;
 
+import byui.cit260.pioneerTrails.control.WagonControl;
 import byui.cit260.pioneerTrails.model.Resource;
 import byui.cit260.pioneerTrails.model.Wagon;
 import java.util.*;
@@ -19,10 +20,12 @@ public class ViewCurrentResources extends View {
     public ViewCurrentResources() {
         super();
     }
-
-    @Override
+@Override
     public  boolean doAction(String Inputs) {
+        boolean report = true;
         
+    
+
         System.out.println("VCR doaction before calls: " );
 //    public static void resourceList(resource){
 //        System.out.println(resource);
@@ -43,7 +46,15 @@ public class ViewCurrentResources extends View {
 //        System.out.println(resourcesList);
         return false;
     }
-
+public ViewCurrentResources(String Inputs) {
+        boolean report = true;
+        
+    //WagonControl.listOfResources();
+    
+    
+    
+    
+}
     @Override
     protected String getPromptMessage() {
         return "what to do\n\n" + "\n========================================================="

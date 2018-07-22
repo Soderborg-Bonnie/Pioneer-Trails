@@ -21,20 +21,12 @@ import pioneertrails.PioneerTrails;
  * @author tyler
  */
 public class GameControl {
+
+    public static Object getGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
-    private boolean gameOver; 
-    public GameControl() {
-    gameOver = false;
-    }
-     // Initialize it to false in Game constructor.
-
-    public boolean isGameOver() {
-        return gameOver;
-    }
-
-    public void setGameOver(boolean gameOver) {
-        this.gameOver = gameOver;
-    }
+    
 
    // Add Getters and setters for gameOver in the Game class
 

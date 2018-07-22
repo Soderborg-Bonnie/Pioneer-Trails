@@ -53,33 +53,33 @@ public abstract class View implements ViewInterface {
         } while (endOfView != true);
     }
 
-//    public boolean display(String menu){
-//
-//        boolean  endOfView = false;
-//
-//        do {
-//
-//            String inputs = getInputs(menu);
-//
-//            if (inputs.length() < 1 || inputs.toUpperCase().equals("Q")) {
-//
-//                endOfView = true;
-//
-//                continue;
-//
-//            }
-//
-//            doAction(inputs);
-//
-//           if (PioneerTrails.getCurrentGame().isGameOver())
-//
-//             return true;          
-//
-//           
-//
-//        } while (endOfView != true);
-//        return false;
-//    }
+    public boolean display(String menu){
+
+        boolean  endOfView = false;
+
+        do {
+
+            String inputs = getInput(menu);
+            //String inputs =this.getInputs();
+            if (inputs.length() < 1 || inputs.toUpperCase().equals("Q")) {
+
+                endOfView = true;
+
+                continue;
+
+            }
+
+            doAction(inputs);
+
+           if (PioneerTrails.getCurrentGame().isGameOver())
+
+             return true;          
+
+           
+
+        } while (endOfView != true);
+        return false;
+    }
     
     protected void displayMessage() {
         this.promptMessage = this.getPromptMessage();

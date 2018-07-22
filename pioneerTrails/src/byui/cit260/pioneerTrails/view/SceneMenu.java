@@ -29,12 +29,12 @@ public class SceneMenu extends View {
 //            case "G":
 //                    gameMenuView();
 //                    break; 
-//            case "A":
-//                acquireFood();
-//                //acquireResources();
-//                break;
+            case "A":
+                acquireResources();
+                //acquireResources();
+                break;
             case "W":
-                WagonControl.calcWagonWheelDegradation(0, 0, inputs)
+                //WagonControl.calcWagonWheelDegradation(0, 0, inputs)
                 break;
             case "D":
                 printSiteDescriptions();

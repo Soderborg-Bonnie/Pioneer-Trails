@@ -294,6 +294,10 @@ public static void IndividualTestTamlyn(){
 //    public static PrintWriter getOutput() {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
+
+    public static Object getGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 /*TeamTest();
         IndividualTestBonnie();

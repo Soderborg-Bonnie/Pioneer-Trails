@@ -56,6 +56,12 @@ public class Resource implements Serializable {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+//    public boolean getName(String water) {
+//        return this.name;
+//    }
+//    public String get(String water) {
+//        return water;
+//    }
 //    public Wagon getWagon() {
 //        return wagon;
 //    }
@@ -141,5 +147,9 @@ public class Resource implements Serializable {
 //        }
         return true;
     }
+
+    
+
+    
 
 }

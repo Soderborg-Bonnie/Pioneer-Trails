@@ -15,6 +15,26 @@ import java.util.Objects;
  */
 public class Game implements Serializable {
 
+    public static Object getGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+private boolean gameOver; 
+
+
+
+    public Game() {
+    gameOver = false;
+    }
+     // Initialize it to false in Game constructor.
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
+
     //class instance variables
     private int time;
 //    private int numPeeps;
@@ -62,8 +82,7 @@ public class Game implements Serializable {
         this.resources = resources;
     }
 
-    public Game() {
-    }
+   
 
     public Map getMap() {
         return map;
@@ -147,8 +166,6 @@ public class Game implements Serializable {
         return true;
     }
 
-    public boolean isGameOver() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }
